@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c7cdf58a-02ee-4a19-bafa-b75b8ff84d5c">
+  <producedTypes>
+    <selectionType typeId="1a8847d4-593d-4497-818f-3acec32fee6a" valueTypeId="278bedbb-f7ac-488b-bd3f-2fec715abca1"/>
+    <listType typeId="11c06e41-f29a-4d53-9818-95f900726505" valueTypeId="4f4e8a32-76dd-45b9-a9a2-2e5a6a175941"/>
+    <managerType typeId="f6886de9-1b94-4d35-b881-51232d5048e5" valueTypeId="c3a28001-8418-48fc-a1aa-beafc1d77a44"/>
+    <recordSetType typeId="86e5fcbc-743c-47fb-bd42-a8896027e03c" valueTypeId="7605cc5e-f5ac-4c6f-b4a0-726af4241487"/>
+    <recordKeyType typeId="2158521e-674a-496a-a3d8-5953baae46c0" valueTypeId="67a3737b-543b-44ef-bfbd-367cd33c2a48"/>
+    <recordType typeId="1f698833-063a-4933-bd24-192a32e56c18" valueTypeId="1c775dbd-8864-4a5b-aa76-843b4d124415"/>
+  </producedTypes>
+  <name>ES_УчетДСпоЗаказамНаДоставку</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет ДС по заказам на доставку (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="611a89a6-b29a-4c61-9f2b-e5a873e4d2bf">
+    <name>ПланСтоимостьДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Планируемая стоимость</value>
+    </synonym>
+    <comment>Стоимость из заказа на доставку</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="8ea19263-8e95-4d39-8611-20f25f02bd37">
+    <name>ФактСтоимостьДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактическая стоимость</value>
+    </synonym>
+    <comment>Стоимость из отчета о доставке</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="74406cf2-eaa3-466e-85f2-ab4770fc91ef">
+    <name>ПланируемыеНП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Планируемые НП</value>
+    </synonym>
+    <comment>НП из заказа на доставку</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="7ac55a01-313d-46a8-be8d-28b9e00689db">
+    <name>УдалитьФактическиеНП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить фактические НП</value>
+    </synonym>
+    <comment>НП из отчета о доставке</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="813d1974-1cd1-41dc-84db-be316284ee06">
+    <name>УдалитьФактСуммаНаличные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма из отчета (наличные)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="2c96dc84-fcd8-405f-94ac-dc8af37e0198">
+    <name>СтоимостьГрузовВыданныхСоСклада</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость грузов выданных со склада</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="a02841d6-33cc-4bd8-8bfe-13223503813f">
+    <name>СуммаВозвращено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма возвращено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="4018a099-cc59-4469-be76-2a080b4459f0">
+    <name>СуммаУдержано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма удержано</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="20764795-9aac-416e-a216-948c0119b62d">
+    <name>Удалить_ФактСуммаЭквайринг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма из отчета (эквайринг)</value>
+    </synonym>
+    <comment>НЕ ИСПОЛЬЗУЕТСЯ</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="edcc5487-ebcf-4101-a1f8-cc44f53c8342">
+    <name>ФактическиеНП_Нал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактические НП нал</value>
+    </synonym>
+    <comment>НП из отчета о доставке наличными</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="df9e3456-5fae-46c2-9219-77abc1fb64cc">
+    <name>ФактическиеНП_Безнал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактические НП безналичными</value>
+    </synonym>
+    <comment>НП из отчета о доставке безналичными</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="73631aaa-b1fe-4f8a-a97b-11c6e20958eb">
+    <name>ФактСумма_Нал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма из отчета (наличные)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="316e4037-921d-4029-975d-c547bd4311b0">
+    <name>ФактСумма_Безнал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма из отчета (безналичные)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="5f975f94-7277-488f-806d-130aa5373864">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="4f80ddd5-d73f-4fe3-9c2a-6699b7ffc4eb">
+    <name>Заказчик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

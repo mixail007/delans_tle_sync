@@ -1,0 +1,3004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Delans Map</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+
+ <style>
+ 
+ 
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            font-size: 14px;
+			overflow-y:auto;
+        }
+		
+		input[type=button].refresh, input[type=button].getOrd, input[type=button].deletePlan, input[type=button].deleteOrder, input[type=button].addPoint, input[type=button].deletePoint, #setCouriersButton, #newPlanCourierButton{
+			box-shadow:	0 0 6px rgba(0,0,0,0.5);
+			background-color: #ffeba0;
+			text-overflow: ellipsis;
+			border: none;
+			font-size: 13px;
+			color: #000;
+			overflow: hidden;
+			line-height: 26px;
+			border-radius: 5px;
+			width: 120px;
+			float: right; 
+			height: 30px;
+			
+		}
+		
+		input[type=button].addPoint, input[type=button].deletePoint{
+			border: 1px solid black;
+		}
+		
+		#menu, #textArea {
+			position: absolute;
+		}
+	
+		
+		input[type=date]{
+			background-color: #fff;
+			text-overflow: ellipsis;
+			border: none;
+			font-size: 13px;
+			font-family: Arial,Helvetica,sans-serif;
+			color: #000;
+			overflow: hidden;
+			line-height: 26px;
+			border-radius: 5px;
+			width: 150px;
+			border: 1px solid #C0C0C0;
+			height: 25px;
+			
+		}
+		
+		input[type=button].refresh:hover, input[type=button].getOrd, input[type=button].deletePlan, input[type=button].deleteOrder, #setCouriersButton:hover, #newPlanCourierButton:hover{
+			background-color: #fff;
+		}
+		
+		
+		input[type=button] {
+			background-color: #fff;
+			text-overflow: ellipsis;
+			border: none;
+			text-decoration: none;
+			white-space: nowrap;
+			font-size: 13px;
+			font-family: Arial,Helvetica,sans-serif;
+			cursor: pointer;
+			font-weight: 400!important;
+			font-style: normal!important;
+			color: #000;
+			user-select: none;
+			overflow: hidden;
+			line-height: 26px;
+			border-radius: 10px; 
+		}
+		
+		input[type=button]:focus {
+			background-color: #ffeba0;
+		}
+      
+        input {
+            width: 15em;
+        }
+
+        .header {
+            padding: 5px;
+        }
+		
+		.myMap{
+			float: left;
+			position: absolute;		
+			overflow-y: hidden;
+			height: 100%;
+			width: 60%;
+		}
+		
+		#map{float: left; width: calc(100% - 3px); height: 100%;}
+		
+		.tabs {  
+			float: right; 
+			position: absolute; 
+			right: 0; 
+			height: 100%;
+		}
+		
+		#dragbar{
+		   background-color: grey;
+		   height:100%;
+		   float: right;
+		   width: 3px;
+		   cursor: col-resize;
+		}
+		
+		#ghostbar{
+			width:3px;
+			background-color:#000;
+			opacity:0.5;
+			position:absolute;
+			cursor: col-resize;
+			z-index:99999;
+		}
+		
+		.tabs>input { display:none; }
+		.tabs>div { display: none;
+			padding: 12px;
+			border: 1px solid #C0C0C0;
+			background: #FFFFFF;
+			
+		}
+		.tabs>label {
+			display: inline-block;
+			padding: 7px;
+			margin: 0 -5px -1px 0;
+			text-align: center;
+			color: #000000;
+			border: 1px solid #C0C0C0;
+			background: #ffeba0;
+			cursor: pointer;
+			width: 150px;
+		}
+		.tabs>input:checked + label {
+			color: #000000;
+			border: 1px solid #C0C0C0;
+			border-bottom: 1px solid #FFFFFF;
+			background: #FFFFFF;
+		}
+		#tab_1:checked ~ #txt_1,
+		#tab_2:checked ~ #txt_2 { display: block; }
+		#tab_3:checked ~ #txt_3 { display: block; }
+
+		
+		table {
+			border-collapse: collapse;		
+			width: 100%; 
+		}
+		th, td {
+			border: 1px solid black; 
+			text-align: center; 
+			padding: 4px; 
+		}
+		th {
+			background: #ffeba0; 
+			height: 40px; 
+			vertical-align: bottom; 
+			padding: 0; 
+			font-style: normal;
+			vertical-align: middle;
+		}		
+
+		input[type="checkbox"] {
+			margin-left: 20px;
+			vertical-align: middle; 
+			width: 18px;
+			height: 18px;
+		}
+		input[type="checkbox"] + label {
+			padding-left: 2px;
+		}
+		input[type="checkbox"]:checked + label {
+			background-position: 0 -32px;
+		}	
+		
+		#table3 tr[class!='head'] td{
+			background:#ffff;
+			border:0;
+		}
+		
+		#save {
+			margin-bottom: 7px;
+			margin-top: 7px;
+		}
+		
+		.conteiner{
+			overflow: auto;
+		}
+		
+		thead th{
+			position:sticky;
+			top:0;
+		}
+
+		.my-button-selected {
+			color: #333333;
+			background-color: #e6e6e6;
+			outline: 2px dashed #333;
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px;
+		}
+		.my-button {
+			display: inline-block;
+			padding: 4px 14px;
+			margin-bottom: 0;
+			font-size: 14px;
+			line-height: 20px;
+			color: #333333;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			background-color: #f5f5f5;
+			border: 1px solid #bbbbbb;
+			border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+			font-family: Arial;
+			position: absolute;
+		}
+		
+		.title{
+			font-family: "Times New Roman", Georgia, Serif;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+			padding-bottom: 5px;
+		}
+		
+		.link {
+			color: #392AB2;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		.link-red {
+			color: red;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		.link-green {
+			color: green;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+ 		.link-blue {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+		
+		.zone-button{
+			background: #ffeba0;
+		}
+		
+		#popupbox{
+			width: 300px; 
+			position: absolute; 
+			top: 30%;
+			left: 30%;
+			background: #FBFBF0; 
+			border: solid #000000 2px; 
+			z-index: 900000; 
+			font-family: arial; 
+			visibility: hidden;
+			padding: 20px;			
+		}
+		
+		#popupbox select{
+			width: 200px;
+		}
+			
+    </style>
+
+
+
+<script>
+
+
+
+		$(document).ready(function(){
+			var today = new Date();
+			var day = String(today.getDate());
+			var month = String(today.getMonth() + 1);
+			var year = String(today.getFullYear());
+			if (month.length == 1)
+			month = "0" + month;
+			if (day.length == 1)
+			day = "0" + day;
+			document.getElementById("date1").value = year + "-" + month + "-" + day; 
+			document.getElementById("date2").value = year + "-" + month + "-" + day; 
+			
+			ymaps.ready(init);
+
+		});
+		
+		var nameBase = "baseName";
+		var myMap, routeСommand, currRoute = null, buttonIndexText = -1, pointsOrders = [], pointsPlans = [], plans = [], orders = [], currPlan = -1, planWasChanged = false, countNewPoint = 0, indexSave = [], indexDelete = [];
+		var zonesProvider, zones, editZones = [], createZones = [], deleteZones = [];
+		var couriers = [], noCourier = [], readyPlans = [];
+		var dragging = false;
+		
+		
+		
+			
+			
+		 
+		function change_date(text){
+			if (text == "date1"){
+				document.getElementById("date2").value = document.getElementById("date1").value;
+			}else{
+				document.getElementById("date1").value = document.getElementById("date2").value;
+			}
+		}
+	
+		function read_orders(text){
+			orders = JSON.parse(text);
+			
+			create_orders_table(orders, "table1");
+
+			pointsOrders = [];
+
+			for (var i = 0; i < orders.orders.length; i++){
+				var point = [];
+				point[0] = orders.orders[i].lng;
+				point[1] = orders.orders[i].lat;
+				point[2] = orders.orders[i].number + ", " + orders.orders[i].time_from + "-" + orders.orders[i].time_to; 
+				var index = 1000 + i;
+				point[3] = "Входная накладная: " + orders.orders[i].invoice + "<br>Адрес: " + orders.orders[i].address + "<br>Получатель: " + orders.orders[i].receiver + "<br>Вес: " + orders.orders[i].weight + "<br>Объем: " + orders.orders[i].amount + "<br><input id=" + index + " type='button' class='addPoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+				pointsOrders[i] = point;
+				
+			}
+			add_points_on_map(myMap, pointsOrders, true, false);
+			
+			
+						
+		}
+		
+		function add_to_plan(e){
+			//var table = document.getElementById("table3");
+			//var count = $('tr', $(table).find('tbody')).length;
+			
+			if (currPlan != -1){
+				var indexOrder = e - 1000;
+				
+				var wasDeleted = false;
+				var delIndex = -1;
+				for (var i = 0; i < indexDelete.length; i++){
+					if (indexDelete[i].newI == indexOrder){
+						wasDeleted = true;
+						delIndex = i;
+						break;
+					}
+				}
+				
+				if (wasDeleted){
+				
+					myMap.geoObjects.remove(pointsOrders[indexDelete[delIndex].newI][4]);
+					
+					var point = [];
+					point[0] = plans[currPlan].orders[indexDelete[delIndex].oldI].lng;
+					point[1] = plans[currPlan].orders[indexDelete[delIndex].oldI].lat;
+					point[2] = plans[currPlan].orders[indexDelete[delIndex].oldI].number + ", " + plans[currPlan].orders[indexDelete[delIndex].oldI].time_from + "-" + plans[currPlan].orders[indexDelete[delIndex].oldI].time_to; 
+					var index = 1000 + indexDelete[delIndex].oldI;
+					point[3] = "Входная накладная: " + plans[currPlan].orders[indexDelete[delIndex].oldI].invoice + "<br>Адрес: " + plans[currPlan].orders[indexDelete[delIndex].oldI].address + "<br> Получатель: " + plans[currPlan].orders[indexDelete[delIndex].oldI].receiver + "<br>Вес: " + plans[currPlan].orders[indexDelete[delIndex].oldI].weight + "<br>Объем: " + plans[currPlan].orders[indexDelete[delIndex].oldI].amount + "<br><input id=" + index + " type='button' class='addPoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+					pointsPlans[indexDelete[delIndex].oldI] = point;
+								
+					var new_point = createIcon(point[2], point[0], point[1], point[3], false, -1);
+					pointsPlans[indexDelete[delIndex].oldI][4] = new_point;
+					myMap.geoObjects.add(pointsPlans[indexDelete[delIndex].oldI][4]);
+					
+					pointsOrders[indexDelete[delIndex].newI] = null;
+					
+					$("#table1 tr[id="+ indexDelete[delIndex].newI +"]").remove();	
+					
+					var table = document.getElementById('table3');	
+					var tblBody = document.getElementById("ordersTab3");
+					
+					var row = document.createElement("tr");
+					row.setAttribute('id', indexDelete[delIndex].oldI);
+					row.setAttribute('class', indexDelete[delIndex].oldI);
+								
+								
+					var cell = document.createElement("td");
+					var type = "";
+					if (plans[currPlan].orders[indexDelete[delIndex].oldI].type_del == "order"){
+						type = "/" + "Заказ";
+					}else{
+						type = "/" + "Забор";
+					}
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].number + type;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].invoice;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].date;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+							
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].time_from;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].time_to;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].address;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].receiver;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].weight;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = plans[currPlan].orders[indexDelete[delIndex].oldI].amount;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					cell.setAttribute('style', 'width:7%;');
+									
+					button = document.createElement("input");
+					button.setAttribute('type', 'button');
+					button.setAttribute('value', 'Удалить');
+					button.setAttribute('id', indexDelete[delIndex].oldI);
+					button.setAttribute('class', 'deleteOrder');
+					button.setAttribute('style', 'width:100%;');
+									
+					button.onclick = function(e){
+						delete_order_button(e);			
+					};
+					cell.appendChild(button);
+
+					row.appendChild(cell);
+					
+					tblBody.appendChild(row);
+					
+					
+					var weight = $("#table2 #weight" + currPlan).text();
+					for (var i = 0; i < indexDelete.length; i++){
+						weight = Number(weight) + Number(plans[currPlan].orders[indexDelete[delIndex].oldI].weight); 
+					}
+							
+					$("#table2 #weight" + currPlan).text(weight);
+							
+					var amount = $("#table2 #amount" + currPlan).text();
+					for (var i = 0; i < indexDelete.length; i++){
+						amount = Number(amount) + Number(plans[currPlan].orders[indexDelete[delIndex].oldI].amount); 
+					}
+					$("#table2 #amount" + currPlan).text(amount);
+							
+					var count = $("#table2 #count" + currPlan).text();
+					count = Number(count) + 1;
+					$("#table2 #count" + currPlan).text(count);
+					
+					indexDelete = indexDelete.splice(delIndex, 1);
+				
+				}else{
+				
+				// удалить с карты
+				myMap.geoObjects.remove(pointsOrders[indexOrder][4]);
+				// занулить точку
+				pointsOrders[indexOrder] = null;
+				// удалить с таблицы
+				//var table = document.getElementById("table1");
+				$("#table1 tr[id="+ indexOrder +"]").remove();
+				// добавить в таблицу планов
+				var table = document.getElementById("table3");	
+				var tblBody = document.getElementsByClassName("ui-sortable")[0];
+				
+				
+					var row = document.createElement("tr");
+					row.setAttribute('id', pointsPlans.length);
+					row.setAttribute('class', pointsPlans.length);
+
+					var cell = document.createElement("td");
+					var type = "";
+					if (orders.orders[indexOrder].type_del == "order"){
+						type = "/" + "Заказ";
+					}else{
+						type = "/" + "Забор";
+					}
+					var text = orders.orders[indexOrder].number + type;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].invoice;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].date;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+				
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].time_from;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].time_to;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].address;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].receiver;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].weight;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexOrder].amount;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					
+					var cell = document.createElement("td");
+					cell.setAttribute('style', 'width:7%;');
+						
+					button = document.createElement("input");
+					button.setAttribute('type', 'button');
+					button.setAttribute('value', 'Удалить');
+					button.setAttribute('id', pointsPlans.length);
+					button.setAttribute('class', 'deleteOrder');
+					button.setAttribute('style', 'width:100%;');
+						
+					button.onclick = function(e){
+						delete_order_button(e);		
+					};
+					cell.appendChild(button);
+					row.appendChild(cell);
+					
+					
+
+				tblBody.appendChild(row);
+				table.appendChild(tblBody);
+				
+				// добавить точку в планы
+				var point = [];
+				point[0] = orders.orders[indexOrder].lng;
+				point[1] = orders.orders[indexOrder].lat;
+				point[2] = orders.orders[indexOrder].number + ", " + orders.orders[indexOrder].time_from + "-" + orders.orders[indexOrder].time_to; 
+				point[3] = "Входная накладная: " + orders.orders[indexOrder].invoice + "<br>Адрес: " + orders.orders[indexOrder].address + "<br>Получатель: " + orders.orders[indexOrder].receiver + "<br>Вес: " + orders.orders[indexOrder].weight + "<br>Объем: " + orders.orders[indexOrder].amount; 
+				pointsPlans[pointsPlans.length] = point;
+				indexSave[indexSave.length] = {oldI: indexOrder,
+											   newI: pointsPlans.length-1};
+				planWasChanged = true;
+				
+				//добавить на карту
+				if (currRoute != null){
+					myMap.geoObjects.remove(currRoute);
+					currRoute = null;
+				}
+				
+				var new_point = createIcon(point[2], point[0], point[1], point[3], false, -1);
+				pointsPlans[pointsPlans.length-1][4] = new_point;
+				myMap.geoObjects.add(pointsPlans[pointsPlans.length-1][4]);
+
+				
+				// добавить в план
+				var weight = $("#table2 #weight" + currPlan).text();
+				weight = Number(weight) + Number(orders.orders[indexOrder].weight);
+				$("#table2 #weight" + currPlan).text(weight);
+				
+				var amount = $("#table2 #amount" + currPlan).text();
+				amount = Number(amount) + Number(orders.orders[indexOrder].amount);
+				$("#table2 #amount" + currPlan).text(amount);
+				
+				var count = $("#table2 #count" + currPlan).text();
+				count++;
+				$("#table2 #count" + currPlan).text(count);
+				//plans.plans[currPlan].orders[plans.plans[currPlan].orders.length] = orders.orders[indexOrder];
+				
+			}		
+			} else{
+				alert("Не выбран план доставки!");
+			}
+			
+		}
+		
+		
+		function delete_order_button(e){
+			
+			if (currRoute != null){
+				myMap.geoObjects.remove(currRoute);
+				currRoute = null;
+			}
+			
+			if(currPlan != -1){
+				var indexOrder = e.path[0].id;
+				
+				var wasAdded = false;
+				var addIndex = -1;
+				for (var i = 0; i < indexSave.length; i++){
+					if (indexSave[i].newI == indexOrder){
+						wasAdded = true;
+						addIndex = i;
+						break;
+					}
+				}
+				
+				
+				if (wasAdded){
+					
+					
+					myMap.geoObjects.remove(pointsPlans[indexSave[addIndex].newI][4]);
+					
+					var point = [];
+					point[0] = orders.orders[indexSave[addIndex].oldI].lng;
+					point[1] = orders.orders[indexSave[addIndex].oldI].lat;
+					point[2] = orders.orders[indexSave[addIndex].oldI].number + ", " + orders.orders[indexSave[addIndex].oldI].time_from + "-" + orders.orders[indexSave[addIndex].oldI].time_to; 
+					var index = 1000 + indexSave[addIndex].oldI;
+					point[3] = "Входная накладная: " + orders.orders[indexSave[addIndex].oldI].invoice + "<br>Адрес: " + orders.orders[indexSave[addIndex].oldI].address + "<br> Получатель: " + orders.orders[indexSave[addIndex].oldI].receiver + "<br><input id=" + index + " type='button' class='addPoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+					pointsOrders[indexSave[addIndex].oldI] = point;
+								
+					var new_point = createIcon(point[2], point[0], point[1], point[3], true, -1);
+					pointsOrders[indexSave[addIndex].oldI][4] = new_point;
+					myMap.geoObjects.add(pointsOrders[indexSave[addIndex].oldI][4]);
+					
+					pointsPlans[indexSave[addIndex].newI] = null;
+					
+					$("#table3 tr[id="+ indexSave[addIndex].newI +"]").remove();	
+					
+					var table = document.getElementById('table1');	
+					var tblBody = document.getElementById("ordersTab1");
+					
+					
+					var row = document.createElement("tr");
+					row.setAttribute('id', indexSave[addIndex].oldI);
+					row.setAttribute('class', indexSave[addIndex].oldI);
+								
+								
+					var cell = document.createElement("td");
+					var type = "";
+					if (orders.orders[indexSave[addIndex].oldI].type_del == "order"){
+						type = "/" + "Заказ";
+					}else{
+						type = "/" + "Забор";
+					}
+					var text = orders.orders[indexSave[addIndex].oldI].number + type;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+					
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].invoice;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].date;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+							
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].time_from;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].time_to;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].address;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].receiver;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].weight;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+								
+					var cell = document.createElement("td");
+					var text = orders.orders[indexSave[addIndex].oldI].amount;
+					var cellText = document.createTextNode(text);
+					cell.appendChild(cellText);
+					row.appendChild(cell);
+
+					tblBody.appendChild(row);
+					
+					
+					var weight = $("#table2 #weight" + currPlan).text();
+					for (var i = 0; i < indexSave.length; i++){
+						weight = Number(weight) - Number(orders.orders[indexSave[addIndex].oldI].weight); 
+					}
+							
+					$("#table2 #weight" + currPlan).text(weight);
+							
+					var amount = $("#table2 #amount" + currPlan).text();
+					for (var i = 0; i < indexSave.length; i++){
+						amount = Number(amount) - Number(orders.orders[indexSave[addIndex].oldI].amount); 
+					}
+					$("#table2 #amount" + currPlan).text(amount);
+							
+					var count = $("#table2 #count" + currPlan).text();
+					count = Number(count) - 1;
+					$("#table2 #count" + currPlan).text(count);
+
+					
+					indexSave = indexSave.splice(addIndex, 1);
+					
+					
+				}else{
+				
+					myMap.geoObjects.remove(pointsPlans[indexOrder][4]);
+					// занулить точку
+					pointsPlans[indexOrder] = null;
+					// удалить с таблицы
+					//var table = document.getElementById("table1");
+					$("#table3 tr[id="+ indexOrder +"]").remove();
+					// добавить в таблицу планов
+					var table = document.getElementById("table1");	
+					var tblBody = document.getElementById("ordersTab1");
+					
+						var row = document.createElement("tr");
+						row.setAttribute('id', pointsOrders.length);
+						row.setAttribute('class', pointsOrders.length);
+
+						var cell = document.createElement("td");
+						var type = "";
+						if (plans[currPlan].orders[indexOrder].type_del == "order"){
+							type = "/" + "Заказ";
+						}else{
+							type = "/" + "Забор";
+						}
+						var text = plans[currPlan].orders[indexOrder].number + type;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].invoice;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].date;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+					
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].time_from;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].time_to;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].address;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].receiver;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].weight;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						var cell = document.createElement("td");
+						var text = plans[currPlan].orders[indexOrder].amount;
+						var cellText = document.createTextNode(text);
+						cell.appendChild(cellText);
+						row.appendChild(cell);
+						
+						tblBody.appendChild(row);
+						table.appendChild(tblBody);
+						
+						var point = [];
+						point[0] = plans[currPlan].orders[indexOrder].lng;
+						point[1] = plans[currPlan].orders[indexOrder].lat;
+						point[2] = plans[currPlan].orders[indexOrder].number + ", " + plans[currPlan].orders[indexOrder].time_from + "-" + plans[currPlan].orders[indexOrder].time_to; 
+						var index = pointsOrders.length + 1000;
+						point[3] = "Входная накладная: " + plans[currPlan].orders[indexOrder].invoice + "<br>Адрес: " + plans[currPlan].orders[indexOrder].address + "<br>Получатель: " + plans[currPlan].orders[indexOrder].receiver + "<br>Вес: " + plans[currPlan].orders[indexOrder].weight + "<br>Объем: " + plans[currPlan].orders[indexOrder].amount + "<br><input id=" + index  + " type='button' class='deletePoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+						pointsOrders[pointsOrders.length] = point;
+						indexDelete[indexDelete.length] = {oldI: indexOrder,
+														   newI: pointsOrders.length-1};
+						planWasChanged = true;
+						
+						if (currRoute != null){
+							myMap.geoObjects.remove(currRoute);
+							currRoute = null;
+						}
+						
+						var new_point = createIcon(point[2], point[0], point[1], point[3], true, -1);
+						pointsOrders[pointsOrders.length-1][4] = new_point;
+						if (document.getElementById("checkbox-id").checked){
+							myMap.geoObjects.add(pointsOrders[pointsOrders.length-1][4]);
+						}
+						
+						
+						var weight = $("#table2 #weight" + currPlan).text();
+						weight = Number(weight) - Number(plans[currPlan].orders[indexOrder].weight);
+						$("#table2 #weight" + currPlan).text(weight);
+						
+						var amount = $("#table2 #amount" + currPlan).text();
+						amount = Number(amount) - Number(plans[currPlan].orders[indexOrder].amount);
+						$("#table2 #amount" + currPlan).text(amount);
+						
+						var count = $("#table2 #count" + currPlan).text();
+						count--;
+						$("#table2 #count" + currPlan).text(count);
+				}	
+			}
+		
+		}
+		
+		function read_plans(text){
+			plans = [];
+
+			plans = JSON.parse(text).plans;
+			
+			$("#table2 tr[class!='head']").remove();
+			
+			create_plans_table(plans);
+			
+		}
+		
+		function init() {
+			myMap = ya_get_map();
+			zonesProvider = new ZonesProvider(); 
+			add_button_building_route(myMap);
+			add_zones_buttons(myMap);
+			add_button_get_couriers(myMap);
+			var control = myMap.controls.get('routePanelControl');	 
+			
+			
+			
+			
+			$('#dragbar').mousedown(function(e){
+				e.preventDefault();
+				   
+				dragging = true;
+				var tabs = $('.tabs');
+				var ghostbar = $('<div>',
+								{id:'ghostbar',
+								css: {
+									height: tabs.outerHeight(),
+									top: tabs.offset().top,
+									left: tabs.offset().left
+								}
+							   }).appendTo('body');
+				   
+				$(document).mousemove(function(e){
+					 ghostbar.css("left",e.pageX+2);
+				});
+			});
+
+			$(document).mouseup(function(e){
+				 if (dragging) 
+				 {
+					if (($(body).width()- e.pageX) < ($(body).width() * 0.4)){
+							$('.myMap').css("width", $(body).width() * 0.6);
+							$('.tabs').css("left", $(body).width() * 0.6);
+					}
+					else{					
+						$('.myMap').css("width",e.pageX+2);
+						$('.tabs').css("left",e.pageX+2);
+					}
+					$('.tabs').css("width", 'auto');
+					$('#ghostbar').remove();
+					$(document).unbind('mousemove');
+					myMap.container.fitToViewport();
+					dragging = false;
+				 }
+			});
+				
+		}
+		
+		function add_points_on_map(myMap, points, newOrders, setIndex){
+			var count = 1;
+			for (var i = 0; i < points.length; i++){
+
+				if (points[i] == null){
+					var point = null;
+				} else{
+				if (setIndex){
+					var index = count;
+					count++;
+				}
+				else{
+					var index = -1;
+				}
+				var point = createIcon(points[i][2], points[i][0], points[i][1], points[i][3], newOrders, index);
+				if (newOrders){				
+					pointsOrders[i][4] = point;
+				}else{
+					pointsPlans[i][4] = point;
+				}
+				myMap.geoObjects.add(point);
+				}
+				
+			}
+		}
+		
+		function createIcon(name, lng, lat, content, newOrders, index){
+		var color = "violet";
+		if (index != -1){
+			name = "<strong style='color: rgb(166, 24, 255);'>" + index + " &nbsp</strong>" + name; 
+		}
+		
+		if (newOrders){
+			color = "red";
+		}
+			point = new ymaps.GeoObject({
+				geometry: {
+					type: "Point",
+					coordinates: [lng, lat]
+					
+				},
+                properties: {
+					iconContent: name,
+					balloonContent: content					
+				},
+			}, {
+				preset: 'islands#blackStretchyIcon',
+				iconColor: color
+			});
+			return point;
+		}
+		
+		function add_button_building_route(myMap){
+		
+			var routeСommand = new ymaps.control.ListBox({
+				data: {
+					title: 'Построить маршрут',
+					content: 'Построить маршрут'
+				},
+				items: [
+					new ymaps.control.ListBoxItem({data: {content: 'На автомобиле'}}),
+					new ymaps.control.ListBoxItem({data: {content: 'На общественном транспорте'}}),
+					new ymaps.control.ListBoxItem({data: {content: 'Пешком'}})
+				]
+			});
+			
+			
+			routeСommand.get(0).events.add('click', function () {
+				routeСommand.get(0).state.set('selected', true);
+				routeСommand.get(1).state.set('selected', false);
+				routeСommand.get(2).state.set('selected', false);
+				
+				if (currRoute != null){
+					myMap.geoObjects.remove(currRoute);
+					currRoute = null;
+				}
+				my_route(myMap, "auto", pointsPlans);
+				
+				routeСommand.collapse();
+			});
+			
+			routeСommand.get(1).events.add('click', function () {
+				routeСommand.get(0).state.set('selected', false);
+				routeСommand.get(1).state.set('selected', true);
+				routeСommand.get(2).state.set('selected', false);
+				
+				if (currRoute != null){
+					myMap.geoObjects.remove(currRoute);
+					currRoute = null;
+				}
+				my_route(myMap, "masstransit", pointsPlans);
+				
+				routeСommand.collapse();
+				
+				
+			});
+           
+		   
+		    routeСommand.get(2).events.add('click', function () {
+				routeСommand.get(0).state.set('selected', false);
+				routeСommand.get(1).state.set('selected', false);
+				routeСommand.get(2).state.set('selected', true);
+				
+				if (currRoute != null){
+					myMap.geoObjects.remove(currRoute);
+					currRoute = null;
+				}
+				my_route(myMap, "pedestrian", pointsPlans);
+				
+				routeСommand.collapse();
+			});
+ 
+			myMap.controls.add(routeСommand, {floatIndex: 100});
+		}	
+			
+		function reorderOrders(){
+			var i = 0;
+			var newOrder = [];
+			$("#table3 tr[class!='head']").each(function(){
+				var index = this.getAttribute('id');
+				
+
+				newOrder[i] = pointsPlans[index];
+				
+				i++;
+			});
+
+			pointsPlans = [];
+			for (var i = 0; i < newOrder.length; i++){
+				pointsPlans[i] =  newOrder[i];
+			}
+			
+			var i = 0;
+			$("#table3 tr[class!='head']").each(function(){
+				this.setAttribute('id', i);
+				i++;
+			});			
+		
+		}
+			
+		function ya_get_map() {
+			
+			var myMap = new ymaps.Map('map', {
+				center: [55.76, 37.64],
+				zoom: 10,
+				controls: []
+			}, {
+				searchControlProvider: 'yandex#search'
+			});
+			
+			ymaps.geocode('Москва').then(function (res) {
+				var newCenter = res.geoObjects.get(0);
+				if (newCenter) {
+					myMap.setCenter(newCenter.geometry.getCoordinates());
+				}         
+			});
+			
+			document.getElementById('map_process').style.display = 'none';
+			return myMap;
+		}
+		
+		function my_route(myMap, type, points){
+		
+				for (var i = 0; i < pointsPlans.length; i++){
+					if (pointsPlans[i] != null){
+						if (myMap.geoObjects.indexOf(pointsPlans[i][4]) != -1){
+							myMap.geoObjects.remove(pointsPlans[i][4]);
+						}
+					}
+				}
+				
+				add_points_on_map(myMap, pointsPlans, false, true);
+				
+				
+				
+				var notNullPoints = [];
+				for (var i = 0; i < points.length; i++){
+					if (points[i] != null){
+						notNullPoints[notNullPoints.length] = points[i];
+					}
+				}	
+				
+					if ($('#textArea').css('display') == 'block') {
+						$('#textArea').remove();
+					}
+				if (buttonIndexText != -1) {
+					myMap.controls.remove(myMap.controls.get(buttonIndexText));
+				}
+				
+				var pointsCoord = new Array(notNullPoints.length);
+				for(var i = 0; i < notNullPoints.length; i++){
+					pointsCoord[i] = new Array(2);
+					pointsCoord[i][0] = notNullPoints[i][0];
+					pointsCoord[i][1] = notNullPoints[i][1];
+				}
+			
+				if (type != "auto"){
+					multi = true;
+				}else{
+					multi = false;
+				}
+				ymaps.route(pointsCoord, 
+				{
+					mapStateAutoApply: true,				
+					multiRoute: multi,
+					routingMode: type
+				}).then(function (route) {
+					for (var i = 0; i < notNullPoints.length; i++){
+						route.getWayPoints().get(i).options.set('visible', false);	
+					}					
+					myMap.geoObjects.add(route);
+					currRoute = route;
+					
+					
+					if (type == "auto"){
+						var moveList = 'Трогаемся,</br>',
+							way,
+							segments;
+						for (var i = 0; i < route.getPaths().getLength(); i++) {
+							way = route.getPaths().get(i);
+							segments = way.getSegments();
+							for (var j = 0; j < segments.length; j++) {
+								var street = segments[j].getStreet();
+								moveList += ('Едем ' + segments[j].getHumanAction() + (street ? ' на ' + street : '') + ', проезжаем ' + segments[j].getLength() + ' м.,');
+								moveList += '</br>'
+							}
+						}
+						moveList += 'Останавливаемся.';
+						add_button_get_text_route(moveList);
+					}
+					
+				});
+		}
+					
+		function add_button_get_text_route(moveList){
+			var routeTextСommand = new ymaps.control.Button({
+				data: {
+				title: 'Описание маршрута',
+				content: 'Описание маршрута'},
+				options: {
+					maxWidth: 200,
+					floatIndex: '1'
+				}
+			});
+							
+			routeTextСommand.events.add('click', function (e) {
+				if ($('#textArea').css('display') == 'block') {
+						$('#textArea').remove();
+				} else {
+					
+					var list = moveList.replace(/<\/br>/gi, '\n');
+							
+					var textContent =
+					'<textarea id="textArea" rows="15" cols="45" >' + list + 
+					'</textarea>';
+					
+					$('#map').append(textContent);
+
+					$('#textArea').css({
+						left: 7,
+						top: 40
+					});
+				}
+			});
+				
+			myMap.controls.add(routeTextСommand);
+			buttonIndexText = myMap.controls.indexOf(routeTextСommand);
+		}
+		
+		function create_orders_table(obj, tableNum) {
+
+			$("#" + tableNum + " tr[class!='head']").remove();
+			
+			var table = document.getElementById(tableNum);	
+			var tblBody = document.createElement("tBody");
+			if (tableNum == "table1"){
+				tblBody.setAttribute('id', "ordersTab1");
+			}else{
+				tblBody.setAttribute('id', "ordersTab3");
+			}
+			
+			for (var j = 0; j < obj.orders.length; j++) {
+				var row = document.createElement("tr");
+				row.setAttribute('id', j);
+				row.setAttribute('class', j);
+				
+				var cell = document.createElement("td");
+				var type = "";
+				if (obj.orders[j].type_del == "order"){
+					type = "/" + "Заказ";
+				}else{
+					type = "/" + "Забор";
+				}
+				var text = obj.orders[j].number + type;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].invoice;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].date;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+			
+				var cell = document.createElement("td");
+				var text = obj.orders[j].time_from;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].time_to;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].address;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].receiver;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].weight;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj.orders[j].amount;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				if (tableNum == 'table3'){
+					var cell = document.createElement("td");
+					cell.setAttribute('style', 'width:7%;');
+						
+					button = document.createElement("input");
+					button.setAttribute('type', 'button');
+					button.setAttribute('value', 'Удалить');
+					button.setAttribute('id',j);
+					button.setAttribute('class', 'deleteOrder');
+					button.setAttribute('style', 'width:100%;');
+						
+					button.onclick = function(e){
+						delete_order_button(e);		
+					};
+					cell.appendChild(button);
+					row.appendChild(cell);
+				}
+
+				tblBody.appendChild(row);
+			}
+			table.appendChild(tblBody);
+
+		}
+		
+		function create_plans_table(obj) {
+		
+			var table = document.getElementById("table2");
+			$("#table2 #plansTab").remove();
+			var tblBody = document.createElement("tbody");
+			tblBody.setAttribute("id", "plansTab");
+			
+			
+			for (var j = 0; j < obj.length; j++) {
+				
+				var row = document.createElement("tr");
+				row.setAttribute("id", j);
+
+				var cell = document.createElement("td");
+				var text = obj[j].number;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj[j].vehicle;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+			
+				var cell = document.createElement("td");
+				var text = obj[j].driver;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj[j].count;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				cell.setAttribute('id', "count" + j);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj[j].weight;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				cell.setAttribute('id', "weight" + j);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = obj[j].amount;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				cell.setAttribute('id', "amount" + j);
+				row.appendChild(cell);
+				
+				
+				var cell = document.createElement("td");
+				cell.setAttribute('style', 'width:15%;');
+				
+				button = document.createElement("input");
+				button.setAttribute('type', 'button');
+				button.setAttribute('value', 'Получить заказы');
+				button.setAttribute('id', j);
+				button.setAttribute('class', 'getOrd');
+				button.setAttribute('style', 'width:100%;');
+				
+				button.onclick = function(e){
+						click_button_get_orders_in_plan(e);
+				};
+				
+				cell.appendChild(button);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				cell.setAttribute('style', 'width:7%;');
+					
+				button = document.createElement("input");
+				button.setAttribute('type', 'button');
+				button.setAttribute('value', 'Удалить');
+				button.setAttribute('id', j);
+				button.setAttribute('class', 'deletePlan');
+				button.setAttribute('style', 'width:100%;');
+					
+				button.onclick = function(e){
+					delete_plan_button(e);		
+				};
+				cell.appendChild(button);
+				
+				row.appendChild(cell);
+
+				tblBody.appendChild(row);
+			}
+			table.appendChild(tblBody);
+
+		}
+		
+		function delete_plan_button(e){
+		
+			if (!confirm('Удалить план?')) return;
+			
+			var planIndex = e.path[0].id;
+			if (currPlan == planIndex){
+				$("#table3 .ui-sortable").remove();
+				currPlan = -1;
+				
+				for (var i = 0; i < pointsPlans.length; i++){
+					if (pointsPlans[i] != null){
+						if (myMap.geoObjects.indexOf(pointsPlans[i][4]) != -1){
+							myMap.geoObjects.remove(pointsPlans[i][4]);
+						}
+					}
+				}
+				pointsPlan = [];
+			}
+			
+			$("#table2 #plansTab tr[id = " + planIndex + "]").remove();
+			
+				var planStr = JSON.stringify(plans[planIndex]);
+				var request = new getXmlHttp();
+				request.open("POST", "http://" + nameBase + "/hs/api-yandex/deletePlan", true);
+				request.onreadystatechange = function() {
+					if(request.readyState == 4) {
+						if(request.status == 200) {
+							alert("План помечен на удаление!");	
+						}
+					}
+				};
+				request.send(planStr); 
+			
+			
+		}
+				
+		function get_orders() {
+			
+			for (var i = 0; i < pointsOrders.length; i++){
+				if (pointsOrders[i] != null){
+					myMap.geoObjects.remove(pointsOrders[i][4]);
+				}
+			}
+			
+			for (var i = 0; i < pointsPlans.length; i++){
+				if (pointsPlans[i] != null){
+					myMap.geoObjects.remove(pointsPlans[i][4]);
+				}
+			}
+			
+			if (currRoute != null){
+				myMap.geoObjects.remove(currRoute);
+				currRoute = null;
+			}
+			
+			currPlan = -1;
+			
+			$("#table3 .ui-sortable").remove();
+				
+				if ($('#textArea').css('display') == 'block') {
+						$('#textArea').remove();
+				}
+				if (buttonIndexText != -1) {
+					myMap.controls.remove(myMap.controls.get(buttonIndexText));
+				}
+				
+			  var date = document.getElementById("date1").value;
+			  date = "{\"date\":\"" + date + "\"}";
+			  var request = new getXmlHttp();
+			  request.open("POST", "http://" + nameBase + "/hs/api-yandex/getOrders", true);
+			  request.onreadystatechange = function() {
+				  if(request.readyState == 4) {
+					if(request.status == 200) {
+						read_orders(request.responseText);
+					}
+				  }
+			 };
+			 request.send(date);   
+			 
+		}
+		
+		function getXmlHttp(){
+		  var xmlhttp;
+		  try {
+			xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+		  } catch (e) {
+			try {
+			  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (E) {
+			  xmlhttp = false;
+			}
+		  }
+		  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+			xmlhttp = new XMLHttpRequest();
+		  }
+		  return xmlhttp;
+		}
+		
+		function get_plans(){
+			
+			if (currRoute != null){
+				myMap.geoObjects.remove(currRoute);
+				currRoute = null;
+			}
+			
+							for (var i = 0; i < indexSave.length; i++){
+								var point = [];
+								point[0] = orders.orders[indexSave[i].oldI].lng;
+								point[1] = orders.orders[indexSave[i].oldI].lat;
+								point[2] = orders.orders[indexSave[i].oldI].number + ", " + orders.orders[indexSave[i].oldI].time_from + "-" + orders.orders[indexSave[i].oldI].time_to; 
+								var index = 1000 + indexSave[i].oldI;
+								point[3] = "Входная накладная: " + orders.orders[indexSave[i].oldI].invoice + "<br>Адрес: " + orders.orders[indexSave[i].oldI].address + "<br> Получатель: " + orders.orders[indexSave[i].oldI].receiver + "<br>Вес: " + orders.orders[indexSave[i].oldI].weight + "<br>Объем: " + orders.orders[indexSave[i].oldI].amount + "<br><input id=" + index + " type='button' class='addPoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+								pointsOrders[indexSave[i].oldI] = point;
+								
+								var new_point = createIcon(point[2], point[0], point[1], point[3], true);
+								pointsOrders[indexSave[i].oldI][4] = new_point;
+								
+								if(document.getElementById('checkbox-id').checked){
+									if (myMap.geoObjects.indexOf(pointsOrders[indexSave[i].oldI][4]) == -1){
+										myMap.geoObjects.add(new_point);
+									}
+								}
+														
+							}
+							
+							var table = document.getElementById('table1');	
+							var tblBody = document.getElementById("ordersTab1");
+							
+							
+							for (var j = 0; j < indexSave.length; j++) {
+								var row = document.createElement("tr");
+								row.setAttribute('id', indexSave[j].oldI);
+								row.setAttribute('class', indexSave[j].oldI);
+								
+								
+								var cell = document.createElement("td");
+								var type = "";
+								if (orders.orders[indexSave[j].oldI].type_del == "order"){
+									type = "/" + "Заказ";
+								}else{
+									type = "/" + "Забор";
+								}
+								var text = orders.orders[indexSave[j].oldI].number + type;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].invoice;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].date;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+							
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].time_from;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].time_to;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].address;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].receiver;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].weight;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].amount;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+
+								tblBody.appendChild(row);
+							}
+							//table.appendChild(tblBody);
+			
+			indexSave = [];
+			indexDelete = [];
+			planWasChanged = false;
+			
+			
+			$("#table3 .ui-sortable").remove();
+			currPlan = -1;
+			
+			for (var i = 0; i < pointsPlans.length; i++){
+				if (pointsPlans[i] != null){
+					myMap.geoObjects.remove(pointsPlans[i][4]);
+				}
+			}			
+			
+			pointsPlans = [];
+			var date = document.getElementById("date2").value;
+			date = "{\"date\":\"" + date + "\"}";
+			var request = new getXmlHttp();
+			request.open("POST", "http://" + nameBase + "/hs/api-yandex/getPlans", true);
+			request.onreadystatechange = function() {
+				if(request.readyState == 4) {
+					if(request.status == 200) {
+						read_plans(request.responseText);
+					}
+				}
+			};
+			request.send(date); 
+		}
+		
+		function sortable(){
+			var fixHelper = function(e, ui) {
+						ui.children().each(function() {
+							$(this).width($(this).width());
+						});
+						return ui;
+					};
+					$("#table3 tbody").sortable({
+						helper: fixHelper
+					}).disableSelection();
+					
+					$(".ui-sortable").sortable({update:function() {
+						planWasChanged = true;
+						reorderOrders();
+					}});
+			
+		}
+		
+		function savePlan(){
+		
+			if (planWasChanged){
+				for (var i = 0; i < indexSave.length; i++){
+					plans[currPlan].orders[plans[currPlan].orders.length] = orders.orders[indexSave[i].oldI];
+				}
+				
+				for (var i = 0; i < indexDelete.length; i++){
+					orders.orders[orders.orders.length] = plans[currPlan].orders[indexDelete[i].oldI];
+				}
+				
+				planWasChanged = false;
+				indexSave = [];
+				indexDelete = [];
+				
+				newOrder = [];
+				var i = 0;
+				$("#table3 tr[class!='head']").each(function(){
+					var index = this.getAttribute('class');
+					newOrder[i] = plans[currPlan].orders[index];
+					i++;
+				});
+				
+				plans[currPlan].orders = [];
+				
+				for (var i = 0; i < newOrder.length; i++){
+					plans[currPlan].orders[i] = newOrder[i];
+				}
+				
+				var plan = plans[currPlan];
+				var planStr = JSON.stringify(plan);
+				var request = new getXmlHttp();
+				request.open("POST", "http://" + nameBase + "/hs/api-yandex/setPlan", true);
+				request.onreadystatechange = function() {
+					if(request.readyState == 4) {
+						if(request.status == 200) {
+							alert("План сохранен!");
+						}
+					}
+				};
+				request.send(planStr);   
+			}
+				
+		}
+	
+		function add_zones_buttons(myMap) {
+		
+			var buttonZone = new ymaps.control.ListBox({
+				data: {
+					title: 'Зоны',
+					content: 'Зоны'
+				},
+				options: {
+					float: 'right'
+				},
+				items: [
+					new ymaps.control.ListBoxItem({data: {content: 'Обновить зоны'}}),
+					new ymaps.control.ListBoxItem({data: {content: 'Сохранить зоны'}}),
+					new ymaps.control.ListBoxItem({data: {content: 'Добавить зону'}}),
+					new ymaps.control.ListBoxItem({data: {content: 'Создать планы по зонам'}})
+				]
+			});
+			
+			buttonZone.get(2).events.add('click', function () {
+				buttonZone.get(0).state.set('selected', false);
+				buttonZone.get(1).state.set('selected', false);
+				buttonZone.get(2).state.set('selected', true);
+				buttonZone.get(3).state.set('selected', false);
+				
+				var color = get_color(zonesProvider.zones.length);
+				var newZone = {
+					coordinates: [],
+					fillColor: color,
+					hintContent: 'Зона ' + (zonesProvider.getMaxIndex() + 1),
+					zoneName: 'Зона ' + (zonesProvider.getMaxIndex() + 1),
+					courier: ""
+				};  
+			
+				zonesProvider.addZone(newZone).startDrawing();
+				
+				buttonZone.collapse();
+			});
+			
+			
+			buttonZone.get(1).events.add('click', function () {
+				buttonZone.get(0).state.set('selected', false);
+				buttonZone.get(1).state.set('selected', true);
+				buttonZone.get(2).state.set('selected', false);
+				buttonZone.get(3).state.set('selected', false);
+				
+				if (zonesProvider.zones.length > 0){
+					save_zones();
+				}
+				
+				zonesProvider.deselectZones();
+				buttonZone.collapse();
+			});
+			
+			buttonZone.get(0).events.add('click', function () {
+				buttonZone.get(0).state.set('selected', true);
+				buttonZone.get(1).state.set('selected', false);
+				buttonZone.get(2).state.set('selected', false);
+				buttonZone.get(3).state.set('selected', false);
+				
+			
+				for (var i = 0; i < zonesProvider.zones.length; i++){
+					if (myMap.geoObjects.indexOf(zonesProvider.zones[i].ref) != -1){
+						myMap.geoObjects.remove(zonesProvider.zones[i].ref);
+					}
+				}		
+
+				get_zones();    
+				
+				document.getElementById("checkbox-id2").checked = true;
+				
+				buttonZone.collapse();
+			});
+			
+			buttonZone.get(3).events.add('click', function () {
+				buttonZone.get(0).state.set('selected', false);
+				buttonZone.get(1).state.set('selected', false);
+				buttonZone.get(2).state.set('selected', false);
+				buttonZone.get(3).state.set('selected', true);
+				
+				var points = get_points();
+				readyPlans = [];
+				noCourier = [];
+				var messageZones = "", first = true;
+				var points_in_zones = [];
+				
+				if (zonesProvider.zones.length > 0){
+					for (var i = 0; i < zonesProvider.zones.length; i++){
+						points_in_zones[i] = get_points_in_zone(points, zonesProvider.zones[i]);
+						if (points_in_zones[i].length > 0){
+							if (zonesProvider.zones[i].gidCourier != "00000000-0000-0000-0000-000000000000" && zonesProvider.zones[i].gidCourier != ""){
+								readyPlans[readyPlans.length] = {gidCourier: zonesProvider.zones[i].gidCourier,
+										orders: points_in_zones[i]};
+							}else{
+								noCourier[noCourier.length] = {gidCourier: "",
+											name: zonesProvider.zones[i].name,
+											zone: zonesProvider.zones[i].gid,
+											orders: points_in_zones[i]};
+								if (first){
+									messageZones = messageZones + zonesProvider.zones[i].name;
+									first = false;
+								}else {
+									messageZones = messageZones + ",  " + zonesProvider.zones[i].name;
+								}
+							}
+						}
+					}
+						
+						if (noCourier.length > 0) {
+							alert("За зонами: " + messageZones + " не закреплены курьеры!");
+							if (couriers.length == 0){
+								alert("Список курьеров пуст или не обновлен!");
+							}else{
+							for (var i = 0; i < points_in_zones.length; i++){
+								for (var j = 0; j < points_in_zones[i].length; j++){
+								var index = points_in_zones[i][j];
+									myMap.geoObjects.remove(pointsOrders[index][4]);
+									pointsOrders[index] = null;
+									$("#table1 tr[id="+ index +"]").remove();
+								}
+							}
+								fill_form_couriers_in_zones(noCourier);
+							}							
+						}else {
+							for (var i = 0; i < points_in_zones.length; i++){
+								for (var j = 0; j < points_in_zones[i]; j++){
+									myMap.geoObjects.remove(pointsOrders[points_in_zones[i][j]][4]);
+									pointsOrders[points_in_zones[i][j]][4] = null;
+									$("#table1 tr[id="+ points_in_zones[i][j] +"]").remove();
+								}
+							}
+							create_plans_in_zones(readyPlans);
+						}
+				}	    
+				
+				buttonZone.collapse();
+			});
+			
+			myMap.controls.add(buttonZone);
+		}
+		
+		function fill_form_couriers_in_zones(noCourier){
+				var window = document.getElementById("popupbox");
+				window.style.visibility="visible";
+				
+				if (couriers.length == 0){
+					get_couriers();
+				}
+				
+				var form = document.getElementById("form_select");
+				for (var i = 0; i < noCourier.length; i++){
+					
+					var label = document.createElement("label");
+					label.setAttribute("for", i);
+					form.appendChild(label);
+					label.innerHTML = noCourier[i].name + "&nbsp" + "&nbsp" + "&nbsp";
+					
+					var select = document.createElement("select");
+					select.setAttribute("id", noCourier[i].zone);
+					
+					for (var j = 0; j < couriers.length; j++){
+						var option = document.createElement("option");
+						option.setAttribute("id", j);
+						option.setAttribute("class", "select_option");
+						option.setAttribute("value", couriers[j].gid);
+						option.innerHTML = couriers[j].name;
+						select.appendChild(option);
+					}
+					
+					form.appendChild(select);
+					
+					var newLine = document.createElement("br");
+					form.appendChild(newLine);
+					form.appendChild(newLine.cloneNode(true));					
+				}
+				
+				var button = document.createElement("input");
+				button.setAttribute("id", "setCouriersButton")
+				button.setAttribute("type", "button");
+				button.setAttribute("value", "OK");
+				button.setAttribute("onclick", "fill_couriers_in_zones()");
+				form.appendChild(button);	
+				
+				
+		}
+		
+		function fill_couriers_in_zones(){
+				
+				for (var i = 0; i < noCourier.length; i++){
+					var id = noCourier[i].zone;
+					var select = document.getElementById(id);
+					var option = select.options[select.selectedIndex].value;
+					readyPlans[readyPlans.length] = noCourier[i];
+					readyPlans[readyPlans.length-1].gidCourier = option;
+				}
+				var window = document.getElementById("popupbox");
+				window.style.visibility="hidden";
+		
+				create_plans_in_zones(readyPlans);
+				
+				
+				noCourier = [];
+				readyPlans = [];
+				$("#form_select").empty();
+					
+		}
+		
+		function get_points_in_zone(points, zone){
+			var pointsInZone = ymaps.geoQuery(points).searchInside(zone.ref);
+			var myPlan = [];
+			if (pointsInZone._objects.length > 0){
+				for (var i = 0; i < pointsInZone._objects.length; i++){
+					for (var j = 0; j < pointsOrders.length; j++){
+						if (pointsOrders[j] != null){
+							if (myMap.geoObjects.indexOf(pointsInZone._objects[i]) == myMap.geoObjects.indexOf(pointsOrders[j][4])){
+								myPlan[myPlan.length] = j;
+								break;
+							}
+						}
+					}
+				}
+			}
+			return myPlan;
+		}
+		
+		function add_button_get_couriers(myMap){
+		
+			var buttonGetCouriers = new ymaps.control.ListBox({
+				data: {
+					title: 'Курьеры',
+					content: 'Курьеры'
+				},
+				options: {
+					float: 'right'
+				},
+				items: [
+					new ymaps.control.ListBoxItem({data: {content: 'Обновить список'}})
+				]
+			});
+			
+			buttonGetCouriers.get(0).events.add('click', function () {
+				buttonGetCouriers.get(0).state.set('selected', true);
+	
+				get_couriers();	
+				
+				buttonGetCouriers.collapse();
+			});
+		
+			myMap.controls.add(buttonGetCouriers);
+		}
+		
+		function get_couriers(){
+			couriers = [];
+				
+				var request = new getXmlHttp();
+				request.open("POST", "http://" + nameBase + "/hs/api-yandex/getCouriers", true);
+				request.onreadystatechange = function() {
+					if(request.readyState == 4) {
+						if(request.status == 200) {
+							couriers = JSON.parse(request.responseText);
+							alert("Список курьров обновлен!");
+							$("#popupbox option[class='select_option']").remove();
+							var select = document.getElementById("select_courier");		
+						}
+					}
+				};
+				request.send(); 
+			
+		}
+		
+		function get_points(){
+			var allPoints = [];
+				for (var i = 0; i < pointsOrders.length; i++){
+					if (pointsOrders[i] != null){
+						allPoints[allPoints.length] = pointsOrders[i][4];
+					}
+				}
+			return allPoints;
+		}
+		
+		function create_plans_in_zones(readyPlans){
+			var new_plans = [];
+			for (var i = 0; i < readyPlans.length; i++){
+				var new_plan = [];
+				for (var j = 0; j < readyPlans[i].orders.length; j++){
+					new_plan[new_plan.length] = orders.orders[readyPlans[i].orders[j]];
+				}
+				new_plans[new_plans.length] = {orders: new_plan,
+												gidCourier: readyPlans[i].gidCourier};
+			};
+				var plansInfo = {plans: new_plans};
+				var plansStr = JSON.stringify(plansInfo);
+
+				var request = new getXmlHttp();
+				request.open("POST", "http://" + nameBase + "/hs/api-yandex/createPlans", true);
+				request.onreadystatechange = function() {
+					if(request.readyState == 4) {
+						if(request.status == 200) {
+							var plan = JSON.parse(request.responseText);
+							add_plans_in_table(plan);
+							alert("Планы по зонам созданы!");
+						}
+					}
+				};
+				request.send(plansStr); 
+		}
+		
+		function get_color(index) {
+			var colors = get_colors();
+			if (index > colors.length || index < 0) index = 0;
+			return colors[index];
+		}
+
+		function ZonesProvider() {
+		
+			var maxIndex = 0;
+			this.zones = [];
+			this.getMaxIndex = function () {
+				return maxIndex;
+			}
+			this.addZone = function (zoneInfo) { 
+				var zone = new Zone(zoneInfo, maxIndex++);
+				var polygon = new ymaps.Polygon([zone.coordinates, []],
+					{
+						hintContent: zone.hintContent,
+						objRef: zone                                        
+					}, {
+						fillColor: zone.fillColor,
+						interactivityModel: 'default#transparent',
+						strokeWidth: 1,
+						opacity: 0.5,
+						draggable: false
+					});
+				zone.ref = polygon;
+				myMap.geoObjects.add(polygon);
+				zone.update_balloon();
+				this.zones.push(zone);
+				return zone;
+			};
+			
+			this.deselectZones = function () {
+				for (var i = 0; i < this.zones.length; i++) {
+					if (this.zones[i].ref.editor.state.get('editing')) {
+						this.zones[i].ref.editor.stopEditing();
+					}
+				}
+			}
+			
+			this.removeById = function (id) {
+				var index = this.findIndexById(id);
+				if (!confirm('Удалить выбранную область?')) return;
+				
+				var del = true;
+				for (var i = 0; i < createZones.length; i++){
+					if (createZones[i] == this.zones[index]){
+						createZones.splice(i, 1);
+						del = false;
+						break;
+					}
+				}
+				for (var i = 0; i < editZones.length; i++){
+					if (editZones[i] == this.zones[index]){
+						editZones.splice(i, 1);
+						deleteZones[deleteZones.length] = this.zones[index].gid;
+						del = false;
+						break;
+					}
+				}
+				if (del){
+					deleteZones[deleteZones.length] = this.zones[index].gid; 
+				}
+				
+				myMap.geoObjects.remove(this.zones[index].ref);
+				this.zones.splice(index, 1);
+			};
+			
+			this.findIndexById = function (id) {
+				var res = 0;
+				for (var i = 0; i < this.zones.length; i++) {
+					if (this.zones[i].id == id) {
+						res = i;
+						i = this.zones.length;
+					}
+				}
+				return res;
+			};
+			
+			this.findById = function (id) {
+				return this.zones[this.findIndexById(id)];
+			}
+			
+			this.getZoneByIndex = function (index) {
+				return this.zones[index];
+			}
+			         
+			return this;
+		}
+		
+		function get_colors() {
+			var colors = ["#EA18FF", "#FF183A", "#FFEB18", "#181EFF", "#29BE13", "#13ABBE", "#BE7E13", "#6A13BE"];
+			return colors;
+		}
+		
+		function Zone(zoneInfo, index) {
+			this.ref = null;
+			this.id = 'id_' + index;
+			this.name = zoneInfo.zoneName,
+			this.coordinates = zoneInfo.coordinates,
+			this.fillColor = zoneInfo.fillColor,
+			this.hintContent = zoneInfo.hintContent,
+			this.code1c = zoneInfo.zoneCode1c,
+			this.gid = zoneInfo.gid,
+			this.courier = zoneInfo.courier,
+			this.gidCourier = zoneInfo.gidCourier,
+			Zone.prototype.startDrawing = function () {
+				this.ref.editor.startDrawing();
+				createZones[createZones.length] = this;
+			}
+			Zone.prototype.edit = function () {
+				this.ref.editor.startEditing();
+				this.ref.balloon.close();
+				
+				var ed = true;
+				
+				for (var i = 0; i < createZones.length; i++){
+					if (createZones[i] == this){
+						ed = false;
+						break;
+					}
+				}
+				if (ed){
+					editZones[editZones.length] = this;
+				}
+			};
+			
+			Zone.prototype.set_color = function (color) {
+				var ed = true;
+				
+				for (var i = 0; i < createZones.length; i++){
+					if (createZones[i] == this){
+						createZones[i].fillColor = color;
+						ed = false;
+						break;
+					}
+				}
+				
+				this.ref.options.set('fillColor', color);
+				this.ref.balloon.close();
+				this.fillColor = color;
+				if (ed){
+					editZones[editZones.length] = this;
+				}
+				
+			};
+			
+			Zone.prototype.name_edit_begin = function () {
+				
+				document.getElementById('zone_name_edit_label_' + this.id).style.display = 'none';	
+				document.getElementById('zone_name_edit_field_' + this.id).value = this.name;
+				document.getElementById('zone_name_edit_panel_' + this.id).style.display = 'block';
+			};
+			
+			Zone.prototype.name_edit_ok = function () {
+				
+				var zoneNewName = document.getElementById('zone_name_edit_field_' + this.id).value;
+				this.name = zoneNewName;
+				document.getElementById('zone_name_edit_header_' + this.id).innerHTML = zoneNewName;
+				this.update_balloon();
+				
+				document.getElementById('zone_name_edit_panel_' + this.id).style.display = 'none';
+				document.getElementById('zone_name_edit_label_' + this.id).style.display = 'block';
+				
+				var ed = true;
+				
+				for (var i = 0; i < createZones.length; i++){
+					if (createZones[i] == this){
+						ed = false;
+						break;
+					}
+				}
+				if (ed){
+					editZones[editZones.length] = this;
+				}
+			};
+			
+			Zone.prototype.name_edit_cancel = function () {
+				
+				document.getElementById('zone_name_edit_panel_' + this.id).style.display = 'none';
+				document.getElementById('zone_name_edit_label_' + this.id).style.display = 'block';
+			};
+			
+			Zone.prototype.update_balloon = function () {
+				var text = this.prepareBalloonContent();
+				this.ref.properties.set('balloonContent', text);
+			};
+			
+				
+			Zone.prototype.prepareBalloonContent = function () {
+
+				var res = '';
+				
+				res += '<div class="title" id="zone_name_edit_header_' + this.id + '">' + this.name + '</div>';
+				if (this.courier){    
+					res += '<div><i>Курьер: ' + this.courier + '</i></div>';
+				}					
+				res += '<div class="link" id="zone_name_edit_label_' + this.id + '" onclick=zonesProvider.findById("' + this.id + '").name_edit_begin()>Переименовать</div>';
+				res += '<div id="zone_name_edit_panel_' + this.id + '" style="display:none">' +
+							'<input type="text" id="zone_name_edit_field_' + this.id + '" value=' + this.name + ' style="width: 98%; margin-bottom: 10px;"/>' +
+							'<br><input style="background: #ffeba0; border-radius: 0px; border: 1px solid black; width: 80px; height: 28px;" type="button" value="OK" onclick=zonesProvider.findById("' + this.id + '").name_edit_ok() /> &nbsp' +
+							'<input style="background: #ffeba0; border-radius: 0px; border: 1px solid black;  width: 80px; height: 28px;" type="button" value="Отмена" onclick=zonesProvider.findById("' + this.id + '").name_edit_cancel() /><br>' +
+						'</div>';
+
+				res += '<div class="link"><span onclick="zonesProvider.removeById(\'' + (this.id) + '\')">Удалить</span></div>';
+
+				res += '<div class="link"><span onclick="zonesProvider.findById(\'' + (this.id) + '\').edit()">Редактировать</span></div>';
+
+				var colorsTd = '';
+				var colorsList = get_colors();
+				for (var i = 0; i < colorsList.length; i++) {
+					colorsTd += '<td bgcolor="' + colorsList[i] + '" width="16px" height="16px" onclick="zonesProvider.findById(\'' + this.id + '\').set_color(\'' + colorsList[i] + '\')"></td>';
+				}
+				res += '<div><table style="border-spacing: 10px;"><tr>' + colorsTd + '</tr></table></div>';
+				res += '<br><input id=' + this.id + ' type="button" class="addPoint" value = "Создать план" style = "margin-top: -10px; width: 100px;" onclick="create_plan_in_one_zone(id)">';
+				return res;
+			}
+			return this;
+		}
+		
+		function create_plan_in_one_zone(id){
+			var zone = zonesProvider.findById(id);
+			var points = get_points();
+			var messageZones = "";
+			readyPlans = [];
+			noCourier = [];
+			
+			var points_in_zone = get_points_in_zone(points, zone);
+			if (points_in_zone.length > 0){
+				if (zone.gidCourier != "00000000-0000-0000-0000-000000000000" && zone.gidCourier != ""){
+					readyPlans[readyPlans.length] = {gidCourier: zone.gidCourier,
+					orders: points_in_zone};
+				}else{
+					noCourier[noCourier.length] = {gidCourier: "",
+								name: zone.name,
+								zone: zone.gid,
+								orders: points_in_zone};
+					messageZones = zone.name;
+				}
+				if (noCourier.length > 0) {
+					alert("За зоной " + messageZones + " не закреплен курьер!");
+						if (couriers.length == 0){
+								alert("Список курьеров пуст или не обновлен!");
+						}else{
+							for (var j = 0; j < points_in_zone.length; j++){
+								var index = points_in_zone[j];
+								myMap.geoObjects.remove(pointsOrders[index][4]);
+								pointsOrders[index] = null;
+								$("#table1 tr[id="+ index +"]").remove();
+							}
+							fill_form_couriers_in_zones(noCourier);	
+						}
+						
+				}else {
+					for (var j = 0; j < points_in_zone.length; j++){
+						var index = points_in_zone[j];
+						myMap.geoObjects.remove(pointsOrders[index][4]);
+						pointsOrders[index] = null;
+						$("#table1 tr[id="+ index +"]").remove();
+					}
+					create_plans_in_zones(readyPlans);
+				}
+			}
+			zone.ref.balloon.close();
+		}
+	
+		function save_zones(){
+
+			var edit = [];
+			var delet = [];
+			var create = [];
+			
+
+			for (var i = 0; i < createZones.length; i++) {
+		
+				create.push({
+					zoneId: createZones[i].zoneId,
+					vertexesArray: createZones[i].ref.geometry.getCoordinates()[0],
+					color: createZones[i].fillColor,
+					gid: createZones[i].gid,
+					zoneName: createZones[i].name
+				});
+			}
+			
+			for (var i = 0; i < editZones.length; i++) {
+				editZones[i].zoneId = i;
+		
+				edit.push({
+					zoneId: editZones[i].zoneId,
+					vertexesArray: editZones[i].ref.geometry.getCoordinates()[0],
+					color: editZones[i].fillColor,
+					gid: editZones[i].gid,
+					zoneName: editZones[i].name
+				});
+			}
+			
+			for (var i = 0; i < deleteZones.length; i++) {
+		
+				delet.push({
+					gid: deleteZones[i]
+				});
+			}
+			
+			var zones = {edit, delet, create};
+			
+				var zonesStr = JSON.stringify(zones);
+				var request = new getXmlHttp();
+				request.open("POST", "http://" + nameBase + "/hs/api-yandex/setZones", true);
+				request.onreadystatechange = function() {
+					if(request.readyState == 4) {
+						if(request.status == 200) {
+							alert("Зоны сохранены!");
+						}
+					}
+				};
+				request.send(zonesStr); 
+
+				editZones = [];
+				createZones = [];
+				deleteZones = [];
+		}
+		
+		function get_zones() {   
+		  var request = new getXmlHttp();
+		  request.open("POST", "http://" + nameBase + "/hs/api-yandex/getZones", true);
+		  request.onreadystatechange = function() {
+			  if(request.readyState == 4) {
+				if(request.status == 200) {
+					read_zones(request.responseText);
+				}
+			  }
+          };
+		  request.send(); 
+		}
+		
+		function read_zones(text){
+			zones = JSON.parse(text);
+			zonesProvider.zones = [];
+			for (var i = 0; i < zones.zones.length; i++){
+				zonesProvider.addZone(zones.zones[i]);
+			}		
+		}
+		
+		function create_new_plan(){
+			if (couriers.length > 0){
+				var window = document.getElementById("popupbox");
+					window.style.visibility="visible";
+
+					var form = document.getElementById("form_select");
+					
+					var label = document.createElement("label");
+					label.setAttribute("for", "new_plan_courier");
+					form.appendChild(label);
+					label.innerHTML = "Курьер: &nbsp; &nbsp; &nbsp";
+						
+					var select = document.createElement("select");
+					select.setAttribute("id", "select_new_plan_courier");
+										
+						for (var j = 0; j < couriers.length; j++){
+							var option = document.createElement("option");
+							option.setAttribute("id", j);
+							option.setAttribute("class", "select_option");
+							option.setAttribute("value", couriers[j].gid);
+							option.innerHTML = couriers[j].name;
+							select.appendChild(option);
+						}
+						
+					form.appendChild(select);
+						
+					var newLine = document.createElement("br");
+					form.appendChild(newLine);
+					form.appendChild(newLine.cloneNode(true));					
+					
+					var button = document.createElement("input");
+					button.setAttribute("id", "newPlanCourierButton")
+					button.setAttribute("type", "button");
+					button.setAttribute("value", "OK");
+					button.setAttribute("onclick", "fill_courier_in_new_plan()");
+					form.appendChild(button);	
+			}else{
+				alert("Список курьеров пуст или не обновлен!");
+			}
+		}
+		
+		function fill_courier_in_new_plan(){
+			
+			var select = document.getElementById("select_new_plan_courier");
+			var gidCour = select.options[select.selectedIndex].value;
+			
+			var window = document.getElementById("popupbox");
+			window.style.visibility = "hidden";
+		
+			var date = document.getElementById("date2").value;
+			var data_new_plan = {date: date,
+								gid: gidCour};
+			var dataNewPlanStr = JSON.stringify(data_new_plan);
+			var request = new getXmlHttp();
+			request.open("POST", "http://" + nameBase + "/hs/api-yandex/createPlan", true);
+			request.onreadystatechange = function() {
+				  if(request.readyState == 4) {
+					if(request.status == 200) {
+						var planData = [];
+						planData[0] = JSON.parse(request.responseText);
+						add_plans_in_table(planData);
+					}
+				  }
+			};
+			request.send(dataNewPlanStr);   
+			 
+			$("#form_select").empty();
+		}
+		
+		function add_plans_in_table(planData){
+		
+
+		for (var i = 0; i < planData.length; i++){
+				plans[plans.length] = planData[i];
+				
+				var table = document.getElementById("table2");	
+				var tblBody = document.getElementById("plansTab");
+				
+				var row = document.createElement("tr");
+				row.setAttribute("id", plans.length-1);
+
+				var cell = document.createElement("td");
+				var text = planData[i].number;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+					
+				var cell = document.createElement("td");
+				var text = planData[i].vehicle;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = planData[i].driver;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				row.appendChild(cell);
+					
+				var cell = document.createElement("td");
+				var text = planData[i].count;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				cell.setAttribute('id', "count" + String(plans.length-1));
+				row.appendChild(cell);
+				
+				
+				var cell = document.createElement("td");
+				var text = planData[i].weight;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				cell.setAttribute('id', "weight" + String(plans.length-1));
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				var text = planData[i].amount;
+				var cellText = document.createTextNode(text);
+				cell.appendChild(cellText);
+				cell.setAttribute('id', "amount" + String(plans.length-1));
+				row.appendChild(cell);				
+					
+				var cell = document.createElement("td");
+				cell.setAttribute('style', 'width:15%;');
+					
+				button = document.createElement("input");
+				button.setAttribute('type', 'button');
+				button.setAttribute('value', 'Получить заказы');
+				button.setAttribute('id', plans.length-1);
+				button.setAttribute('class', 'getOrd');
+				button.setAttribute('style', 'width:100%;');
+					
+				button.onclick = function(e){
+					click_button_get_orders_in_plan(e);		
+				};
+				cell.appendChild(button);
+				row.appendChild(cell);
+				
+				var cell = document.createElement("td");
+				cell.setAttribute('style', 'width:7%;');
+					
+				button = document.createElement("input");
+				button.setAttribute('type', 'button');
+				button.setAttribute('value', 'Удалить');
+				button.setAttribute('id', plans.length-1);
+				button.setAttribute('class', 'deletePlan');
+				button.setAttribute('style', 'width:100%;');
+					
+				button.onclick = function(e){
+					delete_plan_button(e);		
+				};
+				cell.appendChild(button);
+				
+				row.appendChild(cell);
+				tblBody.appendChild(row);
+			}
+		}
+		
+		function click_button_get_orders_in_plan(e){
+			if (planWasChanged) {
+			
+						result = confirm("При переходе на другой план все изменения будут утеряны. Перейти?");
+						
+						if(result){
+						
+						
+						// удалить все планы с карты
+							for (var i = 0; i < pointsPlans.length; i++){
+								if (pointsPlans[i] != null){
+									if (myMap.geoObjects.indexOf(pointsPlans[i][4]) != -1){
+										myMap.geoObjects.remove(pointsPlans[i][4]);
+									}
+								}
+							}
+							
+						if (document.getElementById("checkbox-id").checked){
+							for (var i = 0; i < pointsOrders.length; i++){
+								if (pointsOrders[i] != null){
+									if (myMap.geoObjects.indexOf(pointsOrders[i][4]) == -1){
+										myMap.geoObjects.add(pointsOrders[i][4]);
+									}
+								}
+							}
+						}else{
+							for (var i = 0; i < pointsOrders.length; i++){
+								if (pointsOrders[i] != null){
+									if (myMap.geoObjects.indexOf(pointsOrders[i][4]) != -1){
+										myMap.geoObjects.remove(pointsOrders[i][4]);
+									}
+								}
+							}
+						}
+						
+						// добавить в pointsOrders заказы, создать иконку и вывести на карту
+							for (var i = 0; i < indexSave.length; i++){
+								var point = [];
+								point[0] = orders.orders[indexSave[i].oldI].lng;
+								point[1] = orders.orders[indexSave[i].oldI].lat;
+								point[2] = orders.orders[indexSave[i].oldI].number + ", " + orders.orders[indexSave[i].oldI].time_from + "-" + orders.orders[indexSave[i].oldI].time_to; 
+								var index = 1000 + indexSave[i].oldI;
+								point[3] = "Входная накладная: " + orders.orders[indexSave[i].oldI].invoice + "<br>Адрес: " + orders.orders[indexSave[i].oldI].address + "<br> Получатель: " + orders.orders[indexSave[i].oldI].receiver + "<br><input id=" + index + " type='button' class='addPoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+								pointsOrders[indexSave[i].oldI] = point;
+								
+								var new_point = createIcon(point[2], point[0], point[1], point[3], true, -1);
+								pointsOrders[indexSave[i].oldI][4] = new_point;
+								myMap.geoObjects.add(pointsOrders[indexSave[i].oldI][4]);	
+								
+							}
+							
+							for (var i = 0; i < indexDelete.length; i++){
+								var point = [];
+								point[0] = plans[currPlan].orders[indexDelete[i].oldI].lng;
+								point[1] = plans[currPlan].orders[indexDelete[i].oldI].lat;
+								point[2] = plans[currPlan].orders[indexDelete[i].oldI].number + ", " + plans[currPlan].orders[indexDelete[i].oldI].time_from + "-" + plans[currPlan].orders[indexDelete[i].oldI].time_to; 
+								var index = 1000 + indexDelete[i].oldI;
+								point[3] = "Входная накладная: " + plans[currPlan].orders[indexDelete[i].oldI].invoice + "<br>Адрес: " + plans[currPlan].orders[indexDelete[i].oldI].address + "<br> Получатель: " + plans[currPlan].orders[indexDelete[i].oldI].receiver + "<br>Вес: " + plans[currPlan].orders[indexDelete[i].oldI].weight + "<br>Объем: " + plans[currPlan].orders[indexDelete[i].oldI].amount + "<br><input id=" + index + " type='button' class='addPoint' value = 'Добавить в план' onclick='add_to_plan(id)'>"; 
+								pointsPlans[indexDelete[i].oldI] = point;
+								
+								var new_point = createIcon(point[2], point[0], point[1], point[3], false, -1);
+								pointsPlans[indexDelete[i].oldI][4] = new_point;
+								myMap.geoObjects.add(pointsPlans[indexDelete[i].oldI][4]);
+															
+								
+							}
+							
+							for (var i = pointsOrders.length - indexDelete.length; i < pointsOrders.length; i++){
+								$("#table1 tr[id="+ i +"]").remove();	
+							}
+							
+							
+							// возврат заказов в таблицу новых заказов
+							
+							var table = document.getElementById('table1');	
+							var tblBody = document.getElementById("ordersTab1");
+							
+							
+							for (var j = 0; j < indexSave.length; j++) {
+								var row = document.createElement("tr");
+								row.setAttribute('id', indexSave[j].oldI);
+								row.setAttribute('class', indexSave[j].oldI);
+								
+								
+								var cell = document.createElement("td");
+								var type = "";
+								if (orders.orders[indexSave[j].oldI].type_del == "order"){
+									type = "/" + "Заказ";
+								}else{
+									type = "/" + "Забор";
+								}
+								var text = orders.orders[indexSave[j].oldI].number + type;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].invoice;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].date;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+							
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].time_from;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].time_to;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].address;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].receiver;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].weight;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = orders.orders[indexSave[j].oldI].amount;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+
+								tblBody.appendChild(row);
+							}
+							table.appendChild(tblBody);
+							
+							
+							var table = document.getElementById('table3');	
+							var tblBody = document.getElementById("ordersTab3");
+							
+							
+							for (var j = 0; j < indexDelete.length; j++) {
+								var row = document.createElement("tr");
+								row.setAttribute('id', indexDelete[j].oldI);
+								row.setAttribute('class', indexDelete[j].oldI);
+								
+								
+								var cell = document.createElement("td");
+								var type = "";
+								if (plans[currPlan].orders[indexDelete[j].oldI].type_del == "order"){
+									type = "/" + "Заказ";
+								}else{
+									type = "/" + "Забор";
+								}
+								var text = plans[currPlan].orders[indexDelete[j].oldI].number + type;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].invoice;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].date;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+							
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].time_from;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].time_to;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].address;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].receiver;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].weight;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								var text = plans[currPlan].orders[indexDelete[j].oldI].amount;
+								var cellText = document.createTextNode(text);
+								cell.appendChild(cellText);
+								row.appendChild(cell);
+								
+								var cell = document.createElement("td");
+								cell.setAttribute('style', 'width:7%;');
+									
+								button = document.createElement("input");
+								button.setAttribute('type', 'button');
+								button.setAttribute('value', 'Удалить');
+								button.setAttribute('id', indexDelete[j].oldI);
+								button.setAttribute('class', 'deleteOrder');
+								button.setAttribute('style', 'width:100%;');
+									
+								button.onclick = function(e){
+									delete_order_button(e);			
+								};
+								cell.appendChild(button);
+								row.appendChild(cell);
+
+								tblBody.appendChild(row);
+							}
+							table.appendChild(tblBody);
+							
+							
+							// минусовать характеристики плана
+							var weight = $("#table2 #weight" + currPlan).text();
+							for (var i = 0; i < indexSave.length; i++){
+								weight = Number(weight) - Number(orders.orders[indexSave[i].oldI].weight); 
+							}
+							
+							$("#table2 #weight" + currPlan).text(weight);
+							
+							var amount = $("#table2 #amount" + currPlan).text();
+							for (var i = 0; i < indexSave.length; i++){
+								amount = Number(amount) - Number(orders.orders[indexSave[i].oldI].amount); 
+							}
+							$("#table2 #amount" + currPlan).text(amount);
+							
+							var count = $("#table2 #count" + currPlan).text();
+							count = Number(count) - indexSave.length;
+							$("#table2 #count" + currPlan).text(count);
+
+							///
+							var weight = $("#table2 #weight" + currPlan).text();
+							for (var i = 0; i < indexDelete.length; i++){
+								weight = Number(weight) + Number(plans[currPlan].orders[indexDelete[i].oldI].weight); 
+							}
+							
+							$("#table2 #weight" + currPlan).text(weight);
+							
+							var amount = $("#table2 #amount" + currPlan).text();
+							for (var i = 0; i < indexDelete.length; i++){
+								amount = Number(amount) + Number(plans[currPlan].orders[indexDelete[i].oldI].amount); 
+							}
+							$("#table2 #amount" + currPlan).text(amount);
+							
+							var count = $("#table2 #count" + currPlan).text();
+							count = Number(count) + indexDelete.length;
+							$("#table2 #count" + currPlan).text(count);
+							
+
+							indexSave = [];
+							indexDelete = [];
+							
+							planWasChanged = false;		
+							
+						}else{
+							return;
+						}
+				}
+				
+					// удалить все планы с карты
+							for (var i = 0; i < pointsPlans.length; i++){
+								if (pointsPlans[i] != null){
+									if (myMap.geoObjects.indexOf(pointsPlans[i][4]) != -1){
+										myMap.geoObjects.remove(pointsPlans[i][4]);
+									}
+								}
+							}
+									
+							if (document.getElementById("checkbox-id").checked){
+								for (var i = 0; i < pointsOrders.length; i++){
+									if (pointsOrders[i] != null){
+										if (myMap.geoObjects.indexOf(pointsOrders[i][4]) == -1){
+											myMap.geoObjects.add(pointsOrders[i][4]);
+										}
+									}
+								}
+							}else{
+								for (var i = 0; i < pointsOrders.length; i++){
+									if (pointsOrders[i] != null){
+										if (myMap.geoObjects.indexOf(pointsOrders[i][4]) != -1){
+											myMap.geoObjects.remove(pointsOrders[i][4]);
+										}
+									}
+								}
+							}
+								
+						
+						
+					currPlan = -1;
+					//очистить таблицу планов
+					$("#table3 .ui-sortable").remove();
+					
+					//удалить маршрут если есть
+					if (currRoute != null){
+						myMap.geoObjects.remove(currRoute);
+						currRoute = null;
+					}
+				
+					var index = e.path[0].id;
+					currPlan = index;
+					create_orders_table(plans[index], "table3");
+					sortable();
+
+					pointsPlans = [];
+
+					for (var i = 0; i < plans[index].orders.length; i++){
+						var point = [];
+						point[0] = plans[index].orders[i].lng;
+						point[1] = plans[index].orders[i].lat;
+						point[2] = plans[index].orders[i].number + ", " + plans[index].orders[i].time_from + "-" + plans[index].orders[i].time_to; 
+						point[3] = "Входная накладная: " + plans[index].orders[i].invoice + "<br>Адрес: " + plans[index].orders[i].address + "<br> Получатель: " + plans[index].orders[i].receiver + "<br>Вес: " + plans[index].orders[i].weight + "<br>Объем: " + plans[index].orders[i].amount; 
+						pointsPlans[i] = point;
+						
+					}
+			
+					add_points_on_map(myMap, pointsPlans, false, false);
+		}
+	
+		function change_visibility_zones(id){
+			var check = document.getElementById(id).checked;
+			if (check){
+				for (var i = 0; i < zonesProvider.zones.length; i++){
+					if (myMap.geoObjects.indexOf(zonesProvider.zones[i].ref) == -1){
+						myMap.geoObjects.add(zonesProvider.zones[i].ref);
+					}
+					
+				}
+			}else{
+				for (var i = 0; i < zonesProvider.zones.length; i++){
+					if (myMap.geoObjects.indexOf(zonesProvider.zones[i].ref) != -1){
+						myMap.geoObjects.remove(zonesProvider.zones[i].ref);
+					}
+					
+				}
+			}
+		
+		}
+		
+		function change_visibility_orders(id){
+			var check = document.getElementById(id).checked;
+			if (check){
+				for (var i = 0; i < pointsOrders.length; i++){
+					if (pointsOrders[i] != null){
+						if (myMap.geoObjects.indexOf(pointsOrders[i][4]) == -1){
+							myMap.geoObjects.add(pointsOrders[i][4]);
+						}
+					}
+					
+				}
+				for (var i = 0; i < pointsPlans.length; i++){
+					if (pointsPlans[i] != null){
+						if (myMap.geoObjects.indexOf(pointsPlans[i][4]) == -1){
+							myMap.geoObjects.add(pointsPlans[i][4]);
+						}
+					}
+				}
+			}else{
+				for (var i = 0; i < pointsOrders.length; i++){
+					if (pointsOrders[i] != null){
+						if (myMap.geoObjects.indexOf(pointsOrders[i][4]) != -1){
+							myMap.geoObjects.remove(pointsOrders[i][4]);
+						}
+					}
+					
+				}
+				for (var i = 0; i < pointsPlans.length; i++){
+					if (pointsPlans[i] != null){
+						if (myMap.geoObjects.indexOf(pointsPlans[i][4]) == -1){
+							myMap.geoObjects.add(pointsPlans[i][4]);
+						}
+					}
+					
+				}
+			}
+		}
+		
+		
+</script>
+
+
+</head>
+
+<body id = 'body'>
+
+<div class="tabs" style="width: 40%;"> 
+
+	<input type="radio" name="inset" value="" id="tab_1" checked>
+    <label for="tab_1">Новые заказы</label>
+
+	<input type="radio" name="inset" value="" id="tab_2">
+    <label for="tab_2">Планы доставки</label>
+	
+	<input type="radio" name="inset" value="" id="tab_3">
+    <label for="tab_3">Настройки</label>
+	
+    <div id="txt_1" style="height:95%;">
+		<input id="date1" type="date" value="" onchange="change_date('date1')">
+		<input id="button1" class="refresh" type="button" value = "Обновить" onclick="get_orders()">
+		<br><br>
+		<div class="conteiner" style="height:95%;">
+        <table id="table1">
+		<thead><tr class = 'head'><th>Номер<br>заказа</th><th>Входная<br>накладная</th><th>Дата доставки</th><th>Время с</th><th>Время по</th><th>Адрес</th><th>Получатель</th><th>Вес</th><th>Объем</th></tr></thead>
+		</table> 
+		</div>		
+    </div>
+    <div id="txt_2" style="height:95%;">
+		<input id="date2" type="date" value="" onchange="change_date('date2')">
+		
+		<span id="check"><input type="checkbox" id="checkbox-id" onchange="change_visibility_orders('checkbox-id')" /> <label for="checkbox-id">Показать совместно</label></span>
+		
+		<div style="float: right;"><input style="float: left;"id="button" class="refresh" type="button" value = "Создать план" onclick="create_new_plan()"> &nbsp; &nbsp;
+		<input style="float: right;" id="button2" class="refresh" type="button" value = "Обновить" onclick="get_plans()">
+		</div>
+		<br><br>
+        <div class="conteiner" style="height:45%;">
+		<table id="table2">
+			<thead><tr class="head"><th>Номер<br>маршрута</th><th>Машина</th><th>Водитель</th><th>Количество<br>заказов</th><th>Вес</th><th>Объем</th><th>Заказы</th><th>Удаление</th></tr></thead>
+			<tbody id = "plansTab"></tbody>
+		</table>
+		</div>  
+		<div id="ord" style="height:5%;">
+		<input id="save" class="refresh" type="button" value = "Сохранить план" onclick='savePlan()'>
+		</div>
+		<div class="conteiner" style="height:45%; width:100%">
+		<table id="table3" cellspacing="2" cellpadding="2" onclick="sortable()">
+			<thead><tr class="head"><th>Номер<br>заказа</th><th>Входная<br>накладная</th><th>Дата доставки</th><th>Время с</th><th>Время по</th><th>Адрес</th><th>Получатель</th><th>Вес</th><th>Объем</th><th>Удаление</th></tr></thead>
+		</table>
+		</div>
+
+	</div>  
+	
+	
+	<div id="txt_3" style="height:95%;">
+		<span id="check"><input type="checkbox" id="checkbox-id2" onchange="change_visibility_zones('checkbox-id2')"/> <label for="checkbox-id2">Показывать зоны</label></span>
+	</div>  
+</div>
+
+<div class = "myMap">
+	<div id = "map">
+		<div id="map_process" style="color: red; left: 10px; z-index: 80001; display: block; top: 10px">Поcтроение карты...</div>
+	</div>
+	<div id="dragbar"></div>
+</div>
+
+
+
+<!-- Установить курьеров по зонам: модальное окно -->
+        <div id="popupbox">
+            <form id = "form_select"></form>
+        </div>
+
+
+</body>
+</html>

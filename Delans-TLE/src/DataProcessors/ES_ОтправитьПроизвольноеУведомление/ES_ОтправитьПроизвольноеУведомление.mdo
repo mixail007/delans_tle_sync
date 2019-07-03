@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b3d6a1ff-4969-46c7-8d37-beadee382b7d">
+  <producedTypes>
+    <objectType typeId="586a2f91-4e9c-4469-ad39-28a33e58c467" valueTypeId="253a993d-3dfc-40e3-8884-76161346390c"/>
+    <managerType typeId="938ae62c-4e3b-4836-8694-96128942cd4d" valueTypeId="4cd0912b-90fb-4e5a-8356-fef42fcf4b20"/>
+  </producedTypes>
+  <name>ES_ОтправитьПроизвольноеУведомление</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправить произвольное  (ES)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ES_ОтправитьПроизвольноеУведомление.Form.Форма</defaultForm>
+  <attributes uuid="6aedc4bc-e9e7-4071-aaeb-557eee2ad418">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="70218068-384a-43e9-a4c3-40fff976d850">
+    <name>Содержание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="12b5bd37-473d-4e56-b4ab-68cb7bc0eb72">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

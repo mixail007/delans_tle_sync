@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8bc4d025-7562-4eb3-8223-85989b4d48ab">
+  <name>Отчеты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчеты</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Report.Взаиморасчеты</content>
+  <content>Report.ДенежныеСредства</content>
+  <content>Report.Продажи</content>
+  <content>Report.Запасы</content>
+  <content>Report.Закупки</content>
+  <content>Report.ES_АнализПлатежей</content>
+  <content>Report.ES_АнализДоставки</content>
+  <content>Report.ES_РасходЗапасов</content>
+  <content>Report.ES_ЗагрузкаКурьеров</content>
+  <content>Report.ES_ОтчетЗаказчику</content>
+  <content>Report.ES_ИзменениеСтатусов</content>
+  <content>Report.ES_АвансыЗаказчиков</content>
+  <content>Report.ДоходыРасходы</content>
+  <content>Report.ДоходыИРасходы</content>
+  <content>Report.ES_ТоварыНаСкладе</content>
+  <content>Report.ES_ЗаказыНаСкладе</content>
+  <content>Report.ES_ЗаказыУКурьеров</content>
+  <content>Report.ES_ПрайсЛист</content>
+  <content>Report.ДенежныеСредстваВКассахККМ</content>
+  <content>Report.ES_МатрицаНаправлений</content>
+  <content>Report.ES_ПрайсЛистДопУслуги</content>
+  <content>Report.ES_ДвижениеЗаказовПоСкладам</content>
+  <content>Report.ES_ДоставкаПартнерами</content>
+  <content>Report.ES_ОтчетПоКлиентам</content>
+  <content>Report.ES_ОтчетАгента</content>
+  <content>Report.ФинансовыйРезультат</content>
+  <content>Report.ES_АнализCборов</content>
+  <content>Report.ES_ОтправкаSMSProstor</content>
+  <parentSubsystem>Subsystem.ES_СлужбаДоставки</parentSubsystem>
+</mdclass:Subsystem>

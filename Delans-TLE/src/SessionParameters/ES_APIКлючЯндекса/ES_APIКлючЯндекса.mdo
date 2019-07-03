@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:SessionParameter xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c1108428-10e9-496f-9f0f-7e10ef216ef1">
+  <name>ES_APIКлючЯндекса</name>
+  <synonym>
+    <key>ru</key>
+    <value>APIКлюч яндекса (ES)</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>50</length>
+    </stringQualifiers>
+  </type>
+</mdclass:SessionParameter>

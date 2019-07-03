@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bf2df4f6-5c5d-42a5-a632-303abb4e77d4">
+  <producedTypes>
+    <refType typeId="d4e57ebe-9882-405d-baa4-c67651aa7cda" valueTypeId="0997f7db-b626-439b-bb40-a82d705a7f08"/>
+    <listType typeId="36f6221e-bde2-44d6-a6c3-e7a631c0b827" valueTypeId="a53fe430-662c-493d-8346-99a863198a15"/>
+    <managerType typeId="84919c99-f01b-4b7e-8d09-1ef4ac1e3dd9" valueTypeId="4f5296fb-e5ac-4740-b8e1-c4930600a663"/>
+  </producedTypes>
+  <name>ES_ВидыДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды доставки</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="93c43466-0b24-4e5f-8976-96369722d826">
+    <name>СкладДвери</name>
+    <synonym>
+      <key>ru</key>
+      <value>Терминал - Двери</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="93863db3-55b0-44a9-8542-ffeef7a81f24">
+    <name>СкладСклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Терминал - Терминал</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5846f46c-f7ca-4896-91b9-20ddc3aac6e7">
+    <name>ДвериДвери</name>
+    <synonym>
+      <key>ru</key>
+      <value>Двери - Двери</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="72ea874a-a859-4774-a2c5-771bab3df68a">
+    <name>Самовывоз</name>
+    <synonym>
+      <key>ru</key>
+      <value>Терминал - ПВЗ</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

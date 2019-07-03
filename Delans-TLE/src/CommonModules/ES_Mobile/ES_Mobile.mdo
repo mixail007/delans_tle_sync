@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1d9585a9-a236-4fec-9469-d7ce1319140b">
+  <name>ES_Mobile</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s mobile</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

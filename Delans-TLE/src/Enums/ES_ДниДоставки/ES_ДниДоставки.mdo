@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="510ac747-e2b4-4bc8-a72b-8357c779e71d">
+  <producedTypes>
+    <refType typeId="2f5f16cd-0d54-40c3-aaf4-7d8bda0a4b22" valueTypeId="46083002-72d1-4615-baed-1e06908c472c"/>
+    <listType typeId="c4d84df4-0a22-4645-abd5-ed1a52d1757f" valueTypeId="ddf88cce-48d9-4de3-ad70-dd776e919228"/>
+    <managerType typeId="fff1bf37-42da-4836-814d-2f0313c9c12c" valueTypeId="10089f27-ad8b-4e5c-8807-fd5ed5fdc2c0"/>
+  </producedTypes>
+  <name>ES_ДниДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дни доставки</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="a856350d-6a4e-4de9-8f3b-eaebc8b1bd8b">
+    <name>Сегодня</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сегодня</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="af830049-5885-4c30-9e37-eed8bc4e9d64">
+    <name>Завтра</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завтра</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d6873704-c648-4a57-b5a0-902257b75d83">
+  <name>ES_ПрочиеОбьекты</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Прочие обьекты</value>
+  </synonym>
+</mdclass:Role>

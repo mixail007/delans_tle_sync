@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ee7aa3b5-1792-466b-904a-a84df03152c7">
+  <name>EFSOL</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>HTTPService.Link42Service</content>
+  <content>Constant.EFSOL_ИспользоватьИнструментыБухгалтера</content>
+  <content>Constant.EFSOL_ИДБазыДанных</content>
+  <content>Constant.EFSOL_НормаВремениВыполненияЗапроса</content>
+  <content>Constant.EFSOL_AccountID</content>
+  <content>Constant.EFSOL_Beta</content>
+</mdclass:Subsystem>

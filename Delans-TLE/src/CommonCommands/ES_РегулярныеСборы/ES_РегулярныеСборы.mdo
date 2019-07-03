@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ca608780-1d62-49ee-b005-c7562f6b51dd">
+  <name>ES_РегулярныеСборы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регулярные сборы</value>
+  </synonym>
+  <group>ActionsPanelTools</group>
+  <commandParameterType/>
+  <representation>Auto</representation>
+  <shortcut></shortcut>
+</mdclass:CommonCommand>

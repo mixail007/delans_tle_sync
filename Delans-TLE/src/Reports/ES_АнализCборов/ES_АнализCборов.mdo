@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="af8a4b6f-4f90-4d14-b2fc-ba2ef106df5c">
+  <producedTypes>
+    <objectType typeId="4ebdb225-da21-4ada-ab64-5fe137d997d7" valueTypeId="4c26a0b2-2982-48e5-aff4-ce565c7d0a90"/>
+    <managerType typeId="dd90221d-daab-44b3-ae85-e9f40c21347f" valueTypeId="b2b24c14-5969-460e-87d2-41f01dbbf377"/>
+  </producedTypes>
+  <name>ES_АнализCборов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ cборов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_АнализCборов.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="39377b43-bfe7-4fa6-bfcd-4455b6171ef7">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

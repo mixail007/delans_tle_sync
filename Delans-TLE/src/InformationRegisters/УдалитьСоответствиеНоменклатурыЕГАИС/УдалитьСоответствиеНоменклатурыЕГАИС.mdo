@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="816aa5b7-24f9-4bc6-9a26-89fe26530d8b">
+  <producedTypes>
+    <selectionType typeId="46b85c7e-195c-430e-a9df-74046d8cb48e" valueTypeId="6570c0c5-f1a7-4b1e-b66d-d73994ce8ca7"/>
+    <listType typeId="4cae3ead-6b25-46b8-9568-24e823717360" valueTypeId="01685777-3316-41bd-9b1e-56ab72eb8f99"/>
+    <managerType typeId="e40ef12e-dc5a-4236-82bf-1a7de2a0391f" valueTypeId="f36bae2f-f7ba-44ad-ac9c-f7e1effd58b0"/>
+    <recordSetType typeId="9d1b998b-ec76-4dcd-9e0b-404099e8d757" valueTypeId="29baec24-1a51-440f-ac11-110dd2dcb63e"/>
+    <recordKeyType typeId="b76f1dfb-1e36-4f14-9e15-5326358a8128" valueTypeId="f6acca23-b429-4eb4-8443-7104e4861b38"/>
+    <recordType typeId="8382d2d5-6388-4071-9734-3151e6b7c0a8" valueTypeId="e405d0b6-9016-4da2-abab-1c349795db25"/>
+    <recordManagerType typeId="4a3d1b65-a902-4faf-9149-a959fc20d2bf" valueTypeId="cbecd960-caa8-4113-92f6-9a1bf3d9fa58"/>
+  </producedTypes>
+  <name>УдалитьСоответствиеНоменклатурыЕГАИС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить соответствие номенклатуры ЕГАИС</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d0edb4d1-648d-4c07-94ba-2ed2631a1783">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Наименование номенклатурной позиции</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="27be70c6-595f-492e-ac9e-71c642745fc0">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Характеристика номенклатуры, если есть</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d8e5b943-8684-4832-99d9-2a23a03a1d1b">
+    <name>Упаковка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упаковка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЕдиницыИзмерения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если у выбранной номенклатуры используются упаковки, то можно выбрать упаковку номенклатуры.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6e392596-7e6e-45ed-bf33-73001f911871">
+    <name>АлкогольнаяПродукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Алкогольная продукция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d0755083-3337-4dac-9e8d-07061ab07d1a">
+    <name>ИдентификаторУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор упаковки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

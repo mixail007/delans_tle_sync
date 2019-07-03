@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="40e746b1-0be9-4704-b406-b719930eff44">
+  <name>ES_РедактированиеЗаказаСбора</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Редактирование заказа сбора</value>
+  </synonym>
+</mdclass:Role>

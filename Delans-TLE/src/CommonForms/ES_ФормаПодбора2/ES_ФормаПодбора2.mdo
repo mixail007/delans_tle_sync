@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="07f1ab09-9c19-45ef-9223-aeb6d3dc83b3">
+  <name>ES_ФормаПодбора2</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подбор заказов</value>
+  </synonym>
+  <comment>НЕ ИСПОЛЬЗУЕТСЯ</comment>
+  <usePurposes>PersonalComputer</usePurposes>
+  <usePurposes>MobileDevice</usePurposes>
+  <useStandardCommands>true</useStandardCommands>
+  <explanation>
+    <key>ru</key>
+    <value>Список отображен в динамическом списке</value>
+  </explanation>
+</mdclass:CommonForm>

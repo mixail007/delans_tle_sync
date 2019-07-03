@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8c4f2594-4b57-4077-a546-d04feede5ebc">
+  <producedTypes>
+    <selectionType typeId="5bd03bdc-1098-498b-93bd-f144ce339e21" valueTypeId="355db118-58da-49f4-bbb4-4113376c35a5"/>
+    <listType typeId="add24374-ef3d-48c9-b7b6-cf34d29402d9" valueTypeId="7376f470-fa3e-4cab-9f84-e7447f074a95"/>
+    <managerType typeId="78a2da18-9ea2-44fd-a1b8-83e8e69307f5" valueTypeId="ef269986-3f61-4782-a15f-7e17b4da652c"/>
+    <recordSetType typeId="dc752211-9d7e-4a39-97d8-c4ddff940533" valueTypeId="5ef4f2db-3d2c-48de-9199-03cf942b2973"/>
+    <recordKeyType typeId="641e560b-0662-48a9-86ad-19d8ac713084" valueTypeId="e44b4771-110a-4fe9-aa2b-fd36538db9e3"/>
+    <recordType typeId="5624189b-8c0b-4a95-8f8c-0e7cc99b7a26" valueTypeId="d6fc131a-9da3-4f4b-9804-a83e64325a20"/>
+    <recordManagerType typeId="b2f15e7b-15f1-47ee-a4ca-eae720a1e46b" valueTypeId="843bcd68-6b3d-4fde-97b2-05b04dffa347"/>
+  </producedTypes>
+  <name>ES_СтартовыеНастройки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Стартовые настройки (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f03b6ed5-8435-4350-badb-7cc63c02f1f9">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+      <types>EnumRef.ES_ДниДоставки</types>
+      <types>CatalogRef.Номенклатура</types>
+      <types>EnumRef.ES_ВидыЗабора</types>
+      <types>Boolean</types>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      <types>EnumRef.ES_ТипПодключения</types>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>CatalogRef.Кассы</types>
+      <types>String</types>
+      <types>CatalogRef.Ячейки</types>
+      <types>EnumRef.ES_ТипыПлательщиков</types>
+      <types>EnumRef.ТипыДенежныхСредств</types>
+      <types>CatalogRef.Организации</types>
+      <types>Number</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>EnumRef.ES_СистемыОпределенияКоординат</types>
+      <types>EnumRef.ES_ВидыДоставки</types>
+      <types>AnyRef</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="31d65a74-aef1-4725-8e6b-d15e11966841">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="29f49f00-485a-4cb1-ab40-539fd8d5f9b9">
+    <name>ВидСтартовойНастройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид стартовой настройки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_ВидыСтартовыхНастроек</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

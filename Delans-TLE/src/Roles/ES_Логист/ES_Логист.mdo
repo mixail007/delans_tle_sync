@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9783d7d3-dc07-41d6-9b70-26c2c0b96dd1">
+  <name>ES_Логист</name>
+  <synonym>
+    <key>ru</key>
+    <value>Логист</value>
+  </synonym>
+</mdclass:Role>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="86d431bc-67a4-4ec3-be28-98f284239d34">
+  <producedTypes>
+    <objectType typeId="487b3376-84a7-4371-ba54-bed63a7d1ff1" valueTypeId="7b8cc201-51b7-4d90-8f69-b6a9ff89c80e"/>
+    <managerType typeId="728f87c8-e2cf-440a-95b9-8506f4ef0c95" valueTypeId="73bed63a-1ff7-43d1-ba27-4e68cdf994bd"/>
+  </producedTypes>
+  <name>ES_АнализПлатежей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ НП</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_АнализПлатежей.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <templates uuid="20931e8f-ff7a-4c19-a5a2-9992828b0d49">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

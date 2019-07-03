@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a68c51ee-92d5-415d-9353-8b3e1e13ff88">
+  <producedTypes>
+    <managerType typeId="0f5a2f3c-c594-4a70-a7de-d9ac924ac2e2" valueTypeId="ee9deeb5-ce08-485b-b470-fc6f98ef942d"/>
+    <valueManagerType typeId="a83d8910-820d-46ff-9e70-4320a7305a46" valueTypeId="f9f6cc81-58ef-43e9-a767-51d1f3a7a4e9"/>
+    <valueKeyType typeId="c6194897-9942-45f0-9084-5f13996bec8d" valueTypeId="016dbd6d-4807-4977-bd07-176efa46cfe3"/>
+  </producedTypes>
+  <name>ES_ВремяВозможноеДляЗадержкиТакси</name>
+  <synonym>
+    <key>ru</key>
+    <value>Время возможное для задержки такси (сек.)</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>4</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

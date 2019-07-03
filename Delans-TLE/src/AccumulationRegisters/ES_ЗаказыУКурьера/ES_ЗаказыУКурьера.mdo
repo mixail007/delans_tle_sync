@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9341aff2-6d2d-4ba1-9282-573fda0f45c2">
+  <producedTypes>
+    <selectionType typeId="32fbaf89-0b55-4d7c-b980-6936821962ca" valueTypeId="6fab36ff-e5f9-48d6-b222-bd57252a9ef1"/>
+    <listType typeId="a4b335fd-184b-4b7a-8c2c-15a6d71daa92" valueTypeId="53c11702-a3f6-4488-bc86-585b67f6370e"/>
+    <managerType typeId="003dde72-7e68-4956-ba97-8b91b39fcb58" valueTypeId="2ee9e88b-b710-40f0-a422-33b624157aae"/>
+    <recordSetType typeId="7c91b3c7-f7a0-4c3d-becc-994dffa407e8" valueTypeId="1894f799-278d-4e9f-ab0d-8e299c9734cb"/>
+    <recordKeyType typeId="12afef36-96d4-40d0-b1de-84cd32aa7922" valueTypeId="5c024b71-e7ce-4e02-b09d-83150d2acb7c"/>
+    <recordType typeId="8391e1eb-6059-4ea0-8750-1220e76bbee9" valueTypeId="ebf3f8ab-2a95-4068-8f1e-835b121066f2"/>
+  </producedTypes>
+  <name>ES_ЗаказыУКурьера</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказы у курьера (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="8158bb3f-9729-474a-aaf7-03cd1b7c81c2">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="d0d9ef2a-0d81-4216-9845-fb1eb7c15362">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ce702398-4ec8-4443-8d2d-454158e9bd87">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

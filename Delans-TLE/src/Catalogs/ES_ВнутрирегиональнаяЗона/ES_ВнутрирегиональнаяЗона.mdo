@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="30a71309-29c0-4bb8-8258-94213cd8fef6">
+  <producedTypes>
+    <objectType typeId="fe24e7e9-b319-431a-81bd-d7bdd1672d64" valueTypeId="13e9e865-0dd1-4321-80fb-aa2e39ac3c33"/>
+    <refType typeId="e7f0890a-d197-4d29-9eed-f1cecb268ca6" valueTypeId="79684b09-6dfe-4e3f-b8ec-239c3b6bb3b6"/>
+    <selectionType typeId="3ff9d840-ff19-41ac-87f2-eb3163e8b391" valueTypeId="567cc05b-cd59-43c2-bde4-3c2200b30889"/>
+    <listType typeId="45c22183-0ad7-4091-9c7b-3bd233d88bc4" valueTypeId="c8f83896-73a7-4168-9c2e-2a1060ac7761"/>
+    <managerType typeId="e59c6ddc-552a-422f-b39c-a62ac6ad6487" valueTypeId="5b70c514-d9cc-4572-9411-afd4847283b9"/>
+  </producedTypes>
+  <name>ES_ВнутрирегиональнаяЗона</name>
+  <synonym>
+    <key>ru</key>
+    <value>Региональные зоны</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ES_ВнутрирегиональнаяЗона.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ES_ВнутрирегиональнаяЗона.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="43229a71-c11a-46c1-8f12-0988209f3b1e">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

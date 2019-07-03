@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fb038f1b-001a-4f7d-b496-c9b4f2352c2f">
+  <producedTypes>
+    <selectionType typeId="f80ba3d7-246b-408d-8eb5-7f94777d1c4b" valueTypeId="fa8c2129-b216-457b-9ffc-33eb55b1dc8a"/>
+    <listType typeId="eae797ed-a6bc-4f52-a671-cc5a47858b11" valueTypeId="fa165fbb-9553-4ef1-bc22-428b1f8d5454"/>
+    <managerType typeId="0a6a743b-5773-463d-a33d-3ee2c8061471" valueTypeId="d9e60d54-565f-40b3-a700-3c53a580434f"/>
+    <recordSetType typeId="587b435d-0f3c-4e9a-8526-2b894e13998b" valueTypeId="ca861409-db36-4741-afb4-53b5b367faee"/>
+    <recordKeyType typeId="20490270-597e-4633-ba4c-ecb6d7121172" valueTypeId="b1c2f24f-46b6-418c-9176-2e2bb4489721"/>
+    <recordType typeId="31b09747-f815-4a29-b2bc-9d92b2b3ce96" valueTypeId="1183c367-c224-4283-ad18-eec6e5886585"/>
+    <recordManagerType typeId="9a335364-7d45-4903-aac4-042cc5d46185" valueTypeId="3300929d-df9c-4f62-b53e-2b6a2d669c94"/>
+  </producedTypes>
+  <name>ES_МатрицаЗон</name>
+  <synonym>
+    <key>ru</key>
+    <value>Матрица зон</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b28ff443-4f1d-4bd2-8d94-547af2f769db">
+    <name>Зона</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ES_ЗоныДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="dfb175e2-1998-46cb-ad02-17b8a04cbf9b">
+    <name>СрокДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок доставки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="5d9081b1-ec97-4e84-a6c5-ff9fa385e739">
+    <name>Направление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ES_Направления</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8fc7f6de-c248-40ca-a4b9-00b24e38c3a4">
+    <name>Продукт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срочность</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_СрочностьДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2eec35a7-78e7-423c-acac-4faf0f5716eb">
+    <name>ВидКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид контрагента</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_ВидКонтрагента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

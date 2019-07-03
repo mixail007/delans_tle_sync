@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="499fa863-a5f3-40df-808a-a4b409a7313b">
+  <name>ES_YandexMaps</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s yandex maps</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+  <server>true</server>
+  <serverCall>true</serverCall>
+</mdclass:CommonModule>

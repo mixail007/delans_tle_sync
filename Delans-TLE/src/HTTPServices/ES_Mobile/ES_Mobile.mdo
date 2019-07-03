@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7b4df766-4651-4ac9-87aa-601f53795766">
+  <name>ES_Mobile</name>
+  <synonym>
+    <key>ru</key>
+    <value>Mobile (efsol)</value>
+  </synonym>
+  <rootURL>es-mobile</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="6a292ddb-5c94-4a04-ad81-27ec71bc7716">
+    <name>GetDeliveryReport</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get delivery report</value>
+    </synonym>
+    <template>/GetDeliveryReport</template>
+    <methods uuid="fdd6ab57-f3db-4840-9da3-50e9dd49cf33">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetDeliveryReport</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="7aba597e-06c7-4a8e-b97a-26ec88c0245f">
+    <name>SendDeliveryReport</name>
+    <synonym>
+      <key>ru</key>
+      <value>Send delivery report</value>
+    </synonym>
+    <template>/SendDeliveryReport</template>
+    <methods uuid="126fd829-8b8a-46ad-9aa3-48a80e6845d0">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>SendDeliveryReportPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="a578954a-ec0a-4e9e-a3d8-86c744cbf50a">
+    <name>GetPushID</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get push ID</value>
+    </synonym>
+    <template>/getpushID</template>
+    <methods uuid="f94fd542-9b99-4b03-863c-1d841dcdf5d4">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>GetPushIDGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2176b383-e4cb-4c08-a6f7-0e4af0dfe7d8">
+    <name>get_courier_coordinates</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get courier coordinates</value>
+    </synonym>
+    <template>/get_courier_coordinates</template>
+    <methods uuid="33dd9d55-ceb4-465d-abcf-c5c3901951fa">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>get_courier_coordinatesGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="09b4bcca-1794-453a-b05e-e9e68eca343b">
+    <name>SendGoogleDriveToken</name>
+    <synonym>
+      <key>ru</key>
+      <value>Send google drive token</value>
+    </synonym>
+    <template>/SendGoogleDriveToken</template>
+    <methods uuid="af8890a5-5ee4-48ff-bee1-72ef32b4b7e4">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>SendGoogleDriveTokenPOST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

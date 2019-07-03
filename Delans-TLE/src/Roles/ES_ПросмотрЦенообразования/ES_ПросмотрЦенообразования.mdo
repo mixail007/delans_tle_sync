@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d8063fd8-3588-47c2-9064-47bce82fc25f">
+  <name>ES_ПросмотрЦенообразования</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Просмотр ценообразования</value>
+  </synonym>
+</mdclass:Role>

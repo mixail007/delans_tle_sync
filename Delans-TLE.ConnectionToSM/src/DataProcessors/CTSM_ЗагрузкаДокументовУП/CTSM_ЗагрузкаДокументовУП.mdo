@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6dfcfde5-df9c-47f6-866f-4ce8fbdbe974">
+  <producedTypes>
+    <objectType typeId="2d260ad6-ceeb-48e9-87c3-777053a224a7" valueTypeId="454b3edb-0fb6-490e-a8b7-31f1775447a7"/>
+    <managerType typeId="7eaaf9f4-b9df-49a2-9c41-310c02a50bc5" valueTypeId="b55f8041-4815-4fb2-bc05-425cbaeacc4d"/>
+  </producedTypes>
+  <name>CTSM_ЗагрузкаДокументовУП</name>
+  <synonym>
+    <key>ru</key>
+    <value>ДокАрхив и Загрузка документов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.CTSM_ЗагрузкаДокументовУП.Form.УпрОсновнаяФорма</defaultForm>
+  <forms uuid="9e32b3d1-d1d3-4462-be62-8c84e4bfd20b">
+    <name>УпрОсновнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Главное окно программы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5466d85c-6396-44e8-89ab-732e85baaa64">
+    <name>УпрФормаВерификации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма верификации</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6d2c3d0e-65d9-46b5-b1de-4ad46620daba">
+    <name>УпрАвторизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Авторизация программы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b6c29616-d9d8-4986-b5d2-855fa67e37c7">
+    <name>УпрФормаДобавленияФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма добавления файлов</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d6fc4a68-bb49-4f94-b00f-a5ce2999524f">
+    <name>УпрФормаНастройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Меню настроек программы </value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3c5b5078-7697-4255-8529-f9c6383e2d76">
+    <name>УпрФормаНовыхЭлементовСправочников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работа с новыми элементами справочников </value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="73f6bb86-c6cd-44ef-b35e-9538e4ea30c7">
+    <name>УпрФормаСловаря</name>
+    <synonym>
+      <key>ru</key>
+      <value>Словарь соответствий</value>
+    </synonym>
+    <includeHelpInContents>true</includeHelpInContents>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ebd80430-c758-42ba-a13c-9954ee751ff7">
+    <name>УпрСоставОбъектовСловаря</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состав объектов словаря</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0999a060-7af0-475e-a8c6-c96f20eb4524">
+    <name>УпрФормаОтправкиДокументовНаТестирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма отправки документов на тестирование</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="656a38f4-b202-4bdb-9150-3f5198b8bb86">
+    <name>УпрФормаДопРеквизитов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма доп реквизитов</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6fa076d3-01d6-490d-92ff-fd6ed1cafb17">
+    <name>УпрФормаОПрограмме</name>
+    <synonym>
+      <key>ru</key>
+      <value>О программе</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f740b2e8-bae7-4175-83fe-aa0f5c083432">
+    <name>УпрФормаОбновления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма обновления</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="30136b8c-0221-42e6-b7e4-04eabc103fc7">
+    <name>УпрДанныеПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр данные пользователя</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7c721015-d7cb-41f9-bf66-454f51b02f84">
+    <name>УпрФормаРазрешениеПередачиФайловИнтернет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма разрешение передачи файлов интернет</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ec72d371-521e-4e37-9d1d-498b4b1a2082">
+    <name>УпрФормаНастройкаСортировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма настройка сортировки</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="18195cd1-1b3c-4cff-a850-d1e5ced941bf">
+    <name>УпрФормаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма доступа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f210eb71-5e41-4ae4-9a41-8355a147590d">
+    <name>УпрФормаСоздатьКонтрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма создать контрагент</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dc761582-50f1-4151-be9a-d5e3482a8de8">
+    <name>УпрФормаСправка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма справка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="740583ae-32f0-4b6b-9aa6-88033eb19b0c">
+    <name>ФормаТестированияНечеткогоПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма тестирования нечеткого поиска</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0812c3c2-d103-4368-b634-a5e59ae0cac8">
+    <name>ФормаПросмотраДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма просмотра документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8392a0dc-0880-46c7-bc03-0f6a9c0cc748">
+    <name>УпрФормаНайденыДубли</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упр форма найдены дубли</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="c9ba2507-995f-4964-b87d-09886af42819">
+    <name>СоглашениеОРазрешенииРаботыССервисом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Соглашение о разрешении работы с сервисом</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="62c0c5e9-cd97-4945-9fa0-53646dea33db">
+    <name>Справка</name>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="ed4d8715-d812-4f99-a3b6-edec05962514">
+    <name>СправкаRicoh</name>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="158724fd-02b1-442f-ba7f-011edab9cbbe">
+    <name>Справка1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Справка1</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="71610fe3-719c-421c-9928-e43a83386c29">
+    <name>ТестПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тест поиска</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

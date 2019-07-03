@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9066b490-24f6-47c8-a013-5d2612cebf0d">
+  <name>CTSM_ДокАрхивИЗагрузкаДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>ДокАрхив и Загрузка документов</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>DataProcessor.CTSM_ЗагрузкаДокументовУП</content>
+  <content>1143c491-3d17-42d2-b92c-469369bbca23</content>
+</mdclass:Subsystem>

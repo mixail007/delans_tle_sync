@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b2340ae-a033-4b45-a384-68ea430cf1e5">
+  <name>API_GD</name>
+  <synonym>
+    <key>ru</key>
+    <value>API GD</value>
+  </synonym>
+  <rootURL>api-delivery</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="6aa70e8e-97f9-4c0c-a607-3fffb93e9482">
+    <name>Authorization</name>
+    <synonym>
+      <key>ru</key>
+      <value>Authorization</value>
+    </synonym>
+    <template>/login</template>
+    <methods uuid="55459417-3845-4a3e-a57c-1a815684c244">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>AuthorizationPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2de28b0a-337c-45f2-8b0a-0e395285964c">
+    <name>CloseAuthorization</name>
+    <synonym>
+      <key>ru</key>
+      <value>Close authorization</value>
+    </synonym>
+    <template>/logout</template>
+    <methods uuid="81936aef-acb4-42c1-bfbc-abbac9a85f74">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>CloseAuthorizationPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="fb06661e-2b20-4708-b57b-1bd31522ee12">
+    <name>ShipmentsCreate</name>
+    <synonym>
+      <key>ru</key>
+      <value>Shipments create</value>
+    </synonym>
+    <template>/createshipments</template>
+    <methods uuid="a1ff413e-d6ae-4240-97f7-ed70d3769941">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ShipmentsCreatePOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="3eeea86a-423b-4d65-bdf2-5d1f910aa06e">
+    <name>СallСourier</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сall сourier</value>
+    </synonym>
+    <template>/couriercall</template>
+    <methods uuid="d4ae2809-da4e-4a55-8b8e-69a8ed1ea232">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>СallСourierPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d1abb453-a6b6-4a8d-b4f9-8b99d6149ce1">
+    <name>CancelCouriercAll</name>
+    <synonym>
+      <key>ru</key>
+      <value>Cancel courierc all</value>
+    </synonym>
+    <template>/couriercallcancel</template>
+    <methods uuid="6f2b91f5-c412-42d0-bccb-e0487fe110c1">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>CancelCouriercAllPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="125e2fe5-ea70-4d10-aa7f-9d09163a84ad">
+    <name>SaveCustomerRegistration</name>
+    <synonym>
+      <key>ru</key>
+      <value>Save customer registration</value>
+    </synonym>
+    <comment>//Сохранение данных клиента по завершению регистрации в ЛК</comment>
+    <template>/SaveCustomerRegistration</template>
+    <methods uuid="20143775-28f4-48c3-8641-5b05b3556814">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>SaveCustomerRegistrationPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="38c839ab-1f0a-496e-bdf2-6db1b06af226">
+    <name>GetInvoiceInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get invoice info</value>
+    </synonym>
+    <comment>//Получение информации по заявке</comment>
+    <template>/GetInvoiceInfo</template>
+    <methods uuid="cdf4ad2f-0d17-49f3-9f5e-5d9c069a5b5e">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetInvoiceInfoPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="1fc10c98-c61f-4e2a-985b-96a9a9b9cc82">
+    <name>MonitorInvoiceInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Monitor invoice info</value>
+    </synonym>
+    <comment>//Получение статусов заявок</comment>
+    <template>/MonitorInvoiceInfo</template>
+    <methods uuid="12ec6c83-d409-4384-95e9-510d17dda826">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>MonitorInvoiceInfoPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="e417a5d3-867f-4249-a1ad-c5b348178462">
+    <name>GetExtMon</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get ext mon</value>
+    </synonym>
+    <comment>//Получение информации по заявкам за период</comment>
+    <template>/GetExtMon</template>
+    <methods uuid="11213fee-6ba2-4213-b976-640e2b7bd16f">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetExtMonPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="a7b32fdc-a40e-4a8d-943b-b215f8a40d9f">
+    <name>GetOrders</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get orders</value>
+    </synonym>
+    <comment>//Получение информации по заказам на сбор за период</comment>
+    <template>/GetOrders</template>
+    <methods uuid="4b9c5b8c-1128-4218-be22-5dc77f186ff8">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetOrdersPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="e8943d02-97b2-43a7-9933-e362033bbfa9">
+    <name>GetStickers</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get stickers</value>
+    </synonym>
+    <comment>Получить наклейки</comment>
+    <template>/GetStickers</template>
+    <methods uuid="81677ce7-6126-4bce-93aa-c5a9e9318015">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetStickersPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="b77ede44-d451-43e6-ab69-62f63b5a9140">
+    <name>CustomerInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Customer info</value>
+    </synonym>
+    <comment>Информация о клиенте</comment>
+    <template>/CustomerInfo</template>
+    <methods uuid="9115ca4f-c153-41cc-aa88-2f9bdc8524e0">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>CustomerInfoPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d054632a-c67d-4b43-ab0b-1e109440a8fd">
+    <name>TarifCalc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Tarif calc</value>
+    </synonym>
+    <template>/tarifcalc</template>
+    <methods uuid="3a1080d7-1cfd-47dd-9a48-9d0a16918165">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>TarifCalcPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="4d3fe9bf-eb2e-44d5-8719-f8c74dd79857">
+    <name>pvz</name>
+    <synonym>
+      <key>ru</key>
+      <value>pvz</value>
+    </synonym>
+    <template>/pvz</template>
+    <methods uuid="8701e131-3228-432b-b0c5-3138e6e7359c">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>pvzPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="038e0bb1-9182-4058-89cd-51b3d3dcfd18">
+    <name>City</name>
+    <synonym>
+      <key>ru</key>
+      <value>City</value>
+    </synonym>
+    <template>/city</template>
+    <methods uuid="6d753934-a824-4923-8e1a-0feb2e0af5f9">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>CityPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="077e01ca-0213-4db9-aa4d-9f668c4fe02b">
+    <name>UseShipmentNumber</name>
+    <synonym>
+      <key>ru</key>
+      <value>Use shipment number</value>
+    </synonym>
+    <template>/UseShipmentNumber</template>
+    <methods uuid="f238dde5-3beb-47da-82d6-ad629961a0c9">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>UseEntryNumberPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="3f03bf12-e8de-4229-899e-a223e65554cb">
+    <name>Route</name>
+    <synonym>
+      <key>ru</key>
+      <value>Route</value>
+    </synonym>
+    <template>/Route</template>
+    <methods uuid="c62d7a2e-2571-4b68-a5e1-ef9ccd2ab220">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>RoutePOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="3d86dd43-bbec-45b0-b197-b983167021f4">
+    <name>GetInvoice</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get invoice</value>
+    </synonym>
+    <comment>Печать накладной</comment>
+    <template>/GetInvoice</template>
+    <methods uuid="9e18fa8c-6742-4c5b-bcce-486b3d59e5bf">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetInvoicePOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d8af2675-50ec-4c56-b625-519160755076">
+    <name>GetByNumberInvoice</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get by number invoice</value>
+    </synonym>
+    <comment>получить заказ по номеру накладной</comment>
+    <template>/GetByNumberInvoice</template>
+    <methods uuid="62b9324c-023f-4b29-b2ea-c12fda279bd1">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetByNumberInvoicePOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="8803628e-1bbe-4a17-86ab-b4f640018e6b">
+    <name>HistoryStatusChangesInvoices</name>
+    <synonym>
+      <key>ru</key>
+      <value>History status changes invoices</value>
+    </synonym>
+    <comment>История изменеия статусов</comment>
+    <template>/HistoryStatusChangesInvoices</template>
+    <methods uuid="3e0611ed-5998-41c0-87a8-01ffda66b67a">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>HistoryStatusChangesInvoicesPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="8c143bcd-eb2a-431c-9ec0-8a08bb9ec7b6">
+    <name>Terminal</name>
+    <synonym>
+      <key>ru</key>
+      <value>Terminal</value>
+    </synonym>
+    <template>/terminal</template>
+    <methods uuid="3bd679bd-1745-46d8-9533-67ce1ba1df76">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>TerminalPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="a1c32ce0-4a82-4f93-90d4-53b2e226a569">
+    <name>GetByPartNumberInvoice</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get by part number invoice</value>
+    </synonym>
+    <comment>получить заказ по части номера накладной</comment>
+    <template>/GetByPartNumberInvoice</template>
+    <methods uuid="086afc41-6912-4113-a357-d4a373479684">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetByPartNumberInvoice</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

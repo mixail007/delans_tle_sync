@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fcad6b43-f62c-41fd-9cd7-2d6e774f0839">
+  <producedTypes>
+    <selectionType typeId="20694fb8-076f-40ea-829d-b0b69c112905" valueTypeId="41e7be23-8a85-4b55-b3c2-19e304a41897"/>
+    <listType typeId="302ef893-940d-4f7a-8255-bbf76081b7d6" valueTypeId="7f560d42-c0d7-45e6-b83a-be09be09a441"/>
+    <managerType typeId="46068e5a-089a-4ed3-860c-162d9b49cc84" valueTypeId="b4acbff0-cd6b-431b-b006-e08c5ecb853c"/>
+    <recordSetType typeId="198b7488-937e-4384-8b52-b690a673f4c5" valueTypeId="842fc699-ca5e-4ffc-9019-6ae6c7180d4d"/>
+    <recordKeyType typeId="64410a4f-92ce-4f94-b91a-530b78470e36" valueTypeId="221ade31-7d29-4490-86a5-373bb8fca1dd"/>
+    <recordType typeId="7d26d215-00b9-49ae-a485-459024a3f95f" valueTypeId="8693de0b-8f63-452b-a326-6ced808b59cc"/>
+  </producedTypes>
+  <name>ES_НаложенныеПлатежиПартнеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Наложенные платежи партнеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="e41503b1-7ed2-446b-bd33-85f009a76730">
+    <name>НППлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>НП план</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="dc7e8dfc-7c72-4aa1-9a1f-0a17ec34cb5f">
+    <name>НПФактНал</name>
+    <synonym>
+      <key>ru</key>
+      <value>НП факт нал.</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="6dfcf251-b792-4ef6-a314-43e9c221672e">
+    <name>НПФактБезнал</name>
+    <synonym>
+      <key>ru</key>
+      <value>НП факт безнал.</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="e588956c-0950-434b-a169-ac6d7ae74527">
+    <name>Отправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="b1cc38c7-7f12-445f-beef-d13d6a019391">
+    <name>Принято</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принято</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="9c5cc65e-43a5-479e-851a-50226f9ef011">
+    <name>Партнер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партнер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ddcf10ba-edfd-4aed-8d31-c460b13de0dc">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

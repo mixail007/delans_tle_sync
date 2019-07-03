@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fa5b98de-156e-41f6-b548-75da5d208709">
+  <producedTypes>
+    <selectionType typeId="30a916c6-1db8-43d1-80c4-3e3fea267248" valueTypeId="bc109cdb-3fc2-45a7-9181-852c1d3054be"/>
+    <listType typeId="54999c69-4c94-4084-b752-c59f877d0b58" valueTypeId="46e94c69-c0a5-4879-a44b-697754890585"/>
+    <managerType typeId="f1684eff-1e93-4257-aaa4-87a0200a7821" valueTypeId="f06a735a-fccb-4356-b3d9-864a9d7f297c"/>
+    <recordSetType typeId="2c5ac833-2f71-4511-94c9-4b896daec212" valueTypeId="f8238774-a662-420f-b73d-7954894149e7"/>
+    <recordKeyType typeId="b69e15bb-2654-46c9-8f00-b4dc137a8433" valueTypeId="7943f4d5-6aa0-47d2-b02e-a01c3b32b6ff"/>
+    <recordType typeId="f322dc65-e702-4084-9b4b-4fdbfa47fe86" valueTypeId="8d8553f3-f529-4bb1-8a50-35366cbe9996"/>
+    <recordManagerType typeId="1fd5aac2-6015-454a-bfe0-7b556f0b09f0" valueTypeId="9127e4ee-2f0c-49ba-9c3a-b7cc598fb419"/>
+  </producedTypes>
+  <name>ES_КаталогиИзображенийЗаказов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Каталоги изображений заказов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a5886e04-8c3c-4892-8f8e-18f0fdba72f6">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="72847456-91a2-4d25-820e-1191e9ba4554">
+    <name>Наименование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="1bdcf253-aeec-4656-8e9a-8fb5f5615c4c">
+    <name>ДокументДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ доставки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>String</types>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

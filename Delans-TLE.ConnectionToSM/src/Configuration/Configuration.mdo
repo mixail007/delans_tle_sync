@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="338f9efc-d19d-4fc8-be85-77e8201a09b0">
+  <name>ConnectionToSM</name>
+  <synonym>
+    <key>ru</key>
+    <value>Connection to SM</value>
+  </synonym>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:ConfigurationExtension">
+    <defaultRunMode>Checked</defaultRunMode>
+    <usePurposes>Checked</usePurposes>
+    <managedApplicationModule>Extended</managedApplicationModule>
+    <defaultLanguage>Checked</defaultLanguage>
+    <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
+    <compatibilityMode>Checked</compatibilityMode>
+  </extension>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="9c10ca10-1b01-4f63-8cef-628587b8070f"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="74977e3f-00ca-49ff-84f4-426b103106df"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="9cc7ef1e-74d9-4415-bc37-af333ab0b81d"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="e2edcc83-fbc1-41bc-aab2-75875c490c30"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="93555398-8529-406f-bedf-292ea4e5e12e"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="5cd59b71-5982-4d6e-b7fb-71517c383ee6"/>
+  <namePrefix>CTSM_</namePrefix>
+  <configurationExtensionCompatibilityMode>8.3.12</configurationExtensionCompatibilityMode>
+  <configurationExtensionPurpose>AddOn</configurationExtensionPurpose>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <vendor>42clouds.com</vendor>
+  <version>1.0.0.18</version>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
+  <compatibilityMode>8.3.12</compatibilityMode>
+  <languages uuid="7dfa7acd-f802-4f8c-b8a2-3846b29a7347">
+    <name>Русский</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:LanguageExtension">
+      <languageCode>Checked</languageCode>
+    </extension>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.CTSM_Link42Service</subsystems>
+  <subsystems>Subsystem.CTSM_ДокАрхивИЗагрузкаДокументов</subsystems>
+  <styleItems>StyleItem.ПоясняющийТекст</styleItems>
+  <styleItems>StyleItem.ЦветГиперссылкиБРО</styleItems>
+  <commonPictures>CommonPicture.СостоянияПользователей</commonPictures>
+  <commonPictures>CommonPicture.Предупреждение32</commonPictures>
+  <commonPictures>CommonPicture.ПоказатьТолькоВыбранныеРоли</commonPictures>
+  <commonPictures>CommonPicture.ЗаполнитьФорму</commonPictures>
+  <commonPictures>CommonPicture.Подсистема</commonPictures>
+  <commonPictures>CommonPicture.Предупреждение</commonPictures>
+  <commonPictures>CommonPicture.ПиктограммыЭлементов</commonPictures>
+  <commonPictures>CommonPicture.ПрочиеПользовательскиеНастройки</commonPictures>
+  <commonPictures>CommonPicture.НезавершившаясяПроверка</commonPictures>
+  <commonPictures>CommonPicture.СообщениеВТехПоддержку</commonPictures>
+  <commonPictures>CommonPicture.ПодатьИдею</commonPictures>
+  <commonPictures>CommonPicture.ФорумСервиса</commonPictures>
+  <commonPictures>CommonPicture.Информация32</commonPictures>
+  <commonModules>CommonModule.CTSM_Efsol_Платформа</commonModules>
+  <commonModules>CommonModule.CTSM_EfsolУниверсальныеФункцииСервер</commonModules>
+  <commonModules>CommonModule.CTSM_EfsolУниверсальныеФункцииКлиентСервер</commonModules>
+  <commonModules>CommonModule.CTSM_AutoTest</commonModules>
+  <commonModules>CommonModule.CTSM_Расширения</commonModules>
+  <commonModules>CommonModule.CTSM_EfsolПервичныйДокументКлиент</commonModules>
+  <commonModules>CommonModule.CTSM_ПодключаемыеКоманды_EfsolПервичныйДокумент</commonModules>
+  <commonModules>CommonModule.РезервноеКопированиеОбластейДанных</commonModules>
+  <commonModules>CommonModule.ПодключаемыеКомандыПереопределяемый</commonModules>
+  <commonModules>CommonModule.ДополнительныеОтчетыИОбработкиВМоделиСервиса</commonModules>
+  <commonModules>CommonModule.CTSM_ОповещениеОНедоступности</commonModules>
+  <commonModules>CommonModule.CTSM_ПолучениеСведенийОНедоступностиСервер</commonModules>
+  <commonModules>CommonModule.CTSM_ОбработкаОтветаНаВопросОЗавершенииРаботыВСлучаеНедоступности</commonModules>
+  <commonModules>CommonModule.УправлениеДоступомСлужебный</commonModules>
+  <commonAttributes>CommonAttribute.ОбластьДанныхОсновныеДанные</commonAttributes>
+  <webServices>WebService.RemoteAdministrationOfExchange_2_1_6_1</webServices>
+  <httpServices>HTTPService.CTSM_ServiceManager</httpServices>
+  <httpServices>HTTPService.CTSM_WorkWithExtension</httpServices>
+  <definedTypes>DefinedType.Подразделение</definedTypes>
+  <definedTypes>DefinedType.ФизическоеЛицо</definedTypes>
+  <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
+  <constants>Constant.ИспользоватьНесколькоОрганизаций</constants>
+  <constants>Constant.НеИспользоватьНесколькоОрганизаций</constants>
+  <commonForms>CommonForm.CTSM_EfsolПервичныйДокумент</commonForms>
+  <commonForms>CommonForm.CTSM_ФормаПросмотраДокументаВебКлиент</commonForms>
+  <commonForms>CommonForm.CTSM_ФормаПросмотраДокумента</commonForms>
+  <commonForms>CommonForm.ПраваДоступаУпрощенно</commonForms>
+  <commonForms>CommonForm.ПраваДоступа</commonForms>
+  <catalogs>Catalog.Пользователи</catalogs>
+  <catalogs>Catalog.ПрофилиГруппДоступа</catalogs>
+  <catalogs>Catalog.ИдентификаторыОбъектовМетаданных</catalogs>
+  <catalogs>Catalog.ГруппыПользователей</catalogs>
+  <catalogs>Catalog.ВнешниеПользователи</catalogs>
+  <catalogs>Catalog.ГруппыВнешнихПользователей</catalogs>
+  <catalogs>Catalog.ГруппыДоступа</catalogs>
+  <catalogs>Catalog.Организации</catalogs>
+  <dataProcessors>DataProcessor.CTSM_ДобавлениеПользователяСаюри</dataProcessors>
+  <dataProcessors>DataProcessor.CTSM_ЗагрузкаДокументовУП</dataProcessors>
+  <dataProcessors>DataProcessor.ЗапускЗагрузкаДокументов</dataProcessors>
+  <dataProcessors>DataProcessor.CTSM_Тестирование</dataProcessors>
+  <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
+</mdclass:Configuration>

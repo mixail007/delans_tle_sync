@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4022f5ea-4831-433e-ae33-516322744494">
+  <producedTypes>
+    <objectType typeId="8159a82c-ae7d-449a-a613-981eb2d80b54" valueTypeId="f0479f63-7e45-41fd-999f-619dace8911b"/>
+    <refType typeId="6cc744c2-d3aa-4b80-9914-06a6781953bb" valueTypeId="a146a3a8-75d8-4c33-bd7a-3cf9deaa88b7"/>
+    <selectionType typeId="aaf03af4-9fb5-40e7-b384-278c8348a7bb" valueTypeId="424ed9e9-ae5c-4ddc-be9e-3d53204aa924"/>
+    <listType typeId="609f8148-4bb6-45d1-910c-eac0686984c8" valueTypeId="d77bbea6-1f43-40e9-a314-73d7fd353679"/>
+    <managerType typeId="de9608ee-f136-40a4-8bbf-bc8ff27cd13d" valueTypeId="69159388-cfc7-4e40-b087-209dc8284cb1"/>
+  </producedTypes>
+  <name>ES_ЛинииМетро</name>
+  <synonym>
+    <key>ru</key>
+    <value>Линии метро</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ES_ЛинииМетро.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ES_ЛинииМетро.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Линия метро</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Линии метро</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

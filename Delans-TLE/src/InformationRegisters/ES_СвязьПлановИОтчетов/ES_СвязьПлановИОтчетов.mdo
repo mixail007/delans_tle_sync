@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="50f8b0ac-5370-4f9b-a585-e28034b6bd09">
+  <producedTypes>
+    <selectionType typeId="52ba6d71-8d4d-4f43-8d25-65855dcdef68" valueTypeId="31160266-f6ab-4611-98de-44f5d0ff261f"/>
+    <listType typeId="018ad631-d39d-49b8-995b-aa5d7829403b" valueTypeId="f120cd08-0bc8-4134-9692-0241d83e1c15"/>
+    <managerType typeId="a1e2f210-9f12-4f08-8c99-120f00d3dfc6" valueTypeId="e7b70da6-9d54-4753-bdc3-34dc49b76095"/>
+    <recordSetType typeId="94136738-81c1-45c9-91ae-b9d46f36d43e" valueTypeId="9f6b1ca0-4fbc-4bc2-bf78-2647fab78f6a"/>
+    <recordKeyType typeId="77dbd208-348c-458e-bd3c-e037fcd8b935" valueTypeId="abcb0780-93f4-4bf5-81c8-87594e75d34d"/>
+    <recordType typeId="22742cab-df9b-41c1-b0b3-0df1f5966828" valueTypeId="f52c792c-4d43-4bf5-a3b6-47d9dfbf4825"/>
+    <recordManagerType typeId="ba0f4a6f-ff1f-4f9e-9fc6-3cbdbf21474b" valueTypeId="125f1e19-4e76-4bb6-8ead-b112dccf2dad"/>
+  </producedTypes>
+  <name>ES_СвязьПлановИОтчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Связь планов и отчетов (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8aa675fd-65dc-4f9d-9b16-6454e86b5897">
+    <name>ОтчетОДоставке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет о доставке</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ОтчетОДоставке</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4cd9216a-ef4f-484b-972f-31b71694bcce">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a42d8520-93a4-423a-a61b-bcc562b68ab0">
+    <name>РасходИзОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расход из отчета</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="df770de1-af5a-4cde-a21c-3d05fd39b862">
+    <name>ПланДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>План доставки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ПланДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

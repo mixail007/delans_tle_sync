@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5472047f-a967-49ee-b7d0-9ee1c3adcd77">
+  <name>ES_ИспользоватьВидачуПриемкуПоКурьерам</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s использовать видачу приемку по курьерам</value>
+  </synonym>
+  <location>Constant.ES_ИспользоватьВидачуПриемкуПоКурьерам</location>
+  <privilegedGetMode>true</privilegedGetMode>
+  <content>Document.ES_Выдача</content>
+  <content>Report.ES_ЗаказыУКурьеров</content>
+  <content>AccumulationRegister.ES_ЗаказыУКурьера</content>
+</mdclass:FunctionalOption>

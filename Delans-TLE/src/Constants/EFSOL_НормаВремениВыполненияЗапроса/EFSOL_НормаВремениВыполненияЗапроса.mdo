@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="95c56555-3fed-40f3-b5bb-d6ab84039c7c">
+  <producedTypes>
+    <managerType typeId="c37ad942-fff8-4abf-b37e-74daa5106321" valueTypeId="5cd16edd-5d4b-4b51-920b-e6bd77e25761"/>
+    <valueManagerType typeId="13af09ae-2943-4de4-aa46-1b1206ffb9c0" valueTypeId="e588a25f-3903-4005-9a00-ef249e4fee9a"/>
+    <valueKeyType typeId="e304d4bc-da19-5c13-b797-008571975693" valueTypeId="7c327a9d-1346-5603-bbc6-c9cfe9fc4667"/>
+  </producedTypes>
+  <name>EFSOL_НормаВремениВыполненияЗапроса</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL норма времени выполнения запроса</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>10</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f1ec4b69-1080-4cd1-a07a-f56af6a196ba">
+  <producedTypes>
+    <managerType typeId="c3ad0fb3-cfa7-472e-986b-5d943aa85c81" valueTypeId="e20effb0-636c-4407-ac14-6de90e34cdce"/>
+    <valueManagerType typeId="fbf997b0-2120-4dd0-a6d0-ebeb60347247" valueTypeId="2a1cbfb9-27ed-419b-9f0b-87535502724c"/>
+    <valueKeyType typeId="930424a3-b5dc-4549-9c16-810cc72f945f" valueTypeId="34047ab4-2e02-4c86-a811-fe90d44db762"/>
+  </producedTypes>
+  <name>ES_СерверАльтАвторизацииТокен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Токен альтьтернативной авторизации (ES)</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>500</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

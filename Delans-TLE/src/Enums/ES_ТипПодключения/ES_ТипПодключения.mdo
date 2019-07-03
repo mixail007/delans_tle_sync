@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="268bd417-9c09-48c0-b6d9-474426cce4c6">
+  <producedTypes>
+    <refType typeId="62015c08-eaab-4613-bb84-100c1ce0f321" valueTypeId="8b338206-7fd8-463b-bf59-ea069ea91011"/>
+    <listType typeId="76907350-3e6b-4f10-b4c7-aab90df99962" valueTypeId="2fbddcc7-f065-4195-b511-f564bfd47ebb"/>
+    <managerType typeId="534df652-85d8-44cb-8312-bfb92b40d4c5" valueTypeId="0c9c3ec9-4d23-49b5-869a-e73a1e83a292"/>
+  </producedTypes>
+  <name>ES_ТипПодключения</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Тип подключения</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="edc67c8c-b54b-4da0-b9d8-19bf566d01a3">
+    <name>COM</name>
+    <synonym>
+      <key>ru</key>
+      <value>COM</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5fa54dcc-19e4-4510-993f-bcb766127d1e">
+    <name>FTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>FTP</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

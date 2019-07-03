@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="40a1c43c-7ca5-48e5-82c4-018e35bcfb0f">
+  <producedTypes>
+    <objectType typeId="5316c370-ea73-42b9-b935-aaf4e6c87e0d" valueTypeId="d93949c4-6fa8-4288-a125-b633cee76564"/>
+    <refType typeId="d13f97a3-d7f1-4b9b-99b8-20e2732fd8ab" valueTypeId="e91fc03a-3891-4395-84a4-54b77d3d8564"/>
+    <selectionType typeId="52910847-99fa-41c2-abc4-65c49efb483f" valueTypeId="ab397b84-9b77-421e-b6ef-39962f465d1d"/>
+    <listType typeId="89427970-20b0-48b9-9649-424bc076601a" valueTypeId="65691a12-37ed-48a3-828b-55957eeabde7"/>
+    <managerType typeId="2525583f-e538-4d66-8e20-80026d83eb94" valueTypeId="a5ad05b3-b66e-4882-96a0-d3c5659f0322"/>
+  </producedTypes>
+  <name>ПрофилиГруппДоступа</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension"/>
+  <useStandardCommands>true</useStandardCommands>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <tabularSections uuid="56a43ea3-50a4-4949-9481-bbfef9c5961f">
+    <producedTypes>
+      <objectType typeId="248f14d0-1046-4178-9046-a885c34a8def" valueTypeId="5997fb25-2ad4-4c41-b995-b2dd67bf3ca8"/>
+      <rowType typeId="798ecb90-2c45-42f0-840e-a8c3639a391e" valueTypeId="d8969f19-0220-4dc0-b205-87cc29c2e472"/>
+    </producedTypes>
+    <name>Роли</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="b96b6676-365f-4ce9-96f6-5c30c5d5f6f3">
+      <name>Роль</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <type>Checked</type>
+      </extension>
+      <type>
+        <types>AnyRef</types>
+      </type>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

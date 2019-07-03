@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c256d03a-cff5-4224-ba22-2fd25969bed7">
+  <producedTypes>
+    <objectType typeId="33bc51c3-2d8c-4453-aeeb-a39466122058" valueTypeId="ffc6583e-1943-402e-8dba-0c7629ff1b68"/>
+    <refType typeId="0fa1c14e-972d-4f1a-86cc-a45c2fbe5151" valueTypeId="3a2f162c-5c2e-47f3-967e-6f6e048de4a3"/>
+    <selectionType typeId="57a0dc9c-ae74-4935-93c6-1128166138a9" valueTypeId="a9997e86-c220-441a-9dd3-545395c1420f"/>
+    <listType typeId="97924e66-7f49-4e84-ac6b-ff8e15b39f3b" valueTypeId="961a0bf2-cade-4a8d-b1c6-b60d4d19d7a1"/>
+    <managerType typeId="9c2f0509-85b4-493b-a128-66b8f431eb4c" valueTypeId="09940551-4fdf-4782-bff1-298b30856b7c"/>
+  </producedTypes>
+  <name>ES_МатрицаЗон</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установка матрицы зон</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ES_МатрицаЗон.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ES_МатрицаЗон.Form.ФормаДокумента</defaultObjectForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecords>InformationRegister.ES_МатрицаЗон</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <forms uuid="3b9d776b-b53a-48e3-9f89-968358bb9324">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="43ae7203-e6c7-4f93-84a0-146b4f88db1d">
+    <producedTypes>
+      <objectType typeId="2c39c07e-8334-479c-b3a6-8040c12bdf14" valueTypeId="2cfb59f2-cb6e-4650-970c-af15003f2218"/>
+      <rowType typeId="743052c6-74a2-4820-abdf-0679141db78d" valueTypeId="556491f1-cc2f-4744-84cd-2b2ae218dd3a"/>
+    </producedTypes>
+    <name>ЗоныТЧ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зоны ТЧ</value>
+    </synonym>
+    <attributes uuid="849715c1-9865-442c-8e6c-e834b5d0e290">
+      <name>Зона</name>
+      <synonym>
+        <key>ru</key>
+        <value>Зона</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ES_ЗоныДоставки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a7271263-32a8-4c70-ae5f-b319588e05e5">
+      <name>Направление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Направление</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ES_Направления</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0c3109b1-3058-4c10-ad15-31d03e865463">
+      <name>Срочность</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срочность</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ES_СрочностьДоставки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6c0e3fec-32dd-4c72-839a-e1ab2d7d447d">
+      <name>СрокДоставки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок доставки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="73f20aaa-38c1-4e3c-b9ac-3529a225c814">
+      <name>ВидКонтрагента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид контрагента</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ES_ВидКонтрагента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

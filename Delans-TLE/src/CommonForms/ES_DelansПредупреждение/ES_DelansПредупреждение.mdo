@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7ccc6d52-158a-427b-8ec2-0454a7f40d73">
+  <name>ES_DelansПредупреждение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Delans предупреждение</value>
+  </synonym>
+  <usePurposes>PersonalComputer</usePurposes>
+  <usePurposes>MobileDevice</usePurposes>
+</mdclass:CommonForm>

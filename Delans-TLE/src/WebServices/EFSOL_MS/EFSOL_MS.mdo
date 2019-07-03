@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ef576cef-ac11-47bb-b0bd-681bb582de2a">
+  <name>EFSOL_MS</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL MS</value>
+  </synonym>
+  <namespace>EFSOL_DeliveryServiceUT</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.EFSOL_DeliveryServiceUT</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>EFSOL.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="a6050672-a640-418f-9a95-eb220b34e903">
+    <name>ЗаписатьДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записать данные</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ЗаписатьДанные</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="39db83cf-882f-40fc-8063-2fa3b50bc18c">
+      <name>КодМобильногоКомпьютера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код мобильного компьютера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="9c2554ff-17e1-4af0-a402-4e2c00c122af">
+      <name>ДанныеМобильногоПриложения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные мобильного приложения</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="3ffc568a-5c85-4b33-9dd4-7b4b9cf8389e">
+    <name>ПолучитьДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить данные</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьДанные</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="b2899824-4279-4c3c-bed2-186e080cad73">
+      <name>КодМобильногоКомпьютера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код мобильного компьютера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="98dfbc93-d76e-4dcb-84ef-22b54e608bd4">
+      <name>ИмяМобильногоКомпьютера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя мобильного компьютера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="6cf4fdc9-d437-4011-b88f-57823ccd5461">
+      <name>ПользовательМобильногоУстройства</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пользователь мобильного устройства</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="38b88b63-afea-4407-b571-567776844261">
+    <name>СоздатьУзелКурьера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создать узел курьера</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>СоздатьУзелКурьера</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="c1ecc981-24f5-48e5-aad9-af3960444af8">
+      <name>Курьер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Курьер</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="2706434b-0059-45c8-8e22-be05e782cdc2">
+    <name>ПолучитьЦентральныйУзел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить центральный узел</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьЦентральныйУзел</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="405a45ae-574e-46e0-9921-746a82a8b276">
+    <name>ПолучитьКоличествоУзловВЦБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить количество узлов ВЦБ</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>integer</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ПолучитьКоличествоУзловВЦБ</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="bd1d64b2-8857-4f15-a875-c4719bf1627e">
+    <name>ЗаписатьКоординаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записать координаты</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ЗаписатьКоординаты</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="d2d250ee-e72f-4eca-93d4-8004c8c9dee1">
+      <name>Узел</name>
+      <synonym>
+        <key>ru</key>
+        <value>Узел</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="ab50ca26-59df-43b3-b865-cfdf024e3412">
+      <name>Долгота</name>
+      <synonym>
+        <key>ru</key>
+        <value>Долгота</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="95aa229c-0088-4988-b66b-ec17040ddb21">
+      <name>Широта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Широта</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="37997b35-b565-445a-b5ec-5bd214e5430b">
+      <name>ИмяПровайдера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя провайдера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cc1da845-bc3c-42fb-a3ed-ce34426dbfb1">
+  <name>ES_БиллингКлиент</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s биллинг клиент</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+</mdclass:CommonModule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="37c8febc-82a0-41ca-92e3-e111dcf31e79">
+  <producedTypes>
+    <managerType typeId="1286e89e-a72e-4216-8d77-8c0a513dece1" valueTypeId="86c3d264-8cbb-463d-a24a-5a02f2847a91"/>
+    <valueManagerType typeId="15517f71-cf6c-4977-9d58-4b797b8ab883" valueTypeId="b86817f7-a7c6-467a-904c-c3b501d7a55d"/>
+    <valueKeyType typeId="2206f36b-1f39-5f66-a638-f7f094377446" valueTypeId="37dfe3b8-0493-587e-bd3b-e5fc5da1858b"/>
+  </producedTypes>
+  <name>ES_ИспользоватьТарифныйКалькулятор</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s использовать тарифный калькулятор</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

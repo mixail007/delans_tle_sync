@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="20513342-3e25-4beb-8e8f-f18c8b633ddf">
+  <name>ES_БиллингСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Биллинг (delans)</value>
+  </synonym>
+  <server>true</server>
+  <serverCall>true</serverCall>
+</mdclass:CommonModule>

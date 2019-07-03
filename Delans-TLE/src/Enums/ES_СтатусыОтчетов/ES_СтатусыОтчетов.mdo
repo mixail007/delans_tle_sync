@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97692b22-89bc-44ac-a1ce-40dc4876c728">
+  <producedTypes>
+    <refType typeId="78236e8b-a17e-462e-befb-05bff4e900dd" valueTypeId="ef5e28f4-8e39-4304-9bcc-5236177692c4"/>
+    <listType typeId="0d969dae-9b65-4e9b-9f7e-f2e2e1050b8f" valueTypeId="93aec8b1-1ca6-49e0-a159-8ee193c6553f"/>
+    <managerType typeId="d1605823-57f5-4c89-8071-5a213157e279" valueTypeId="5e7fcf95-871b-4b2b-a917-b921d98d6cc8"/>
+  </producedTypes>
+  <name>ES_СтатусыОтчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы отчетов о доставке</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="57057e60-d76f-425e-9cd2-c6511d557930">
+    <name>Новый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Новый</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f8e3ffe4-6b6b-4eaa-9f3f-26194784b4c1">
+    <name>Исполняется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исполняется</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="98b5a48c-5408-4e4d-85f3-589f01a2ed97">
+    <name>Закрыт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрыт</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

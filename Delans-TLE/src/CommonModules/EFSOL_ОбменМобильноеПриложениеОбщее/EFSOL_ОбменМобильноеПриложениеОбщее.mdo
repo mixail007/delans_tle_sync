@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3726da9e-1c69-4a6e-b41f-1d6455ed23f9">
+  <name>EFSOL_ОбменМобильноеПриложениеОбщее</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL обмен мобильное приложение общее</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <serverCall>true</serverCall>
+</mdclass:CommonModule>

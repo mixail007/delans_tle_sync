@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="78d74b3c-6d90-4c5a-9f9f-7db807741c9a">
+  <producedTypes>
+    <selectionType typeId="3d8b42ca-eb6b-47db-8c84-ec8d0278d4c2" valueTypeId="be8aa729-56a0-4a1f-91db-22e1e8453f44"/>
+    <listType typeId="1a3294bc-69f9-47f4-8838-fb61eb65569e" valueTypeId="0f15a5db-9953-4cb8-81fe-5ef404acda5a"/>
+    <managerType typeId="feef32ea-2b74-4ea2-bc14-e9977ace6c62" valueTypeId="daaf146f-a98d-4c25-842f-939f9136e37b"/>
+    <recordSetType typeId="99602ac4-5964-49a5-b1d7-c6f4b5eff63c" valueTypeId="17061b92-6b4c-40e4-92c5-143ea1c892a1"/>
+    <recordKeyType typeId="2dcaaa93-d141-43cb-be2e-d361389720f7" valueTypeId="30212f02-05a2-4405-8517-6656a3eecc27"/>
+    <recordType typeId="93b1e58b-8229-49ac-b8f2-fd8e1ee875d3" valueTypeId="59c4143f-3b6c-498b-b0a0-3ef26fab1d83"/>
+  </producedTypes>
+  <name>ES_ЗаказыВПути</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказы в пути (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="2aa80734-2ed6-46f1-af6f-7ea49c2a91dd">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2a4aff84-8f94-46ec-9c96-350bb6598b5d">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b10b04e4-6ad0-4160-8e0d-a04125ee1611">
+    <name>СкладОтправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад отправитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="70a1883f-325b-4951-a95f-f2eb750b445c">
+    <name>СкладПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад получатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

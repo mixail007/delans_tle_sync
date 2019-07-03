@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b8e3ff11-8147-4ba7-849b-b531f672d8a4">
+  <producedTypes>
+    <selectionType typeId="2d6227e6-8878-4cfc-83a4-815f2b267616" valueTypeId="e08ce539-f22a-48ef-953f-8e40cc8898d9"/>
+    <listType typeId="cb270d4c-52d8-4bbd-bd2b-bc6a579077b9" valueTypeId="62e5fe12-3552-474e-b585-4faa59eee6ee"/>
+    <managerType typeId="85f8e01f-4d0b-4252-915b-b291abf7e38d" valueTypeId="6490ef45-e1aa-4642-a23a-cde5176e6f7a"/>
+    <recordSetType typeId="f57b78aa-3737-4275-99a9-3b387a6fa139" valueTypeId="ff67df8a-7446-4de7-bf6c-9e52fbddf397"/>
+    <recordKeyType typeId="2f513ddb-eea3-4c32-8d5b-688f62df97b3" valueTypeId="3f963d4b-04f1-4459-ba94-e9b6c7f4865c"/>
+    <recordType typeId="e9b28b82-6418-4051-94ac-63275d643062" valueTypeId="1170be62-df79-40e3-b36d-0d06618fefbb"/>
+    <recordManagerType typeId="15462cce-3781-45a3-9512-e82e1fcd61bd" valueTypeId="48a9268e-4dd2-4f9f-8042-3542636e6117"/>
+  </producedTypes>
+  <name>ES_СтатусыЗаборов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы заборов груза (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d5b917a4-6fb2-4855-b0f8-deb16f8f49d4">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="43076001-09b2-4fa3-bc21-c7be6bb530b4">
+    <name>СтатусЗабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус забора</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_СтатусыЗаборов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="50dd552c-d93f-4afe-b78e-3751b49e4527">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b4d3f50f-df19-499d-98e6-2eacaa23f341">
+    <name>Удалить_ДатаПоследнегоПроведения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата последнего проведения</value>
+    </synonym>
+    <comment>НЕ ИСПОЛЬЗУЕТСЯ</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="12e21667-a1ea-4ad5-b447-eda074f88287">
+    <name>Забор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Забор</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

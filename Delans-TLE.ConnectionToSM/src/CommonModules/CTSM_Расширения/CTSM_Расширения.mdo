@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0a32d4e2-fa34-4eb0-9b9a-ce187f9bece2">
+  <name>CTSM_Расширения</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM расширения</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

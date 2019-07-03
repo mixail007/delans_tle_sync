@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d41f0bfc-5e2b-4c67-807f-8ee0ccb2c62c">
+  <name>ES_ОбновлениеСтатусовSMS</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление статусов SMS</value>
+  </synonym>
+  <methodName>CommonModule.ES_SMSИнформированиеПростор.ES_ОбновлениеСтатусовSMS</methodName>
+  <description>Обновление статусов SMS (Prostor)</description>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="8b66f996-0852-417f-8a00-c82500351555">
+  <producedTypes>
+    <selectionType typeId="6aad5bec-8917-4bab-a22a-39f919ecda75" valueTypeId="beab971f-84cd-4c35-b220-bba65beb20ae"/>
+    <listType typeId="28c3840c-ae64-4208-bbd3-d2cc2c69d078" valueTypeId="ae44e0b3-f79c-4e0f-9eb7-635e3b44700b"/>
+    <managerType typeId="632d65d5-92bc-441c-9c8a-49b9c731043b" valueTypeId="0669d35e-015b-4823-8cc3-28730750156b"/>
+    <recordSetType typeId="ba95510e-ab3e-497e-b9ea-8d7f5b5b7ff4" valueTypeId="9c8a0879-bd69-4b15-b006-509d04d9254b"/>
+    <recordKeyType typeId="5bb8b4e0-2650-4334-b6d7-bdd9e2e637b8" valueTypeId="329c917b-c984-4998-9e69-3f29cd2dea0b"/>
+    <recordType typeId="2e9a3fdf-5d0c-41e3-9a60-b3c53daea301" valueTypeId="d210cfaf-f305-46a7-8cd0-05acedc95a2b"/>
+    <recordManagerType typeId="437527e5-cd84-4e9f-b1ad-48e23508e858" valueTypeId="d4969c41-622d-4c92-ac07-ed2374011b4f"/>
+  </producedTypes>
+  <name>СоставыГруппПользователей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="94b5a30c-a2a0-4d93-bbbe-e7ec9f897302">
+    <name>Пользователь</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <type>Checked</type>
+    </extension>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d95a3f8f-c115-4c9d-98f7-e76100736392">
+    <name>ГруппаПользователей</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <type>Checked</type>
+    </extension>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

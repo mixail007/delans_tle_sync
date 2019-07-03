@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4ef94ba3-bc5f-4848-8552-c0ac9964e596">
+  <producedTypes>
+    <managerType typeId="f94d46df-a6ba-4456-808c-c67136386508" valueTypeId="97f2bef0-406e-4256-ac4a-72a45dff0583"/>
+    <valueManagerType typeId="9d31e235-27a1-40ce-82e3-262168808607" valueTypeId="f854bca2-ef48-421c-9245-2729c169f279"/>
+    <valueKeyType typeId="949aec3e-5adb-51c1-8ade-edc29d0c08cb" valueTypeId="98a57d6b-b9bd-5ba2-86c9-8b06aee3272f"/>
+  </producedTypes>
+  <name>ES_СлужбаДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Служба доставки (ES)</value>
+  </synonym>
+  <comment>Хранит значение одноименной функциональной опции</comment>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bacb0bb8-9239-4235-9f81-0086cc6da0be">
+  <name>НастройкиМобильногоПриложения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки мобильного приложения</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>InformationRegister.ES_CоответствиеПравилОбменаОборудованияOfflineИКурьеров</content>
+  <content>Catalog.ПодключаемоеОборудование</content>
+  <content>CommonCommand.ES_НастройкаPushУведомленийКоманда</content>
+  <parentSubsystem>Subsystem.ES_СлужбаДоставки</parentSubsystem>
+</mdclass:Subsystem>

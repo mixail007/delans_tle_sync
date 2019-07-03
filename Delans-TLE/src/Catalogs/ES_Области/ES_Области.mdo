@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc05c948-1f3d-49fc-a0d2-486a51232eae">
+  <producedTypes>
+    <objectType typeId="c364ccac-c187-4c1c-90da-781c677bbd67" valueTypeId="38dcb94f-3af3-4553-ab8b-00b8cb36d46d"/>
+    <refType typeId="9fc0067a-e4ef-4785-a582-1af039be9385" valueTypeId="7e78924c-6a09-47f5-a7e1-393b7b595c84"/>
+    <selectionType typeId="63c79678-2e5a-45f0-9126-8bfdf5257dcb" valueTypeId="ab11ff91-1010-49a5-b18c-27bf511bfbdd"/>
+    <listType typeId="d235d067-e4dc-481d-88ce-6a205260c4da" valueTypeId="a6e3e131-6265-44eb-8984-2eda8ce7becb"/>
+    <managerType typeId="4a2a959f-4047-4a32-b4f0-bee3f5322879" valueTypeId="89ac1450-5b8f-4664-b161-32cc8cc74b81"/>
+  </producedTypes>
+  <name>ES_Области</name>
+  <synonym>
+    <key>ru</key>
+    <value>Области(Регионы)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ES_Области.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ES_Области.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

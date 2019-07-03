@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dc25d7bc-83d8-4b08-a00f-9462f588eff6">
+  <producedTypes>
+    <objectType typeId="097a011d-94b1-46b1-a35c-c55b436ee7d6" valueTypeId="30bbf5f1-565d-4262-8782-e5f5057ebce8"/>
+    <managerType typeId="d44037fc-cd32-41be-b5a9-579d35b1b18e" valueTypeId="075f076c-2c1a-4bb9-9f9a-b83e33ca9c6a"/>
+  </producedTypes>
+  <name>ES_НастройкаGoogleDrive</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка Google Drive</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ES_НастройкаGoogleDrive.Form.Форма</defaultForm>
+  <forms uuid="55748b13-c125-4b82-ab40-205093ff2e1e">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

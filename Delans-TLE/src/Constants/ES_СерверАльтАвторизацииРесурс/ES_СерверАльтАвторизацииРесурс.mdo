@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a8266d1a-6fa0-4f4f-b11f-5cde54d0f8a7">
+  <producedTypes>
+    <managerType typeId="49ccc23f-700e-4ad2-b8be-4c0e02d8294b" valueTypeId="e253468b-5deb-4c6a-8143-800254710efa"/>
+    <valueManagerType typeId="9a4929c2-2543-4fca-a1be-93e746e65bd4" valueTypeId="6f63df80-f697-4ddc-86cd-fda0cf302eef"/>
+    <valueKeyType typeId="9c1f26a4-d354-4b27-9f29-1ac435a4bf3f" valueTypeId="5fd219b3-d6b6-4f38-a4a1-9ce72b197a31"/>
+  </producedTypes>
+  <name>ES_СерверАльтАвторизацииРесурс</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ресурс сервера альтьтернативной авторизации (ES)</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>500</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

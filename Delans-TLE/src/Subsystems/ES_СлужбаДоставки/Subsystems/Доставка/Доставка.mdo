@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="44555f4f-7150-4aa6-b581-8625c1703e64">
+  <name>Доставка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доставка</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.ЗаказПокупателя</content>
+  <content>Document.ES_ЗаборГруза</content>
+  <content>Document.ES_ПланДоставки</content>
+  <content>Document.ES_ОтчетОДоставке</content>
+  <content>Document.ES_Самовывоз</content>
+  <content>Document.ES_Возвраты</content>
+  <content>Document.ES_Приемка</content>
+  <content>Document.ES_ПеремещениеЗаказов</content>
+  <content>Document.ES_Выдача</content>
+  <content>Document.ES_Поставка</content>
+  <content>Document.ES_Инвентаризация</content>
+  <parentSubsystem>Subsystem.ES_СлужбаДоставки</parentSubsystem>
+</mdclass:Subsystem>

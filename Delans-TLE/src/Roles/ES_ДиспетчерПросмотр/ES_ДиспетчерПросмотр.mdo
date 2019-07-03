@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="04e683ad-18d0-425b-adeb-03f34930bfb6">
+  <name>ES_ДиспетчерПросмотр</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Диспетчер (просмотр)</value>
+  </synonym>
+  <comment>Просмотр плана и отчета о доставке</comment>
+</mdclass:Role>

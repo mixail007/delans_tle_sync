@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fee8ab76-0f80-4820-a91c-416c10108e3a">
+  <producedTypes>
+    <objectType typeId="6e1bda18-497c-45a5-8969-3f9fa3dc79ff" valueTypeId="801dd08a-6b4b-442a-8715-da005a8910dc"/>
+    <managerType typeId="0ffa4903-e44e-42fc-ac51-d8815bb1647f" valueTypeId="6c934f15-1fc9-481e-a5ba-fadb43eef3ce"/>
+  </producedTypes>
+  <name>ES_ЗагрузкаМанифестов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка реестров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ES_ЗагрузкаМанифестов.Form.УпрФорма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="8c04ce1d-c2d3-4cf2-b407-c5353a231918">
+    <name>ДатаДокументаПоУмолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата документа</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата документа по умолчанию</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c9a93298-a074-463f-99a1-2e65595684d5">
+    <name>ДатаДоставкиПоУмолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата доставки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата доставки по умолчанию</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="53646d86-0917-4fe8-be67-a7328263cce2">
+    <name>Манифест</name>
+    <synonym>
+      <key>ru</key>
+      <value>Манифест</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ES_Реестры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="ce149411-15f5-4991-b75f-ce50d1877fb0">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ES_НастройкиЗагрузкиМанифестов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6707b529-b550-4a70-82bc-b1ab1935f883">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9ca44c0e-7f75-4975-8464-68233277e614">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="56b26e68-b7cd-46b2-9090-88bbc1a2c395">
+    <name>УпрФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Управляемая форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

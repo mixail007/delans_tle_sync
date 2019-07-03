@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c939bd30-8a7a-4647-a218-ff8eba8a6f17">
+  <producedTypes>
+    <managerType typeId="e2900557-fe53-41ce-873a-b29ee2a438fa" valueTypeId="dfa640a3-04ff-4907-8c63-3000c95a5d43"/>
+    <valueManagerType typeId="1b31e38f-70aa-4303-a275-8460ace32c19" valueTypeId="35c52331-d105-4f5e-9bbc-ab46ecb19eb3"/>
+    <valueKeyType typeId="5609d7d7-6112-5bb6-9598-992917947819" valueTypeId="f8ecaa01-da91-57cb-a76d-19df4678dbe3"/>
+  </producedTypes>
+  <name>EFSOL_ИДБазыДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL ИДБазы данных</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>36</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

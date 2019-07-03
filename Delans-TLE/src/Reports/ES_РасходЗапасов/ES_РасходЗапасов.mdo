@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1b3c9cfd-4cd2-454c-bd8b-69dcd5fe141b">
+  <producedTypes>
+    <objectType typeId="3fd06d08-06d3-415e-a5be-abd697360acd" valueTypeId="5d97b023-52ce-45c1-8101-e2303f31da9f"/>
+    <managerType typeId="36f2dee9-2b2c-49d2-9905-427938baf172" valueTypeId="728d762d-83a9-452b-a3f0-2fc4a6691593"/>
+  </producedTypes>
+  <name>ES_РасходЗапасов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расход запасов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_РасходЗапасов.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <templates uuid="746afa94-4cb5-40a2-896e-3aa43504bb11">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

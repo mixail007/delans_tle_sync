@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="caf153ce-d8ca-4bf3-873c-0a4f59bfaf13">
+  <producedTypes>
+    <refType typeId="051b082e-87ad-41a4-ad5a-f66bc024fb1e" valueTypeId="f4a2f6e9-6938-4263-bf79-9807446968b6"/>
+    <listType typeId="d4e9758c-cc59-4efb-b0e5-b6d0b6b71108" valueTypeId="7eeb0a74-4ee2-4bfc-b945-2b7890ab52a7"/>
+    <managerType typeId="88d94a08-53d2-4344-8723-8b92d3c0e384" valueTypeId="6fb8c7c1-feef-4041-a5a3-f219fc3391bf"/>
+  </producedTypes>
+  <name>ES_SMS_ВидШаблона</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вид шаблона SMS</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="903eecd8-5b05-4f2c-884e-8d618b572fa4">
+    <name>Получатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получателю</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1cd6a5e7-be56-4833-b492-1dae8ab6883b">
+    <name>Отправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказчику</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

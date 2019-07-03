@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fd09ab10-17b9-4cbe-a992-c05b2bc19d99">
+  <producedTypes>
+    <objectType typeId="a477e6d3-e1a9-4f40-a635-3d20b2642592" valueTypeId="3237384a-819b-41a0-91bf-5595d1697ab4"/>
+    <managerType typeId="c542fadd-7afa-4512-be0f-fd16484969a3" valueTypeId="eea13f92-70a7-4f02-a31c-34bf4a67d047"/>
+  </producedTypes>
+  <name>ES_ЗаказыУКурьеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказы у курьеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_ЗаказыУКурьеров.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="a1baec88-f4c5-4639-8219-59185b654959">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

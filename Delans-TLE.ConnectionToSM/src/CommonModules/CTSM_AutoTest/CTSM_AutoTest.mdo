@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1fb5ec9b-0610-4cab-983f-7c2ba2491662">
+  <name>CTSM_AutoTest</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM auto test</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

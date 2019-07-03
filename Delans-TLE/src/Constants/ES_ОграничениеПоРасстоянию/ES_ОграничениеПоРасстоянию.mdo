@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="03c5979d-f794-40af-8180-9973ff8c3c3b">
+  <producedTypes>
+    <managerType typeId="8a9127ed-5e4c-4b52-8df7-3a0e020653be" valueTypeId="6e294740-66e2-4858-b747-d146485c5a2c"/>
+    <valueManagerType typeId="6a3a678e-0646-433e-9990-bf332877c206" valueTypeId="38589e58-de3d-4cf5-9b70-bc86f6599426"/>
+    <valueKeyType typeId="53f4d1cc-fa8d-4bf3-a382-aad1cd29d515" valueTypeId="44e76166-a0aa-4658-923c-069a07a944fc"/>
+  </producedTypes>
+  <name>ES_ОграничениеПоРасстоянию</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ограничение по расстоянию (км)</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>10</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

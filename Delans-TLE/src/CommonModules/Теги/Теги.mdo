@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5cf93021-9f7d-4afe-b5b1-65ad1de058a2">
+  <name>Теги</name>
+  <synonym>
+    <key>ru</key>
+    <value>Теги</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+</mdclass:CommonModule>

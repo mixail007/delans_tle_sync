@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="16adcaf0-696f-4059-be75-3d89876a742b">
+  <producedTypes>
+    <objectType typeId="a728f45e-b60b-4d97-827c-43d31fe79b83" valueTypeId="496f35b6-5a7f-4e22-b7cf-89cf74db7b5b"/>
+    <managerType typeId="32b7be56-17ed-4fd0-bbb4-a2ece6e9d244" valueTypeId="3584bafb-f9eb-4f2e-ad77-5137c7d869d4"/>
+  </producedTypes>
+  <name>JSON_and_UnJSON</name>
+  <synonym>
+    <key>ru</key>
+    <value>JSON and UnJSON (27/11/2009)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.JSON_and_UnJSON.Form.Форма1</defaultForm>
+  <forms uuid="1abe6a05-d2cb-446a-9c45-b7de080339c1">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="270f59d4-604e-413c-8ade-8b1b63a29d57">
+    <name>Форма1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма1</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="6ffe01a4-af97-4359-b894-bbf5ffca23d3">
+    <name>Тест_JSON</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тест JSON</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="2f84cd11-53a3-4891-a90f-15b0c2fc8da3">
+    <name>Пример6</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пример 6</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

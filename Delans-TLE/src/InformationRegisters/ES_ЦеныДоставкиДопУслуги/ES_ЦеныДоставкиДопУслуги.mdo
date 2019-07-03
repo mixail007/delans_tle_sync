@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1dfbeed8-906d-416a-b137-a28e1b17b016">
+  <producedTypes>
+    <selectionType typeId="4431d5a1-81bf-4c6b-bc5c-9c294fe75731" valueTypeId="74530330-a4fa-457f-8f00-cbb82659c9f9"/>
+    <listType typeId="9e21014a-a866-41d7-8614-db7448c4c398" valueTypeId="7c3235dd-17b9-447b-ac1c-da56a5c5bee5"/>
+    <managerType typeId="2d2856c2-d20e-4317-a871-9cfce0475d69" valueTypeId="3ac337ba-3b54-423f-8c74-e65b80908cc0"/>
+    <recordSetType typeId="97a6529b-639b-4d8c-8b45-1801b9cea61b" valueTypeId="dc8de00d-bea2-4b1d-9cf4-4c2bd40268ca"/>
+    <recordKeyType typeId="11bbf7ba-7649-4802-8642-40dffb3bf733" valueTypeId="4b10c500-7a79-47b4-9299-76157aa0ec59"/>
+    <recordType typeId="2fcda1a4-e79c-4d35-9a16-6deb0ced3cd8" valueTypeId="d2abf688-7269-4053-9628-e2eb9d9a51d4"/>
+    <recordManagerType typeId="6cc79dfd-ed22-4dc3-ab73-3f541ee39b5b" valueTypeId="0cba2b96-1e4b-4f84-8234-7fa2ce705e40"/>
+  </producedTypes>
+  <name>ES_ЦеныДоставкиДопУслуги</name>
+  <synonym>
+    <key>ru</key>
+    <value>Цены доставки доп услуги(efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f65562ee-5a3f-45a9-adba-1e5f0adb04ef">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1970e322-0e34-4358-9f34-e4fc6d550216">
+    <name>Цена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8dc70068-aabd-4384-9ac4-d9e5245a311f">
+    <name>ЦенаЗаКаждыйКилограмм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена за каждый килограмм</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f95c3a7a-5a57-43cd-bdab-a9950646eec8">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="223aef67-7e07-4925-ad2d-8aab32e4d5e6">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

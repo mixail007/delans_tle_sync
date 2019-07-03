@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="46fe2b42-5e80-4924-af4a-86bb5caec026">
+  <name>CTSM_WorkWithExtension</name>
+  <synonym>
+    <key>ru</key>
+    <value>Work with extension</value>
+  </synonym>
+  <rootURL>WorkWithExtension</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="e4f0659b-19bb-46f9-ba6f-3578fef6e5ef">
+    <name>ШаблонURL</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон URL</value>
+    </synonym>
+    <template>/{MethodName}</template>
+    <methods uuid="12e2d5bd-cb08-4a03-aba9-ff73562406bf">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ШаблонURLGET</handler>
+    </methods>
+    <methods uuid="64fc338c-b5fb-40b1-8782-300099c1cc00">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ШаблонURLPOST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

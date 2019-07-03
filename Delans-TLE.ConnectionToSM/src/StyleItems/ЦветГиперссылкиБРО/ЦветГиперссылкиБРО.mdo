@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:StyleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="d3852a9b-3896-491d-93dc-39d22a60e622">
+  <name>ЦветГиперссылкиБРО</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:StyleItemExtension">
+    <type>Checked</type>
+  </extension>
+  <value xsi:type="core:ColorValue">
+    <value xsi:type="core:ColorDef"/>
+  </value>
+</mdclass:StyleItem>

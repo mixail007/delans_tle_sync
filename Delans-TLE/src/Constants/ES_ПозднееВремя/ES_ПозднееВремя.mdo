@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="11d88c7d-ce2b-4ad5-8243-0dd3b271cf99">
+  <producedTypes>
+    <managerType typeId="83d8fd3a-8da7-401f-9e2f-5bad2d8f218b" valueTypeId="8a2737f9-72ed-4060-b526-0f5627938a23"/>
+    <valueManagerType typeId="db327749-9647-4644-8fda-6293c9b298bd" valueTypeId="93878cd8-9653-4f4d-83df-30bda4a22112"/>
+    <valueKeyType typeId="124360fd-5fb1-5771-9568-d0a164d09e82" valueTypeId="c3dfa75c-5c7c-51da-8cb8-9b6f1032a12a"/>
+  </producedTypes>
+  <name>ES_ПозднееВремя</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s позднее время</value>
+  </synonym>
+  <type>
+    <types>Date</types>
+    <dateQualifiers>
+      <dateFractions>Time</dateFractions>
+    </dateQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

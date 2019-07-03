@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f0b5c35f-7542-4299-a548-8dce97cd5c2f">
+  <producedTypes>
+    <objectType typeId="59db2121-035d-4063-bc35-77ace488fede" valueTypeId="8f26df1d-89aa-4f56-b512-6a0949231e09"/>
+    <managerType typeId="a6ece810-8a2b-424f-8020-14500ff8baa1" valueTypeId="2b0d17aa-be68-40a3-94d9-41cadfccc3fd"/>
+  </producedTypes>
+  <name>ES_АвансыЗаказчиков</name>
+  <synonym>
+    <key>ru</key>
+    <value>Авансы заказчиков</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_АвансыЗаказчиков.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <templates uuid="6cbb888b-59fe-450d-8d94-a18777829c12">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

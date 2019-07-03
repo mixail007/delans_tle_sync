@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a82523d4-dde1-42f0-966f-7699f9685362">
+  <name>ИнтеграцияГИСМУнф</name>
+  <synonym>
+    <key>ru</key>
+    <value>Интеграция ГИСМУнф</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>CommonModule.RFIDКлиент</content>
+  <content>CommonModule.ИнтеграцияГИСМКлиентУНФ</content>
+  <content>CommonModule.ИнтеграцияГИСМУНФ</content>
+  <content>CommonModule.RFIDСервер</content>
+  <content>CommonModule.RFIDКлиентСервер</content>
+  <content>DocumentJournal.РозничныеПродажиГИСМ</content>
+</mdclass:Subsystem>

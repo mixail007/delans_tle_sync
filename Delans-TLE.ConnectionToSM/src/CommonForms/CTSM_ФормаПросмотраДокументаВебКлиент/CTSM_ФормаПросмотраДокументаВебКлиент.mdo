@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="00b2be6e-184f-46f0-84f2-c759e8c079ed">
+  <name>CTSM_ФормаПросмотраДокументаВебКлиент</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM форма просмотра документа веб клиент</value>
+  </synonym>
+  <usePurposes>PersonalComputer</usePurposes>
+  <usePurposes>MobileDevice</usePurposes>
+</mdclass:CommonForm>

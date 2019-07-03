@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a4d115de-655a-476f-ad3e-d60390debe8d">
+  <producedTypes>
+    <selectionType typeId="bb55f8bb-418c-466d-9eeb-867891c0cb3c" valueTypeId="a40622f7-6789-4d09-9cf2-5425436431cb"/>
+    <listType typeId="a53c8183-0280-49ae-a7ad-fccca973ec55" valueTypeId="92a0bd1f-b142-431d-a1cb-23edd2fb2c71"/>
+    <managerType typeId="777b751e-83f8-4404-9115-0875008c6525" valueTypeId="e6aa58d1-8554-4836-8f78-ff5e6b11baee"/>
+    <recordSetType typeId="ff30c044-44df-439e-af9f-bda60006e7cd" valueTypeId="1db0ae08-b5ab-4964-b5b2-de1011421751"/>
+    <recordKeyType typeId="615d6bd6-fa33-4818-a2e6-956354c8a7ab" valueTypeId="9c2c1d13-5a27-46f9-9aa5-0112dd275f83"/>
+    <recordType typeId="9a2a4a9d-033e-41b6-8969-8f6a7bf29c8d" valueTypeId="9d84a2e1-b5a0-42b5-88c4-dd324ba84975"/>
+  </producedTypes>
+  <name>ES_РасходыПоЗаказам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расходы по заказам (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="daccc5a3-6422-4627-b97c-97167fd10432">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="6a1f1d46-a869-40a2-bfac-0889f1f23dd8">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

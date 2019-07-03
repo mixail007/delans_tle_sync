@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="72cdc97b-0d71-4c2e-a65d-7a9382d180ce">
+  <name>ES_РаспределениеЗаявокВОтдельномОкне</name>
+  <synonym>
+    <key>ru</key>
+    <value>Распределение заявок в отдельном окне</value>
+  </synonym>
+  <location>Constant.ES_РаспределениеЗаявокВОтдельномОкне</location>
+  <privilegedGetMode>true</privilegedGetMode>
+</mdclass:FunctionalOption>

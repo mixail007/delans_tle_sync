@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1cacaca8-6868-4e6a-82d9-368434453261">
+  <name>CTSM_ОбработкаОтветаНаВопросОЗавершенииРаботыВСлучаеНедоступности</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM обработка ответа на вопрос о завершении работы в случае недоступности</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+</mdclass:CommonModule>

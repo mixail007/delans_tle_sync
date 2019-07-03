@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e31d625a-70ad-4b27-b57c-8c2038eb16fc">
+  <name>ES_СборГрузов</name>
+  <synonym>
+    <key>ru</key>
+    <value>сбор грузов</value>
+  </synonym>
+  <methodName>CommonModule.ES_ОбщегоНазначения.РегЗадание</methodName>
+  <description>Регулярный сбор грузов</description>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

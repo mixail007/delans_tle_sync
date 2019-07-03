@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="10967852-5d6b-451d-b912-495f2c99d718">
+  <name>NS_ОтправкаСМС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка СМС</value>
+  </synonym>
+  <methodName>CommonModule.NS_ОбщийМодуль.NS_ОтправкаСМС</methodName>
+  <use>true</use>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

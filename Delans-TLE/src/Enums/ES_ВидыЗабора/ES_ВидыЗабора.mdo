@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97d84e05-9475-4f57-ac64-ad3b43b854f8">
+  <producedTypes>
+    <refType typeId="4ba7b64a-0b8d-4abb-9e1b-fc861d5569e4" valueTypeId="04e5ded1-ecaa-4357-8692-acc6110611fa"/>
+    <listType typeId="5474068e-cae0-4360-b13b-95f7917d2555" valueTypeId="a80a04ab-b4d2-4d18-a249-5f35472d3778"/>
+    <managerType typeId="ba451a57-9520-4027-9f08-02bf06f31c26" valueTypeId="efa92685-8af1-4ec7-b0b6-dec33f1fe8f0"/>
+  </producedTypes>
+  <name>ES_ВидыЗабора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды забора</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="cc208f68-f28d-4273-bb5f-4b23b99fd012">
+    <name>НаСклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>На склад</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a320bcef-e1d0-4e81-aa7e-2c528e044f41">
+    <name>ПоПути</name>
+    <synonym>
+      <key>ru</key>
+      <value>По пути</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="67d7f70d-cec3-4813-a9e0-0ecb623fb5f1">
+    <name>Выезд</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поездка</value>
+    </synonym>
+    <comment>Самостоятельный забор</comment>
+  </enumValues>
+  <enumValues uuid="8525a44c-616a-4290-925f-135fc77c6535">
+    <name>Упрощенный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упрощенный</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cf5e4462-c7d4-4e35-bdf4-63a746c85342">
+    <name>ПодЗаказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Двери - Двери</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1d3aa5e5-87d9-4ce6-9de8-b0a4f23dc314">
+    <name>Реестр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реестр</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d004d320-b2f8-4716-a10e-ad7e713e522d">
+  <producedTypes>
+    <selectionType typeId="ab9372f2-8a7e-42e8-807e-fa9b114e4377" valueTypeId="aab5ff02-02b6-4886-9cee-94a56f26ba36"/>
+    <listType typeId="f68b8933-4829-451e-b0b9-46b3de4c4e13" valueTypeId="8626daf8-abfe-4067-b089-421074731601"/>
+    <managerType typeId="954ff5f7-7332-485c-9260-efe88c1cd928" valueTypeId="f9007a83-8f5b-4097-8348-dcbc414010c7"/>
+    <recordSetType typeId="c4dfeccb-cf98-4d78-85bb-b7c1f99c0aa7" valueTypeId="604ca2cf-57d9-422c-a447-15dccfeddf37"/>
+    <recordKeyType typeId="9df13146-5183-4fe4-a920-4e97a18376b6" valueTypeId="084cf0b6-b5ef-4420-b481-bd6b55262290"/>
+    <recordType typeId="7d964175-503a-417f-a628-59f7b2b2678e" valueTypeId="9b0c100e-899e-4773-9855-607e34e4d02c"/>
+    <recordManagerType typeId="fef8b1bf-7f6d-4fa8-be8f-1118cd59a93a" valueTypeId="adc96501-08f2-455a-aab5-c2c16ca07e26"/>
+  </producedTypes>
+  <name>ES_КоэффициентКомпании</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: коэффициент компании</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c5b4f0a7-7507-4b78-8300-e6b7ba97ea27">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="72557b4c-dd1d-4d40-92b0-2ca8f5bec12b">
+    <name>Компания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компания</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

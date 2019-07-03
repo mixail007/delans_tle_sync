@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="96841445-ff35-4b37-b248-d95442cc0cd4">
+  <producedTypes>
+    <objectType typeId="8088af53-512a-4e99-8958-e484660457f4" valueTypeId="22803fd2-8e01-42af-b299-c1f69dbf27d0"/>
+    <managerType typeId="215b55f8-825f-4250-8b02-29ad31263697" valueTypeId="e58aac53-bc09-4ab9-8693-2c4d4cc2a465"/>
+  </producedTypes>
+  <name>ЗапускЗагрузкаДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запуск программы ДокАрхив и Загрузка документов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЗапускЗагрузкаДокументов.Form.ОбычнаяФорма</defaultForm>
+  <auxiliaryForm>DataProcessor.ЗапускЗагрузкаДокументов.Form.УправляемаяФорма</auxiliaryForm>
+  <forms uuid="c30b6f9d-9615-4825-80eb-81875f990d0f">
+    <name>ОбычнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обычная форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bc990f7c-c07a-4283-a411-058c13a4713b">
+    <name>УправляемаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Управляемая форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

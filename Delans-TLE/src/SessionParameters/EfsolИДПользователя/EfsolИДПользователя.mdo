@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:SessionParameter xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9c636cd0-ca4d-4661-a281-4fc90748597c">
+  <name>EfsolИДПользователя</name>
+  <synonym>
+    <key>ru</key>
+    <value>Efsol ИДПользователя</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>36</length>
+    </stringQualifiers>
+  </type>
+</mdclass:SessionParameter>

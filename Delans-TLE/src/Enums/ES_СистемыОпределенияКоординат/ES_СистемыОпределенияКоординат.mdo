@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="611f2faa-29b6-4418-86c4-808c5f235d65">
+  <producedTypes>
+    <refType typeId="c2af42e9-a9c3-43f8-856c-fa42e1d4aaa0" valueTypeId="ed31775e-ceb3-4812-af3a-5a69f0578532"/>
+    <listType typeId="f260728e-ffa2-47d4-9f7c-969045917bbc" valueTypeId="bb3da033-fcaa-4da7-a839-34e571af082e"/>
+    <managerType typeId="f47a28d5-376d-44c5-82e3-2525a3297119" valueTypeId="8e7f3cc8-4f53-4d43-9388-fe9be840cded"/>
+  </producedTypes>
+  <name>ES_СистемыОпределенияКоординат</name>
+  <synonym>
+    <key>ru</key>
+    <value>E s системы определения координат</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="1336172f-4200-4227-aaa2-f4df8028fd8e">
+    <name>Yandex</name>
+    <synonym>
+      <key>ru</key>
+      <value>Yandex</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9936a270-4a7c-4593-8e14-a7a786d2ab29">
+    <name>Google</name>
+    <synonym>
+      <key>ru</key>
+      <value>Google</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="32378526-4f93-4752-af47-5bf33ea333d5">
+    <name>OpenStreetMap</name>
+    <synonym>
+      <key>ru</key>
+      <value>Open street map</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

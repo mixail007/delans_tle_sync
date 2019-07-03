@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6230ace-c5b4-4da3-b519-de225c826e63">
+  <producedTypes>
+    <selectionType typeId="f0a20a15-230c-4d4f-914d-c8d585b0933e" valueTypeId="350a7819-ab42-42a9-91e4-d675fd68cb34"/>
+    <listType typeId="79dc20c1-2d78-4615-8ea1-debec4910134" valueTypeId="b78127bb-50a7-46b5-bdbc-6ec253b4a50e"/>
+    <managerType typeId="b74ac630-3e56-46d3-ba79-2874fbedc555" valueTypeId="79ba602e-5131-41b6-a2d7-61abf5f0a794"/>
+    <recordSetType typeId="03f3e97a-21ea-47c9-8c7e-ac193fa72e41" valueTypeId="01906755-8554-4417-9ca2-f6285608485f"/>
+    <recordKeyType typeId="8317d3a2-dd6e-4818-af62-d357c3b01de3" valueTypeId="df1c66b6-833a-4562-bb3f-961c1c91ae2e"/>
+    <recordType typeId="40e84ffb-6e6d-4e09-86cf-461de28cc3a5" valueTypeId="1b0fd035-951f-4622-9be3-cf5b03856fc0"/>
+    <recordManagerType typeId="f51af22c-561c-4a99-8aeb-4373821eb760" valueTypeId="56f58ca4-15a6-45b4-8f71-ff8073e5a40a"/>
+  </producedTypes>
+  <name>ES_Delans_Доступ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Delans доступ (ES)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b3886782-2476-467d-82e5-ab4611cb8761">
+    <name>Доступен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2efd8db3-bfd2-4d03-b121-9dfa02c5e1b2">
+    <name>КрайнийСрок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Крайний срок</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="aff72858-945f-473d-b3ab-721169820e50">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

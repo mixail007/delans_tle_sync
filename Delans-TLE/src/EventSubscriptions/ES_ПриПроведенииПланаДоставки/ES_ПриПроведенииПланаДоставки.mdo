@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ad40ca8f-3d90-4d0a-9739-04a809fd0996">
+  <name>ES_ПриПроведенииПланаДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: При проведении плана доставки</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ES_ПланДоставки</types>
+  </source>
+  <event>Posting</event>
+  <handler>CommonModule.ES_ОбщегоНазначения.ES_ПриПроведенииПланаДоставкиОбработкаПроведения</handler>
+</mdclass:EventSubscription>

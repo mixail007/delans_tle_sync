@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1d2e5423-5bbe-47f8-bde9-32efa6d17df3">
+  <producedTypes>
+    <refType typeId="0bbb31c5-0079-4534-a2f6-7f44f0d28d43" valueTypeId="b69eb981-e1a3-41f8-8951-7b346c224d7f"/>
+    <listType typeId="37cf7d7d-3ddb-4efc-bafe-61ab533eb62c" valueTypeId="2b703815-e804-407f-942b-4cd88e000f68"/>
+    <managerType typeId="ab6ff4e4-8ba4-4955-8b56-8e7c916e6029" valueTypeId="8ed25d71-1410-4f33-95d7-85ab3781c3fc"/>
+  </producedTypes>
+  <name>ES_ВидКонтрагента</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Вид контрагента</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="483a170d-83fa-458e-a6aa-defcaf414d04">
+    <name>В2В</name>
+    <synonym>
+      <key>ru</key>
+      <value>В2В</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6abafe50-d5e5-4c7c-ae13-cbf8d3a2fd83">
+    <name>В2С</name>
+    <synonym>
+      <key>ru</key>
+      <value>В2С</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

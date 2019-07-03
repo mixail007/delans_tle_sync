@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b98c8116-636f-48d7-8721-4f8503c83948">
+  <producedTypes>
+    <selectionType typeId="aaad53c9-c107-46ef-88c0-e3547820c2f9" valueTypeId="d3fdb150-ecd4-457e-a83e-3b8a785391f6"/>
+    <listType typeId="97f739a3-22df-4375-b5fc-98a6f4869617" valueTypeId="4713a859-9863-4867-8275-fe8827742803"/>
+    <managerType typeId="fb990560-7001-4e22-9e45-709151a25a7a" valueTypeId="74dea9ca-37f1-4698-be76-2c99496c54d6"/>
+    <recordSetType typeId="ef2426ac-7b50-4676-b99f-6e323c45c8d4" valueTypeId="8f21668e-21ee-45f9-8ed4-7d693c82202c"/>
+    <recordKeyType typeId="7ab2e3c9-f841-42cf-97eb-fef9ff6dc8c3" valueTypeId="b87b138c-fbc3-4a6b-b408-929c1d74d28b"/>
+    <recordType typeId="0b42e498-48c9-4e14-928b-92bf6d02b907" valueTypeId="2a6241e5-0797-4134-92cb-331def9d8806"/>
+    <recordManagerType typeId="284c4c1e-9e10-44ad-ae5a-7c0932b605de" valueTypeId="685a8377-e13b-4e4a-adeb-4d490ffe75d7"/>
+  </producedTypes>
+  <name>ES_ПризнакиУчетаДСиЗапасов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Признаки учета ДС и запасов (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="30dcb808-2ab2-426b-b8bb-353bbe5500f1">
+    <name>УчтеноНП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учтено НП</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3db6ec43-4953-48c5-acdb-0f0458057ec7">
+    <name>УчтеноСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учтено стоимость</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2ffa9e15-e189-4877-8b97-9175a7373dcb">
+    <name>СписаныЗапасы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списаны запасы</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f0dc39ba-1c4c-4e22-acf2-3bf0972be7ae">
+    <name>РасходДенег</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расход денег</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8e916a7f-d23b-424d-9418-750bcc844ae9">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_Самовывоз</types>
+      <types>DocumentRef.ES_ОтчетОДоставке</types>
+      <types>DocumentRef.ES_Возвраты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d3ed2fb3-e816-4343-888e-24d225da2186">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

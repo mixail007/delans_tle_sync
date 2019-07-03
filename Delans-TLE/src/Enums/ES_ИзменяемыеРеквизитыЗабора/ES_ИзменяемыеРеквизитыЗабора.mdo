@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c2ff49ec-c56c-4d62-a5ad-26f545bd0947">
+  <producedTypes>
+    <refType typeId="062457d7-def1-4b79-9efc-4ba15622ecd0" valueTypeId="20538086-c423-4606-9264-af06cd775bb4"/>
+    <listType typeId="b3a8ff9d-4914-40e2-97fc-1c1b58d697bf" valueTypeId="15d52ab1-77b7-4e0c-a168-ae2eb93758f4"/>
+    <managerType typeId="60e3a125-eb88-4e2f-b9d1-46f4835e5b92" valueTypeId="788c644e-7674-4424-ac4e-1e94d964b73a"/>
+  </producedTypes>
+  <name>ES_ИзменяемыеРеквизитыЗабора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Изменяемые реквизиты забора</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="fd0ac87c-81c8-4fb1-81d4-5b5fbfc11b77">
+    <name>ДатаВыполненияЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>ДатаВыполненияЗаказа</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b829e4d1-7384-4ffb-b56c-be83f6b0dd8a">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6b21e804-b5f7-47e8-b3bd-d9f47f58498d">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3a3646c7-df1d-4fd5-8074-04b50ede5537">
+    <name>Расходы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расходы</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8089ea19-3f41-449d-b39c-0767937623ad">
+    <name>ТрекНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТрекНомер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="67516e27-fdf1-47c9-ba47-cca71cce8b10">
+    <name>АктивныйЗаказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Активный заказ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d00e10e9-9add-4b71-93cc-30337a2d4289">
+    <name>Партнер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партнер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6988a901-0fd9-4782-8d39-a434feb3b8fc">
+    <name>ДоставкаПартнером</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доставка партнером</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e9257659-dfda-410a-a5d5-d380c051dc47">
+    <name>ОплаченIBox</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оплачен i box</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="eaa25a9f-ee30-4acb-9584-1e034a36fbc7">
+    <name>НомерЧека</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер чека</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1ea72844-c865-4de1-98c4-a3b33d1b5d44">
+    <name>ИДТранзакции</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИДТранзакции</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

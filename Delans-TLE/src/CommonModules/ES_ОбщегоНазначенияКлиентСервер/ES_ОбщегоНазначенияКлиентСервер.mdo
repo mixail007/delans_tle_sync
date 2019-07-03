@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="da996f19-6800-4937-bf46-03cd8ac1c5d8">
+  <name>ES_ОбщегоНазначенияКлиентСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Общего назначения клиент сервер (efsol)</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+  <server>true</server>
+  <serverCall>true</serverCall>
+</mdclass:CommonModule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="874c9858-1f15-4816-8793-c5d7beaee216">
+  <name>CTSM_EfsolПервичныйДокументКлиент</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM efsol первичный документ клиент</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+</mdclass:CommonModule>

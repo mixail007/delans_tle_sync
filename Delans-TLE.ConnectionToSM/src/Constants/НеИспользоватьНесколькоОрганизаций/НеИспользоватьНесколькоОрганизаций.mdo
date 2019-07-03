@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c6804f55-d013-4841-a4ac-ffa2d9005631">
+  <producedTypes>
+    <managerType typeId="48caa412-8816-467f-ade7-1b0a9bfc6c0b" valueTypeId="7918583d-9486-4f34-ba16-9709b27ba7a0"/>
+    <valueManagerType typeId="f01bdddf-2ac9-412e-b94f-d5567105752d" valueTypeId="1269d250-8d03-4608-bb12-ddd2029e42bd"/>
+    <valueKeyType typeId="912f17bf-b9b7-4836-b449-b230bd2eaaf3" valueTypeId="6e5ef12d-133e-4a1d-a392-c809d64f1624"/>
+  </producedTypes>
+  <name>НеИспользоватьНесколькоОрганизаций</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:ConstantExtension">
+    <type>Checked</type>
+  </extension>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

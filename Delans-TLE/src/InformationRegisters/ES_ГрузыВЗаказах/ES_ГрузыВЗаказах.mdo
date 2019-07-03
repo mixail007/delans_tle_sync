@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf706105-a5e1-4607-9042-e1114397c154">
+  <producedTypes>
+    <selectionType typeId="8de9f41c-d067-4b31-8667-72b2a69bfff9" valueTypeId="8c8ed66c-bddd-4952-989d-ca637f3cafc6"/>
+    <listType typeId="1e79cf4d-9c2c-49bb-9e5a-e0c30dd9120e" valueTypeId="215ff04b-b9c8-4e4f-8de7-a1b9028bad9a"/>
+    <managerType typeId="bd7d01d7-5556-48d1-aa24-34976624c5fb" valueTypeId="b8b4a763-d45c-41ba-83f1-9e5b5f2757b0"/>
+    <recordSetType typeId="1dfacddd-4e55-40a3-a50a-18e12f775f88" valueTypeId="d9cc9877-43f9-48c1-bd95-6592d7bc3021"/>
+    <recordKeyType typeId="27d51d8e-bd45-4f12-bb04-60bbd9326cd6" valueTypeId="f62e19bf-04b4-4623-9462-b4371619e1fc"/>
+    <recordType typeId="b57233bd-3a0d-4c37-99c7-df8d44119422" valueTypeId="ccd396ef-ab60-4dc1-919d-8e60e26079ae"/>
+    <recordManagerType typeId="32398268-4dc1-4707-9f17-2b0dc83e3153" valueTypeId="4c0b7459-7e6a-467d-8c5c-35c15de3f6df"/>
+  </producedTypes>
+  <name>ES_ГрузыВЗаказах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Грузы в заказах (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="df7bdb1c-513c-4925-87f3-78958ee9c9e1">
+    <name>ТипГруза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип груза</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ES_ТипыГрузов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="439302b5-28ff-48eb-ad32-c8d4a689eecf">
+    <name>Вес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вес, кг</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="192ec5e8-52fc-42b9-ba97-ecb7d434db16">
+    <name>ОбъемныйВес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объемный вес, кг</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5562354c-37a7-4a80-bae7-e849cb8a5ef3">
+    <name>Высота</name>
+    <synonym>
+      <key>ru</key>
+      <value>Высота, см</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0af02892-f8a8-460f-b1f8-6b1a964494a8">
+    <name>Длина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длина, см</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="99b9a28a-ed2e-47cb-ad9b-c09921fbe1cf">
+    <name>Ширина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ширина, см</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cd3755ed-6c40-4ebd-8966-2f3d4bb6e41d">
+    <name>НППлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>НП план</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4f7ff55a-c4d1-4c82-90bc-b07b8a0386dd">
+    <name>Страховка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страховка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="48f7d675-7071-4d15-ae9e-d7a6bd0a634c">
+    <name>ОписаниеГруза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание груза</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="ae50d775-bce8-4783-a3d2-949b242f1458">
+    <name>ДокументДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ доставки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bdc1f4dc-9678-4cf2-8b14-249e0fb4fe01">
+    <name>КлючСтроки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ строки</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

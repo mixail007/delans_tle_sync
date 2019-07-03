@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1ce4f98e-81af-45db-8e58-7fdb9be35499">
+  <producedTypes>
+    <refType typeId="25394d5a-2e96-4288-8dd4-07cf63d5b7d0" valueTypeId="ebc9fb7a-53a4-4e3c-aef6-f1d7f7de3570"/>
+    <listType typeId="aaa351ca-32a0-4100-8305-d066aabe8659" valueTypeId="79ddb3a2-0079-4811-b2bf-b7d96e74fa37"/>
+    <managerType typeId="e626ba43-745c-4de3-8474-4c43dfc347f6" valueTypeId="34a1ae37-f563-402f-82c9-ba003ca07449"/>
+  </producedTypes>
+  <name>ES_ВидыОперацийПеремещение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды операции перемещение (efsol)</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="af60fc8c-f888-436f-865f-12c280259060">
+    <name>Заказы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказы</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c79bbd82-96d0-401f-a989-ba4bdf9364f6">
+    <name>НаложенныеПлатежи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наложенные платежи</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ff9efe22-c2ae-43af-83e0-2ca3c3db480d">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказы курьера</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

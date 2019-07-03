@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e19dad7b-559f-4dbb-8a3d-bf4eb08e7d1f">
+  <producedTypes>
+    <managerType typeId="c059fc1c-57e5-469f-8b01-8fa30e7a8e6f" valueTypeId="baa1f92c-1320-4332-8aab-c86f99d9adbf"/>
+    <valueManagerType typeId="b3aba4ee-1615-4be7-8e39-67dadb2a9bca" valueTypeId="a57cb8ae-db61-4d6a-8047-bb4c97fc4533"/>
+    <valueKeyType typeId="e8fbc761-316f-4030-969a-c6b2de4dc7c6" valueTypeId="e6068041-1f4f-4827-be58-a12b47f365e6"/>
+  </producedTypes>
+  <name>ES_ВремяВыполненияЗаказа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Время выполнения заказа, сбора (сек.)</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>10</precision>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

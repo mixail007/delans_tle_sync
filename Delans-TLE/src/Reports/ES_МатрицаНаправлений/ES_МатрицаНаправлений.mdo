@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d95524c3-6cf9-4dc8-bed0-f427257729e3">
+  <producedTypes>
+    <objectType typeId="08c4595e-6e98-4fc4-91bb-ff9818f3d7e1" valueTypeId="13e892c1-2771-4c65-ba97-8254e6491680"/>
+    <managerType typeId="aca700a5-85f1-45d2-afc7-213cf3959e4d" valueTypeId="2d9b0f6e-48b9-486c-a966-0f26f5608972"/>
+  </producedTypes>
+  <name>ES_МатрицаНаправлений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Матрица зон</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_МатрицаНаправлений.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="b63f4060-a093-45b2-a7fb-c80c71454048">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

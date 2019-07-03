@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0c833d57-a9b3-45a5-aa79-14ea0445ee34">
+  <name>ES_ИзмененныеОбъекты</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES_ИзмененныеОбъекты</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>Document.ЗаказПокупателя</content>
+  <content>Catalog.Контрагенты</content>
+  <content>Document.ПоступлениеВКассу</content>
+  <content>Enum.ВидыОперацийПоступлениеВКассу</content>
+  <content>Document.РасходИзКассы</content>
+  <content>Report.ДвиженияДокумента</content>
+  <content>Document.РасходнаяНакладная</content>
+  <content>Report.ДенежныеСредства</content>
+  <content>Report.Продажи</content>
+  <content>CommonModule.СтандартныеПодсистемыКлиент</content>
+  <content>Catalog.СтатьиДвиженияДенежныхСредств</content>
+  <content>Enum.ВидыОперацийЗаказПокупателя</content>
+  <content>Enum.ВидыОперацийРасходИзКассы</content>
+  <content>FilterCriterion.СвязанныеДокументы</content>
+  <content>FilterCriterion.СтруктураПодчиненности</content>
+  <content>CommonCommand.ИсторияИзменений</content>
+  <content>CommonCommand.ДополнительныеСведенияКоманднаяПанель</content>
+  <content>ChartOfAccounts.Управленческий</content>
+  <content>Document.РасходСоСчета</content>
+  <content>Enum.ВидыОперацийРасходнаяНакладная</content>
+  <content>Document.АвансовыйОтчет</content>
+  <content>Catalog.Сотрудники</content>
+</mdclass:Subsystem>

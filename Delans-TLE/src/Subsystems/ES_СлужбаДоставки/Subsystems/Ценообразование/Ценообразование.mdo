@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2d9013a1-edd0-4f47-856d-197476d06d9f">
+  <name>Ценообразование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ценообразование</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.ES_ЗоныДоставки</content>
+  <content>Catalog.ES_Вес</content>
+  <content>Document.ES_УстановкаЦенДоставки</content>
+  <content>InformationRegister.ES_ЦеныДоставки</content>
+  <content>InformationRegister.ES_ЦеныДоставкиДопУслуги</content>
+  <content>Document.ES_МатрицаЗон</content>
+  <content>InformationRegister.ES_ГородаОбслуживания</content>
+  <content>Catalog.ES_ВнутрирегиональнаяЗона</content>
+  <content>Catalog.ES_Направления</content>
+  <parentSubsystem>Subsystem.ES_СлужбаДоставки</parentSubsystem>
+</mdclass:Subsystem>

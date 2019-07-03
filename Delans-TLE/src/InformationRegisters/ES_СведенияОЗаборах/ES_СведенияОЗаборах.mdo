@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3166f59d-6c0d-4436-85aa-ac1c6a6be11a">
+  <producedTypes>
+    <selectionType typeId="be60ac98-2e7e-491c-8ef6-9a402ad08eb1" valueTypeId="171c4c05-ab65-4958-bbae-27a21f95eac2"/>
+    <listType typeId="a260d29f-8601-414c-82ea-b8f9a7b0eca1" valueTypeId="6a2001a7-eb7d-407a-b10c-98ce338ce219"/>
+    <managerType typeId="01972521-ab93-4c7b-bc9c-dc9f12028ecd" valueTypeId="a5c59b6c-3616-433c-9a4d-85c53a0d4a99"/>
+    <recordSetType typeId="9ca3df83-1957-478c-bb41-e5ac91d53107" valueTypeId="4ec6a091-6e8a-472e-b34c-e556f20b3707"/>
+    <recordKeyType typeId="15fa4701-fd54-406d-88e5-7d435ede4f21" valueTypeId="a1799cba-5fc9-4742-b6ed-21c28d956a34"/>
+    <recordType typeId="174cdf39-3ed5-4462-bc25-4965c24fef0c" valueTypeId="f8b2c436-d4fd-4c61-90d6-51aa77f23a7f"/>
+    <recordManagerType typeId="573aebdc-26ac-406f-86aa-40a5e9cc6fcd" valueTypeId="41ebcf7c-efb6-473e-b12a-791b47ce4c5a"/>
+  </producedTypes>
+  <name>ES_СведенияОЗаборах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о заборах груза (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2be56bbb-cdb9-4018-8719-bc88a6c7ca3d">
+    <name>ПланДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>План доставки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ПланДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4bc0e003-433e-4f1d-8267-5e1cdc42b0cb">
+    <name>ОтчетОДоставке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет о доставке</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ОтчетОДоставке</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="50d22ded-240a-4f29-b8f0-26e241729c36">
+    <name>ОснованиеЗабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основание забора</value>
+    </synonym>
+    <comment>Если Забор без Заказа, поле заполняется этим же Забором</comment>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4779980b-737e-4567-8395-8887aa34fccf">
+    <name>Забор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Забор груза</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

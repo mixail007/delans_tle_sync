@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="47f62e8d-42f9-42ae-a183-bd4ef868a271">
+  <name>ES_ТелеграмAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Телеграм API (efsol)</value>
+  </synonym>
+  <rootURL>Forbot1c</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="cbcc0858-64c0-4762-a7db-ef85f5c3d642">
+    <name>ШаблонURLДляБотаТелеграм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон URLДля бота телеграм</value>
+    </synonym>
+    <template>/getMessage</template>
+    <methods uuid="26bfdc36-6648-4005-ba27-92b7730ce99d">
+      <name>ПолучитьОтвет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить ответ</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ШаблонURLДляБотаТелеграмПолучитьОтвет</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="6c2f555f-23a4-4a0d-81a9-a42f8e79b666">
+    <name>T_APIИзменитьСтатусВыполнен</name>
+    <synonym>
+      <key>ru</key>
+      <value>T API изменить статус выполнен</value>
+    </synonym>
+    <template>/ChangeStatusCompleted</template>
+    <methods uuid="d8b5f539-d874-441d-82fe-4496c57c9f2a">
+      <name>ИзменитьСтатусВыполнен</name>
+      <synonym>
+        <key>ru</key>
+        <value>Изменить статус выполнен</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>T_APIИзменитьСтатусВыполненИзменитьСтатусВыполнен</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2f532f75-60f6-4446-b37b-b56a20550a84">
+    <name>T_APIСоздатьНайтиСотрудника</name>
+    <synonym>
+      <key>ru</key>
+      <value>T_API Создать найти сотрудника</value>
+    </synonym>
+    <template>/CreateEmployee</template>
+    <methods uuid="809656a8-1b55-4582-ab66-41f50c5e3d7d">
+      <name>СоздатьНайтиСотрудника</name>
+      <synonym>
+        <key>ru</key>
+        <value>Создать найти сотрудника</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>T_APIСоздатьНайтиСотрудникаСоздатьНайтиСотрудника</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="02f6e796-aa44-42e1-9c4f-938c8b922cb3">
+    <name>T_APIИзменитьСтатусОтказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>T API Изменить статус отказ</value>
+    </synonym>
+    <template>/ChangeStatusFailure</template>
+    <methods uuid="46d6ffd6-c141-492d-813c-c4a54d44c5b8">
+      <name>ИзменитьСтатусОтказ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Изменить статус отказ</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>T_APIИзменитьСтатусОтказИзменитьСтатусОтказ</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="0990175e-2421-43cc-a8a0-8b8d3380a239">
+    <name>T_APIПроверитьЗаказНазначен</name>
+    <synonym>
+      <key>ru</key>
+      <value>T API Проверить заказ назначен</value>
+    </synonym>
+    <template>/OrderAssigned</template>
+    <methods uuid="8437d9bd-7ef1-4393-88f2-ed9f16ead52f">
+      <name>ПроверитьЗаказ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проверить заказ</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>T_APIТелеграмПроверитьЗаказНазначенПроверитьЗаказ</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d0093d56-18a5-4a0f-a484-b009368d2633">
+  <producedTypes>
+    <managerType typeId="40f94f7c-74aa-4bef-b127-9e88dea1c4c6" valueTypeId="7df12442-58c4-4d57-8c3f-314faac26024"/>
+    <valueManagerType typeId="17d0b9a0-4268-4877-bb97-63a3fd724ecf" valueTypeId="5bdc1358-fe7c-413f-a3c0-7ef5e5358739"/>
+    <valueKeyType typeId="e38df351-a026-4374-91a4-f05ccbfdd609" valueTypeId="13545c01-3c47-4acc-8b1a-8745fa517ee0"/>
+  </producedTypes>
+  <name>ES_ДельтаВремени</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: дельта времени (сек)</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>10</precision>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="050ed909-5a80-40f0-8c33-6f74cccbec5d">
+  <name>ExchangeYandex</name>
+  <synonym>
+    <key>ru</key>
+    <value>Exchange Yandex</value>
+  </synonym>
+  <rootURL>api-yandex</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="2a7a646b-680a-4644-aa21-90087ff03966">
+    <name>RefreshOrders</name>
+    <synonym>
+      <key>ru</key>
+      <value>Refresh orders</value>
+    </synonym>
+    <template>/getOrders</template>
+    <methods uuid="96e9df16-8c01-4bdf-9c85-2fab280857d6">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>RefreshOrdersPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="49ac5ea5-082b-4d1f-a120-57ad7b0c168e">
+    <name>RefreshPlans</name>
+    <synonym>
+      <key>ru</key>
+      <value>Refresh plans</value>
+    </synonym>
+    <template>/getPlans</template>
+    <methods uuid="2ae49363-d64f-4724-90f8-9482eee1dede">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>RefreshPlansPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="30582f7d-292c-42d8-9120-92eedcd608a4">
+    <name>RefreshPlan</name>
+    <synonym>
+      <key>ru</key>
+      <value>Refresh plan</value>
+    </synonym>
+    <template>/setPlan</template>
+    <methods uuid="4f2d72b0-4b66-4572-8d95-dcf1a66cc38c">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>RefreshPlanPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="42cf5829-32a2-40df-b828-c2de5cd5db77">
+    <name>RefreshZones</name>
+    <synonym>
+      <key>ru</key>
+      <value>Refresh zones</value>
+    </synonym>
+    <template>/setZones</template>
+    <methods uuid="bce3f4db-a3f7-46be-be79-57ef82e9eb82">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>RefreshZonesPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="7d3a7114-85d8-4ce4-860e-170398aa3ea2">
+    <name>RefrreshSavedZones</name>
+    <synonym>
+      <key>ru</key>
+      <value>Refrresh saved zones</value>
+    </synonym>
+    <template>/getZones</template>
+    <methods uuid="d0d611bd-3338-4803-9556-07d32d2363fb">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>RefrreshSavedZonesPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="e562bd70-af8f-47dc-bd03-c2a73aa118f4">
+    <name>CreatePlans</name>
+    <synonym>
+      <key>ru</key>
+      <value>Create plans</value>
+    </synonym>
+    <template>/createPlans</template>
+    <methods uuid="bcfa5d5a-39b5-48c8-8648-59f3ef9debf5">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>CreatePlansPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="4438ef0b-6157-425b-adfe-9670c48c3f89">
+    <name>GetCouriers</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get couriers</value>
+    </synonym>
+    <template>/getCouriers</template>
+    <methods uuid="8eade3c4-0387-430f-b63f-3b6d3a6b5a3f">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>GetCouriersPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="fa68a0d6-e3bd-4a3c-a770-6b7b982df96e">
+    <name>CreatePlan</name>
+    <synonym>
+      <key>ru</key>
+      <value>Create plan</value>
+    </synonym>
+    <template>/createPlan</template>
+    <methods uuid="b6dc6053-cce2-4117-83cb-af722b889851">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>CreatePlanPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2539a123-887f-4cf6-ad77-10661f76012d">
+    <name>DeletePlan</name>
+    <synonym>
+      <key>ru</key>
+      <value>Delete plan</value>
+    </synonym>
+    <template>/deletePlan</template>
+    <methods uuid="13ce4082-9bec-4e5d-a292-2a6507ee912a">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>DeletePlanPOST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d082686-5c4c-4877-abdc-633cf2a6bc36">
+  <name>CTSM_ПодключаемыеКоманды_EfsolПервичныйДокумент</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM подключаемые команды efsol первичный документ</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

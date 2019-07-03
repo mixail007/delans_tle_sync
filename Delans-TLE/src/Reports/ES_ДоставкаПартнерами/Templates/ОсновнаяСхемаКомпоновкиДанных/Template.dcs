@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операция</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Курьер</dataPath>
+			<field>Курьер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДокумента</dataPath>
+			<field>ДатаДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитЗаказа</dataPath>
+			<field>РеквизитЗаказа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитЗабора</dataPath>
+			<field>РеквизитЗабора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Забор</dataPath>
+			<field>Забор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НПФактБезнал</dataPath>
+			<field>НПФактБезнал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НПФакт безнал</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Накладная</dataPath>
+			<field>Накладная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусЗаказа</dataPath>
+			<field>СтатусЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НППлан</dataPath>
+			<field>НППлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НПФактНал</dataPath>
+			<field>НПФактНал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НП факт нал</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыполнения</dataPath>
+			<field>ДатаВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выполнения</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НПВозвращен</dataPath>
+			<field>НПВозвращен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НП возвращен</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Остаток</dataPath>
+			<field>Остаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДоставки</dataPath>
+			<field>АдресДоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НПОжидаетсяКВозврату</dataPath>
+			<field>НПОжидаетсяКВозврату</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НП ожидается к возврату</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказВозвращен</dataPath>
+			<field>ЗаказВозвращен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ возвращен</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаетсяКВозврату</dataPath>
+			<field>ОжидаетсяКВозврату</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидается к возврату</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПартнерОстаток</dataPath>
+			<field>ПартнерОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДоставки</dataPath>
+			<field>ДатаДоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы</dataPath>
+			<field>Расходы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ES_ДанныеПоЗаказамСрезПоследних.Заказ КАК Заказ,
+	ES_ДанныеПоЗаказамСрезПоследних.ДатаДокумента КАК ДатаДокумента,
+	ES_ДанныеПоЗаказамСрезПоследних.НомерНакладной КАК НомерНакладной,
+	ES_ДанныеПоЗаказамСрезПоследних.АдресДоставки КАК АдресДоставки,
+	ES_ДанныеПоЗаказамСрезПоследних.НППлан КАК НППлан,
+	ES_ДанныеПоЗаказамСрезПоследних.ДатаДоставки КАК ДатаДоставки
+ПОМЕСТИТЬ ВТ_Заказы
+ИЗ
+	РегистрСведений.ES_ДанныеПоЗаказам.СрезПоследних КАК ES_ДанныеПоЗаказамСрезПоследних
+ГДЕ
+	ES_ДанныеПоЗаказамСрезПоследних.ДатаДокумента МЕЖДУ &amp;ДатаНач И &amp;ДатаКон
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЕСТЬNULL(ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаказовДоставкаПартнером.Значение КАК БУЛЕВО), ЛОЖЬ) КАК ДоставкаПартнером,
+	ВТ_Заказы.Заказ КАК Заказ,
+	ВТ_Заказы.ДатаДокумента КАК ДатаДокумента,
+	ВТ_Заказы.НомерНакладной КАК НомерНакладной,
+	ВТ_Заказы.АдресДоставки КАК АдресДоставки,
+	ВТ_Заказы.НППлан КАК НППлан,
+	ВТ_Заказы.ДатаДоставки КАК ДатаДоставки
+ПОМЕСТИТЬ ВТ_ДоставкаПартнером
+ИЗ
+	ВТ_Заказы КАК ВТ_Заказы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаказов.СрезПоследних(
+				,
+				Заказ В
+						(ВЫБРАТЬ
+							ВТ_Заказы.Заказ
+						ИЗ
+							ВТ_Заказы КАК ВТ_Заказы)
+					И РеквизитЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗаказа.ДоставкаПартнером)) КАК ES_ИзменяемыеРеквизитыЗаказовДоставкаПартнером
+		ПО ВТ_Заказы.Заказ = ES_ИзменяемыеРеквизитыЗаказовДоставкаПартнером.Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ДоставкаПартнером.Заказ КАК Заказ,
+	ВТ_ДоставкаПартнером.ДатаДокумента КАК ДатаДокумента,
+	ЕСТЬNULL(ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаказовПартнер.Значение КАК Справочник.Контрагенты), ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)) КАК Партнер,
+	ВТ_ДоставкаПартнером.АдресДоставки КАК АдресДоставки,
+	ВТ_ДоставкаПартнером.НППлан КАК НППлан,
+	ВТ_ДоставкаПартнером.НомерНакладной КАК НомерНакладной,
+	ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаказовДатаВыполненияЗаказа.Значение КАК ДАТА) КАК ДатаВыполнения,
+	ВТ_ДоставкаПартнером.ДатаДоставки КАК ДатаДоставки,
+	ЕСТЬNULL(ES_РасходыПоЗаказамОбороты.СуммаОборот, 0) КАК Расходы
+ПОМЕСТИТЬ ВТ_ДанныеПоЗаказам
+ИЗ
+	ВТ_ДоставкаПартнером КАК ВТ_ДоставкаПартнером
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаказов.СрезПоследних(
+				,
+				Заказ В
+						(ВЫБРАТЬ
+							ВТ_Заказы.Заказ
+						ИЗ
+							ВТ_Заказы КАК ВТ_Заказы)
+					И РеквизитЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗаказа.Партнер)) КАК ES_ИзменяемыеРеквизитыЗаказовПартнер
+		ПО ВТ_ДоставкаПартнером.Заказ = ES_ИзменяемыеРеквизитыЗаказовПартнер.Заказ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаказов.СрезПоследних(
+				,
+				Заказ В
+						(ВЫБРАТЬ
+							ВТ_Заказы.Заказ
+						ИЗ
+							ВТ_Заказы КАК ВТ_Заказы)
+					И РеквизитЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗаказа.ДатаВыполненияЗаказа)) КАК ES_ИзменяемыеРеквизитыЗаказовДатаВыполненияЗаказа
+		ПО ВТ_ДоставкаПартнером.Заказ = ES_ИзменяемыеРеквизитыЗаказовДатаВыполненияЗаказа.Заказ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ES_РасходыПоЗаказам.Обороты(
+				,
+				,
+				,
+				Заказ В
+					(ВЫБРАТЬ
+						ВТ_Заказы.Заказ КАК Заказ
+					ИЗ
+						ВТ_Заказы КАК ВТ_Заказы)) КАК ES_РасходыПоЗаказамОбороты
+		ПО ВТ_ДоставкаПартнером.Заказ = ES_РасходыПоЗаказамОбороты.Заказ
+ГДЕ
+	ВТ_ДоставкаПартнером.ДоставкаПартнером
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ДанныеПоЗаказам.Заказ КАК Заказ,
+	ВТ_ДанныеПоЗаказам.ДатаДокумента КАК ДатаДокумента,
+	ВТ_ДанныеПоЗаказам.АдресДоставки КАК АдресДоставки,
+	ВТ_ДанныеПоЗаказам.НППлан КАК НППлан,
+	ЕСТЬNULL(ES_НаложенныеПлатежиПартнеровОбороты.НПФактНалОборот, 0) КАК НПФактНал,
+	ЕСТЬNULL(ES_НаложенныеПлатежиПартнеровОбороты.НПФактБезналОборот, 0) КАК НПФактБезнал,
+	ЕСТЬNULL(ES_НаложенныеПлатежиПартнеровОбороты.ОтправленоОборот, 0) КАК НПОтправлено,
+	ЕСТЬNULL(ES_НаложенныеПлатежиПартнеровОбороты.ПринятоОборот, 0) КАК НПВозвращен,
+	ES_СтатусыЗаказовСрезПоследних.СтатусЗаказа КАК СтатусЗаказа,
+	ВТ_ДанныеПоЗаказам.НомерНакладной КАК НомерНакладной,
+	ВТ_ДанныеПоЗаказам.ДатаВыполнения КАК ДатаВыполнения,
+	ЕСТЬNULL(ES_НаложенныеПлатежиПартнеровОбороты.НПФактНалОборот, 0) + ЕСТЬNULL(ES_НаложенныеПлатежиПартнеровОбороты.НПФактБезналОборот, 0) КАК НПОжидаетсяКВозврату,
+	ВТ_ДанныеПоЗаказам.ДатаДоставки КАК ДатаДоставки,
+	ВТ_ДанныеПоЗаказам.Партнер КАК Партнер,
+	ВТ_ДанныеПоЗаказам.Расходы КАК Расходы
+ПОМЕСТИТЬ ВТ_ЗаказыСПлатежами
+ИЗ
+	ВТ_ДанныеПоЗаказам КАК ВТ_ДанныеПоЗаказам
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ES_НаложенныеПлатежиПартнеров.Обороты(
+				&amp;ДатаНач,
+				&amp;ДатаКон,
+				,
+				Заказ В
+					(ВЫБРАТЬ
+						ВТ_ДанныеПоЗаказам.Заказ
+					ИЗ
+						ВТ_ДанныеПоЗаказам КАК ВТ_ДанныеПоЗаказам)) КАК ES_НаложенныеПлатежиПартнеровОбороты
+		ПО ВТ_ДанныеПоЗаказам.Заказ = ES_НаложенныеПлатежиПартнеровОбороты.Заказ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_СтатусыЗаказов.СрезПоследних(
+				,
+				Заказ В
+					(ВЫБРАТЬ
+						ВТ_ДанныеПоЗаказам.Заказ
+					ИЗ
+						ВТ_ДанныеПоЗаказам КАК ВТ_ДанныеПоЗаказам)) КАК ES_СтатусыЗаказовСрезПоследних
+		ПО ВТ_ДанныеПоЗаказам.Заказ = ES_СтатусыЗаказовСрезПоследних.Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ES_ЗаказыНаСкладеОстатки.Заказ КАК Заказ,
+	ES_ЗаказыНаСкладеОстатки.Склад КАК Склад,
+	ES_ЗаказыНаСкладеОстатки.КоличествоОстаток КАК КоличествоОстаток,
+	ES_ЗаказыНаСкладеОстатки.Склад.ES_Партнер КАК СкладES_Партнер
+ПОМЕСТИТЬ ВТ_Остатки
+ИЗ
+	РегистрНакопления.ES_ЗаказыНаСкладе.Остатки(
+			,
+			Заказ В
+				(ВЫБРАТЬ
+					ВТ_ДанныеПоЗаказам.Заказ
+				ИЗ
+					ВТ_ДанныеПоЗаказам КАК ВТ_ДанныеПоЗаказам)) КАК ES_ЗаказыНаСкладеОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ES_ЗаказыНаСкладе.Заказ КАК Заказ,
+	МАКСИМУМ(ES_ЗаказыНаСкладе.Период) КАК Период,
+	МАКСИМУМ(ВЫРАЗИТЬ(ES_ЗаказыНаСкладе.Регистратор КАК Документ.ES_ПеремещениеЗаказов)) КАК ДокПеремещение
+ПОМЕСТИТЬ ВТ_Перемещение
+ИЗ
+	РегистрНакопления.ES_ЗаказыНаСкладе КАК ES_ЗаказыНаСкладе
+ГДЕ
+	ES_ЗаказыНаСкладе.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+	И ES_ЗаказыНаСкладе.Регистратор ССЫЛКА Документ.ES_ПеремещениеЗаказов
+
+СГРУППИРОВАТЬ ПО
+	ES_ЗаказыНаСкладе.Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_Перемещение.Заказ КАК Заказ,
+	МАКСИМУМ(ВТ_Перемещение.Период) КАК Период,
+	МАКСИМУМ(ВТ_Перемещение.ДокПеремещение) КАК ДокПеремещение,
+	ВТ_Перемещение.ДокПеремещение.СкладОтправитель.ES_Партнер КАК ДокПеремещениеСкладОтправительES_Партнер
+ПОМЕСТИТЬ ВТ_ДатаПослПеремещения
+ИЗ
+	ВТ_Перемещение КАК ВТ_Перемещение
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Перемещение.Заказ,
+	ВТ_Перемещение.ДокПеремещение.СкладОтправитель.ES_Партнер
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ЗаказыСПлатежами.Заказ КАК Заказ,
+	ВТ_ЗаказыСПлатежами.НомерНакладной КАК Накладная,
+	ВТ_ЗаказыСПлатежами.ДатаДокумента КАК ДатаДокумента,
+	ВТ_ЗаказыСПлатежами.АдресДоставки КАК АдресДоставки,
+	ВТ_ЗаказыСПлатежами.НППлан КАК НППлан,
+	ВТ_ЗаказыСПлатежами.НПФактНал КАК НПФактНал,
+	ВТ_ЗаказыСПлатежами.НПФактБезнал КАК НПФактБезнал,
+	ВТ_ЗаказыСПлатежами.НПВозвращен КАК НПВозвращен,
+	ВТ_ЗаказыСПлатежами.СтатусЗаказа КАК СтатусЗаказа,
+	ЕСТЬNULL(ВТ_Остатки.Склад, ЗНАЧЕНИЕ(Справочник.СтруктурныеЕдиницы.ПустаяСсылка)) КАК Склад,
+	ЕСТЬNULL(ВТ_Остатки.КоличествоОстаток, 0) КАК Остаток,
+	ЕСТЬNULL(ВТ_Остатки.СкладES_Партнер, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)) КАК ПартнерОстаток,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_Остатки.СкладES_Партнер, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				И (ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.НАзначен)
+					ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.ВПути)
+					ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.ОжидаетГрузНазначен)
+					ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.Доставлен)
+					ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.ДоставленРассчитать))
+			ТОГДА ЛОЖЬ
+		КОГДА ЕСТЬNULL(ВТ_Остатки.СкладES_Партнер, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ОжидаетсяКВозврату,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_Остатки.СкладES_Партнер, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)) = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ТОГДА ВЫБОР
+					КОГДА ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.Подготовлен)
+							ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.Назначен)
+							ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.ВПути)
+							ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.Доставлен)
+							ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.ДоставленРассчитать)
+							ИЛИ ВТ_ЗаказыСПлатежами.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_СтатусыЗаказов.МеждуСкладами)
+						ТОГДА ЛОЖЬ
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЗаказВозвращен,
+	ВТ_ЗаказыСПлатежами.ДатаВыполнения КАК ДатаВыполнения,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ЗаказыСПлатежами.НПВозвращен, 0) &lt;&gt; 0
+			ТОГДА 0
+		ИНАЧЕ ВТ_ЗаказыСПлатежами.НПОжидаетсяКВозврату
+	КОНЕЦ КАК НПОжидаетсяКВозврату,
+	ВТ_ЗаказыСПлатежами.ДатаДоставки КАК ДатаДоставки,
+	ВТ_ЗаказыСПлатежами.Партнер КАК Партнер,
+	ВТ_ЗаказыСПлатежами.Расходы КАК Расходы
+ПОМЕСТИТЬ ВТ_ИтогЗаказы
+ИЗ
+	ВТ_ЗаказыСПлатежами КАК ВТ_ЗаказыСПлатежами
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Остатки КАК ВТ_Остатки
+		ПО ВТ_ЗаказыСПлатежами.Заказ = ВТ_Остатки.Заказ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДатаПослПеремещения КАК ВТ_ДатаПослПеремещения
+		ПО ВТ_ЗаказыСПлатежами.Заказ = ВТ_ДатаПослПеремещения.Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ES_ДанныеПоЗаборамСрезПоследних.Забор КАК Забор,
+	ES_ДанныеПоЗаборамСрезПоследних.НомерДокумента КАК НомерДокумента,
+	ES_ДанныеПоЗаборамСрезПоследних.ДатаДокумента КАК ДатаДокумента,
+	ES_ДанныеПоЗаборамСрезПоследних.Адрес КАК Адрес,
+	ES_ДанныеПоЗаборамСрезПоследних.ДокументОснование КАК СвязанныйЗаказ,
+	ES_ДанныеПоЗаборамСрезПоследних.НомерНакладной КАК НомерНакладной,
+	ES_ДанныеПоЗаборамСрезПоследних.ДатаЗабора КАК ДатаЗабора
+ПОМЕСТИТЬ ВТ_Заборы
+ИЗ
+	РегистрСведений.ES_ДанныеПоЗаборам.СрезПоследних(, ДатаДокумента МЕЖДУ &amp;ДатаНач И &amp;ДатаКон) КАК ES_ДанныеПоЗаборамСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_Заборы.Забор КАК Забор,
+	ВТ_Заборы.НомерДокумента КАК НомерДокумента,
+	ВТ_Заборы.ДатаДокумента КАК ДатаДокумента,
+	ВТ_Заборы.Адрес КАК Адрес,
+	ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаборовПарнер.Значение КАК Справочник.Контрагенты) КАК Партнер,
+	ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаборовДоставкаПарнером.Значение КАК БУЛЕВО) КАК ДоставкаПарнером,
+	ВТ_Заборы.СвязанныйЗаказ КАК СвязанныйЗаказ,
+	ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаказовПартнер.Значение КАК Справочник.Контрагенты) КАК ПарнерПоЗаказу,
+	ВТ_Заборы.НомерНакладной КАК НомерНакладной,
+	ВЫРАЗИТЬ(ES_ИзменяемыеРеквизитыЗаборовДатаВыполнения.Значение КАК ДАТА) КАК ДатаВыполнения,
+	ВТ_Заборы.ДатаЗабора КАК ДатаЗабора,
+	ЕСТЬNULL(ES_РасходыПоЗаказамОбороты.СуммаОборот, 0) КАК Расходы
+ПОМЕСТИТЬ ВТ_ЗаборыСПарнерами
+ИЗ
+	ВТ_Заборы КАК ВТ_Заборы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаборов.СрезПоследних(
+				,
+				Забор В
+						(ВЫБРАТЬ
+							ВТ_Заборы.Забор КАК Забор
+						ИЗ
+							ВТ_Заборы КАК ВТ_Заборы)
+					И РеквизитЗабора = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗабора.ДоставкаПартнером)) КАК ES_ИзменяемыеРеквизитыЗаборовДоставкаПарнером
+		ПО ВТ_Заборы.Забор = ES_ИзменяемыеРеквизитыЗаборовДоставкаПарнером.Забор
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаборов.СрезПоследних(
+				,
+				Забор В
+						(ВЫБРАТЬ
+							ВТ_Заборы.Забор КАК Забор
+						ИЗ
+							ВТ_Заборы КАК ВТ_Заборы)
+					И РеквизитЗабора = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗабора.Партнер)) КАК ES_ИзменяемыеРеквизитыЗаборовПарнер
+		ПО ВТ_Заборы.Забор = ES_ИзменяемыеРеквизитыЗаборовПарнер.Забор
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаборов.СрезПоследних(
+				,
+				Забор В
+						(ВЫБРАТЬ
+							ВТ_Заборы.Забор КАК Забор
+						ИЗ
+							ВТ_Заборы КАК ВТ_Заборы)
+					И РеквизитЗабора = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗабора.ДатаВыполненияЗаказа)) КАК ES_ИзменяемыеРеквизитыЗаборовДатаВыполнения
+		ПО ВТ_Заборы.Забор = ES_ИзменяемыеРеквизитыЗаборовДатаВыполнения.Забор
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_ИзменяемыеРеквизитыЗаказов.СрезПоследних(
+				,
+				Заказ В
+						(ВЫБРАТЬ
+							ВТ_Заборы.СвязанныйЗаказ КАК СвязанныйЗаказ
+						ИЗ
+							ВТ_Заборы КАК ВТ_Заборы)
+					И РеквизитЗаказа = ЗНАЧЕНИЕ(Перечисление.ES_ИзменяемыеРеквизитыЗаказа.Партнер)) КАК ES_ИзменяемыеРеквизитыЗаказовПартнер
+		ПО ВТ_Заборы.СвязанныйЗаказ = ES_ИзменяемыеРеквизитыЗаказовПартнер.Заказ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ES_РасходыПоЗаказам.Обороты(
+				,
+				,
+				,
+				Заказ В
+					(ВЫБРАТЬ
+						ВТ_Заборы.Забор КАК Забор
+					ИЗ
+						ВТ_Заборы КАК ВТ_Заборы)) КАК ES_РасходыПоЗаказамОбороты
+		ПО ВТ_Заборы.Забор = ES_РасходыПоЗаказамОбороты.Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ЗаборыСПарнерами.Забор КАК Забор,
+	ВТ_ЗаборыСПарнерами.НомерДокумента КАК НомерДокумента,
+	ВТ_ЗаборыСПарнерами.ДатаДокумента КАК ДатаДокумента,
+	ВТ_ЗаборыСПарнерами.Адрес КАК Адрес,
+	ВТ_ЗаборыСПарнерами.ДоставкаПарнером КАК ДоставкаПарнером,
+	ES_СтатусыЗаборовСрезПоследних.СтатусЗабора КАК СтатусЗабора,
+	ВТ_ЗаборыСПарнерами.СвязанныйЗаказ КАК СвязанныйЗаказ,
+	ES_СтатусыЗаказовСрезПоследних.СтатусЗаказа КАК СтатусЗаказа,
+	ES_ЗаказыНаСкладеОстатки.Склад КАК ТекСкладЗаказа,
+	ВТ_ЗаборыСПарнерами.НомерНакладной КАК НомерНакладной,
+	ВТ_ЗаборыСПарнерами.ДатаВыполнения КАК ДатаВыполнения,
+	ВТ_ЗаборыСПарнерами.ДатаЗабора КАК ДатаЗабора,
+	ВТ_ЗаборыСПарнерами.Партнер КАК Партнер,
+	ВТ_ЗаборыСПарнерами.Расходы КАК Расходы
+ПОМЕСТИТЬ ВТ_ИтогЗаборы
+ИЗ
+	ВТ_ЗаборыСПарнерами КАК ВТ_ЗаборыСПарнерами
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_СтатусыЗаборов.СрезПоследних(
+				,
+				Забор В
+					(ВЫБРАТЬ
+						ВТ_ЗаборыСПарнерами.Забор КАК Забор
+					ИЗ
+						ВТ_ЗаборыСПарнерами КАК ВТ_ЗаборыСПарнерами)) КАК ES_СтатусыЗаборовСрезПоследних
+		ПО ВТ_ЗаборыСПарнерами.Забор = ES_СтатусыЗаборовСрезПоследних.Забор
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ES_СтатусыЗаказов.СрезПоследних(
+				,
+				Заказ В
+					(ВЫБРАТЬ
+						ВТ_ЗаборыСПарнерами.СвязанныйЗаказ КАК СвязанныйЗаказ
+					ИЗ
+						ВТ_ЗаборыСПарнерами КАК ВТ_ЗаборыСПарнерами)) КАК ES_СтатусыЗаказовСрезПоследних
+		ПО ВТ_ЗаборыСПарнерами.СвязанныйЗаказ = ES_СтатусыЗаказовСрезПоследних.Заказ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ES_ЗаказыНаСкладе.Остатки(
+				,
+				Заказ В
+					(ВЫБРАТЬ
+						ВТ_ЗаборыСПарнерами.СвязанныйЗаказ КАК СвязанныйЗаказ
+					ИЗ
+						ВТ_ЗаборыСПарнерами КАК ВТ_ЗаборыСПарнерами)) КАК ES_ЗаказыНаСкладеОстатки
+		ПО ВТ_ЗаборыСПарнерами.СвязанныйЗаказ = ES_ЗаказыНаСкладеОстатки.Заказ
+ГДЕ
+	ВТ_ЗаборыСПарнерами.ДоставкаПарнером
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ИтогЗаказы.Заказ КАК Заказ,
+	ВТ_ИтогЗаказы.Накладная КАК Накладная,
+	ВТ_ИтогЗаказы.ДатаДокумента КАК ДатаДокумента,
+	ВТ_ИтогЗаказы.АдресДоставки КАК АдресДоставки,
+	ВТ_ИтогЗаказы.НППлан КАК НППлан,
+	ВТ_ИтогЗаказы.НПФактНал КАК НПФактНал,
+	ВТ_ИтогЗаказы.НПФактБезнал КАК НПФактБезнал,
+	ВТ_ИтогЗаказы.НПВозвращен КАК НПВозвращен,
+	ВТ_ИтогЗаказы.СтатусЗаказа КАК СтатусЗаказа,
+	ВТ_ИтогЗаказы.Склад КАК Склад,
+	ВТ_ИтогЗаказы.Остаток КАК Остаток,
+	ВТ_ИтогЗаказы.ПартнерОстаток КАК ПартнерОстаток,
+	ВТ_ИтогЗаказы.ОжидаетсяКВозврату КАК ОжидаетсяКВозврату,
+	ВТ_ИтогЗаказы.ЗаказВозвращен КАК ЗаказВозвращен,
+	ВТ_ИтогЗаказы.ДатаВыполнения КАК ДатаВыполнения,
+	ВТ_ИтогЗаказы.НПОжидаетсяКВозврату КАК НПОжидаетсяКВозврату,
+	ВТ_ИтогЗаказы.ДатаДоставки КАК ДатаДоставки,
+	ВТ_ИтогЗаказы.Партнер КАК Партнер,
+	ВТ_ИтогЗаказы.Расходы КАК Расходы
+ИЗ
+	ВТ_ИтогЗаказы КАК ВТ_ИтогЗаказы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ИтогЗаборы.Забор,
+	ВТ_ИтогЗаборы.НомерНакладной,
+	ВТ_ИтогЗаборы.ДатаДокумента,
+	ВТ_ИтогЗаборы.Адрес,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ВТ_ИтогЗаборы.СтатусЗабора,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ВТ_ИтогЗаборы.ДатаВыполнения,
+	NULL,
+	ВТ_ИтогЗаборы.ДатаЗабора,
+	ВТ_ИтогЗаборы.Партнер,
+	ВТ_ИтогЗаборы.Расходы
+ИЗ
+	ВТ_ИтогЗаборы КАК ВТ_ИтогЗаборы</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаКон</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата кон</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;ПериодОтчета.ДатаОкончания, "ДЕНЬ")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаНач</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата нач</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Доставка партнеров</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Накладная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусЗаказа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВыполнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Партнер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Расходы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НППлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НПФактНал</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НПФактБезнал</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НПОжидаетсяКВозврату</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НПВозвращен</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОжидаетсяКВозврату</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказВозвращен</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Партнер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>f69de2f5-053c-4459-99b1-8a0490b73e04</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаКон</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>af8e8e3c-43f1-42bc-8c4d-4dcf20ca9d17</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаНач</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>904953ed-7044-43c0-8bc6-792165bb3c6f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>c45e29ea-a002-4729-84a5-7d7e2862870a</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

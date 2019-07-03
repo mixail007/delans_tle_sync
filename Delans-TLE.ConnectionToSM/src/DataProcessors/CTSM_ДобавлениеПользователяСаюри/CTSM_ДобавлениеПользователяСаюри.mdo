@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3c00bfdc-b335-4140-8817-dc20e4f1281d">
+  <producedTypes>
+    <objectType typeId="57def51f-8dd8-44b5-80be-915d96c9936e" valueTypeId="9af9d91b-7f76-45b0-9033-acf3d33f52ba"/>
+    <managerType typeId="ec84a049-1545-44ec-a7f8-3b6cbd8ac37f" valueTypeId="4035c2c9-c7a6-4338-9f46-dfa811cf5300"/>
+  </producedTypes>
+  <name>CTSM_ДобавлениеПользователяСаюри</name>
+  <synonym>
+    <key>ru</key>
+    <value>Добавление пользователя в саюри</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.CTSM_ДобавлениеПользователяСаюри.Form.Форма</defaultForm>
+  <forms uuid="40640f79-b641-4527-9f6c-f6f152c542d1">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

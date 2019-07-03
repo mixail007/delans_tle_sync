@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6c53c0ae-037c-4a89-9151-f44adef3557d">
+  <producedTypes>
+    <selectionType typeId="cb806459-b26c-45bd-8cf9-7c0b348c63a1" valueTypeId="b43b97ef-a9d9-42c3-86ae-ac860b2d377d"/>
+    <listType typeId="742069fe-b75e-4e7e-b575-3f90b72fff7f" valueTypeId="7b28b864-fca2-4980-bc58-a36e938a8c48"/>
+    <managerType typeId="aac0d545-46f4-4755-9022-513a0f25104d" valueTypeId="8e53465b-4673-45e1-b568-7ee6476bdf4b"/>
+    <recordSetType typeId="934a2b06-a5d3-4805-9cfd-4c1ee3cda3f6" valueTypeId="875e5a5c-3334-4415-ba82-062593c28420"/>
+    <recordKeyType typeId="34bc5575-90de-47c7-b9f1-cb2350e73b92" valueTypeId="cb1e119f-1937-42d8-8d01-249119796587"/>
+    <recordType typeId="dc5491bf-cfef-4f04-9948-4f93fa62bf0d" valueTypeId="a73dcbe9-cda0-44e0-9a75-546ea3dfab1e"/>
+    <recordManagerType typeId="fa2f48f7-4e6c-4cae-a2fa-cbd27713c2f4" valueTypeId="3ebe3542-49eb-4b46-8cf0-a3cab5017996"/>
+  </producedTypes>
+  <name>ES_ИзменяемыеРеквизитыЗаказов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Изменяемые реквизиты заказов (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="71256d59-24a0-4508-b78f-31aa5a0f3ae8">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтактныеЛица</types>
+      <types>CatalogRef.ES_КомментарииКСтатусам</types>
+      <types>Boolean</types>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>CatalogRef.Кассы</types>
+      <types>String</types>
+      <types>CatalogRef.Ячейки</types>
+      <types>EnumRef.ES_ТипыПлательщиков</types>
+      <types>EnumRef.ES_ТипыДенежныхСредствОплатаПолучателем</types>
+      <types>Date</types>
+      <types>Number</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Сотрудники</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="78dcc7fc-1ba9-470a-8f72-03294ead4677">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="846b9afc-1070-40fe-98db-485f6629cb07">
+    <name>РеквизитЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реквизит заказа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_ИзменяемыеРеквизитыЗаказа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

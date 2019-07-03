@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db73e242-1ca5-4375-9495-dd00242c33f6">
+  <producedTypes>
+    <objectType typeId="94233105-15f1-408a-942e-1ca7ff0e922e" valueTypeId="744cdc47-43f3-4d2d-8ed9-541c643dd789"/>
+    <managerType typeId="02abc9b6-0e9e-4f69-af61-bd420ab5a477" valueTypeId="52c13386-8cd0-43c6-8bd1-803c7073c626"/>
+  </producedTypes>
+  <name>ES_ОтправкаSMSProstor</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка SMS Prostor</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_ОтправкаSMSProstor.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="c4de0409-1599-448a-ad3e-497c769d24d5">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

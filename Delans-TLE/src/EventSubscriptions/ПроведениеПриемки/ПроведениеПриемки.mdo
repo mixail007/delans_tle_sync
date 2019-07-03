@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a06f84dc-e848-48d9-a91e-2527a6a84274">
+  <name>ПроведениеПриемки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проведение приемки</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ES_Приемка</types>
+  </source>
+  <event>Posting</event>
+  <handler>CommonModule.ES_ОбщегоНазначения.ПроведениеПриемкиОбработкаПроведения</handler>
+</mdclass:EventSubscription>

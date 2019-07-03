@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="985ca64d-4e52-42c1-82ce-5d7b929cecd8">
+  <producedTypes>
+    <refType typeId="478eba9e-f142-4c5b-8b27-637480eb4722" valueTypeId="b503d4e8-073a-44c0-b642-67a79a5548a9"/>
+    <listType typeId="3cc9028e-0d2e-4830-ac85-cc1b1097662a" valueTypeId="caee57cc-3773-4e10-9471-4658d8a6466b"/>
+    <managerType typeId="e718937e-ace6-4fb5-9418-537392dba835" valueTypeId="466fa26f-4ed0-4ab8-8c80-bf0f89a2e774"/>
+  </producedTypes>
+  <name>ES_СтатусыЗаказов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы заказов</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="7347e647-5293-4c03-8596-4905d8c22abb">
+    <name>ТребуетсяЗабор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Требуется сбор</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="08b79362-85aa-4f09-83da-db1decd7c745">
+    <name>Комплектуется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплектуется</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f0794e1e-50e7-41bc-b798-9c4f5c0e863a">
+    <name>Подготовлен</name>
+  </enumValues>
+  <enumValues uuid="f77555f1-72b7-4f04-b7e4-d02c95eb796e">
+    <name>ОжидаетГруз</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ожидает груз</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9fd2e021-7704-4fb9-b600-14320f63cd54">
+    <name>Назначен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначен</value>
+    </synonym>
+    <comment>Заказ в проведенном плане доставки</comment>
+  </enumValues>
+  <enumValues uuid="16463de0-ebbb-4b12-99ee-47b87ba33197">
+    <name>ВПути</name>
+    <synonym>
+      <key>ru</key>
+      <value>В пути</value>
+    </synonym>
+    <comment>Заказ принят к исполнению</comment>
+  </enumValues>
+  <enumValues uuid="7cdba7b4-bd58-42fd-bd51-2f57c4f8fdf1">
+    <name>НеДоставлен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не доставлен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="186f2be0-b450-42e3-a865-e024db4698da">
+    <name>ГотовКВыдаче</name>
+    <synonym>
+      <key>ru</key>
+      <value>Готов к выдаче</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="200d1b68-126f-4822-a365-baa0d77df530">
+    <name>ЧастичноДоставленРассчитать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Частично доставлен (рассчитать)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e9c91f1f-62f8-46e5-b15c-807fa69c5c93">
+    <name>ЧастичноДоставлен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Частично доставлен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="40846157-5071-4728-ad7c-eed05d744770">
+    <name>ДоставленВозвращен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доставлен (возвращен)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3c7405aa-78f9-46bf-9ba6-63c9577647c0">
+    <name>ДоставленРассчитать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доставлен (рассчитать)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d8d36202-f86b-4385-b487-05e73980d4e0">
+    <name>Доставлен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доставлен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9d7c695c-4425-4756-b8d6-920560266c3e">
+    <name>Отменен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отменен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a712aa1a-9ab0-46bb-b3d3-09f60ac05225">
+    <name>ОжидаетВыдачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ожидает выдачи</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f1b8a28d-a9f4-4552-b293-a4267b485c94">
+    <name>Возвращен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвращен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="884fb11d-d8ad-4adb-b73b-d1fa9566bc66">
+    <name>Отказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отказ получателя</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f48bd656-c011-4010-b9e7-47d25bf01719">
+    <name>Принят</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принят курьером</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="56aae277-da18-44a9-a1ed-8fdc651d481a">
+    <name>ВозвращенРассчитать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвращен (рассчитать)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8a1cf399-a4b3-44ae-9e76-e1c1b5a376bc">
+    <name>НазначенПринят</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначен (принят)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="172dd03a-a2fa-4b12-82b6-c6c3aa1f4497">
+    <name>ПодготовленПринят</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подготовлен (принят)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d6fc4fec-8fcf-4edd-a31c-15b6caedab98">
+    <name>Некондиция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Некондиция</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="dc4498bc-0f26-4dde-a57b-244cec8ed1b8">
+    <name>БезСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Без статуса</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4c0da7cd-a632-4c5b-a9fb-c23ed7a7e9a9">
+    <name>МеждуСкладами</name>
+    <synonym>
+      <key>ru</key>
+      <value>Между складами</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="7b433934-9f0d-4aec-a2ba-c28504027b4c">
+    <name>ОжидаетГрузНазначен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ожидает груз (назначен)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ed54b570-d188-4f87-9704-052f62b15d9e">
+    <name>ОтмененПринят</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отменен (принят)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1cc7cf92-09d8-4b84-980b-b762ef8afda7">
+    <name>НеправильныйАдрес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Неправильный адрес</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9bd82895-56de-469d-9f86-45147b4f0855">
+    <name>ПолучательПереехал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель переехал</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6ffff78d-9bf8-40ff-9d7b-26eeb715d28d">
+    <name>ОфисПолучателяЗакрыт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Офис получателя закрыт</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1a7dc64a-3afa-4fb6-ad0e-17a3d75de4c0">
+    <name>ПолучателяНетДомаВОфисе</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получателя нет дома/ в офисе</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

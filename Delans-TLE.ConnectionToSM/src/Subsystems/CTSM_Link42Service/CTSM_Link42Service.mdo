@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dfbf65ba-04d3-4931-b4f5-a89f22615f44">
+  <name>CTSM_Link42Service</name>
+  <synonym>
+    <key>ru</key>
+    <value>CTSM link42 service</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>HTTPService.CTSM_ServiceManager</content>
+  <content>8665cd97-6c66-4d0e-afaf-4da0b7867c85</content>
+  <content>CommonModule.CTSM_Efsol_Платформа</content>
+  <content>CommonModule.CTSM_EfsolУниверсальныеФункцииСервер</content>
+  <content>CommonModule.CTSM_EfsolУниверсальныеФункцииКлиентСервер</content>
+  <content>DataProcessor.CTSM_ДобавлениеПользователяСаюри</content>
+  <content>Catalog.Пользователи</content>
+  <content>1cba402c-e459-4358-a0cd-f40f3421b35d</content>
+  <content>HTTPService.CTSM_WorkWithExtension</content>
+</mdclass:Subsystem>

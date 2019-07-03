@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b9c6d24e-c378-4abf-a1df-65c20e78acea">
+  <name>ES_АсинхронныеОбработчики</name>
+  <synonym>
+    <key>ru</key>
+    <value>Асинхронные обработчики</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

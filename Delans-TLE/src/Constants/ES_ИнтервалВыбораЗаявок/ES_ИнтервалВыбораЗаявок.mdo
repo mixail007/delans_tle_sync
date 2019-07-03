@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6400f56-5fc4-4779-9987-7a368e54c3f2">
+  <producedTypes>
+    <managerType typeId="c7f4592a-dce9-448b-b80c-ea0b7efd4d9c" valueTypeId="35a30296-b12e-4bb1-a602-063241024cfe"/>
+    <valueManagerType typeId="ae572754-d5cd-4f4e-bdd6-9b7e3f1a9e2d" valueTypeId="8f35e9f7-cb8e-4448-a5a8-5aab4ebfbd0b"/>
+    <valueKeyType typeId="5a6f6108-8f55-48e0-a945-8a1e9d0b0d7f" valueTypeId="aff89dca-82fb-4179-8ffb-d4cab3b6443e"/>
+  </producedTypes>
+  <name>ES_ИнтервалВыбораЗаявок</name>
+  <synonym>
+    <key>ru</key>
+    <value>ES: Интервал выбора заявок</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>10</precision>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

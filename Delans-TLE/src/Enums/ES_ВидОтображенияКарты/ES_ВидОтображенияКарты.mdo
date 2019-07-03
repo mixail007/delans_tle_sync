@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3d02b8ca-1cd5-40f0-a4fc-e80420eb21f1">
+  <producedTypes>
+    <refType typeId="592204af-7c6a-4c2d-bc92-a8543678b3a9" valueTypeId="b4b686b8-1ffb-4e20-8c42-9750537c8884"/>
+    <listType typeId="cda21f93-337c-4fce-9ccd-2a15c0b73bec" valueTypeId="4686a289-083a-49be-913b-00de877fdb0c"/>
+    <managerType typeId="6ad6438a-04d1-4e30-bae9-2bb1ff6ed8d7" valueTypeId="5968199a-d26f-4f90-a7e8-52fdd1bbe626"/>
+  </producedTypes>
+  <name>ES_ВидОтображенияКарты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вид отображения карты</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="12ce5427-9744-406d-91b4-d99badb658e9">
+    <name>YandexКарты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Yandex карты</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="7e1c5a06-490b-487d-a3ea-d116311b2bc3">
+    <name>OpenStreetMap</name>
+    <synonym>
+      <key>ru</key>
+      <value>Open street map</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

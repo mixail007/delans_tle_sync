@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bf27fcbe-c9b1-4ad2-8397-872a4a3a1d06">
+  <producedTypes>
+    <refType typeId="ba453afb-27ac-4dce-8296-adb91a93b57a" valueTypeId="5c530e45-b42c-40e8-9368-226997b70933"/>
+    <listType typeId="51cc7576-6184-4cc6-ba72-4029121d8a7d" valueTypeId="6be5d42f-c9d7-4b22-b267-16ece1333118"/>
+    <managerType typeId="9bcc4f70-6561-446c-a528-facdc6dd8605" valueTypeId="e7d30668-4a25-4ddd-8f15-ce6b1c769131"/>
+  </producedTypes>
+  <name>ES_ВидыСтавокНачисленийСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды ставок начислений сотрудников (efsol)</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="df84a3a6-3b66-4a8d-86c6-d8fc2411456b">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a366b691-8e2a-4979-aed1-b4aff911c930">
+    <name>ФиксСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фикс. стоимость</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

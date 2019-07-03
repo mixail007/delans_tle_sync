@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="628130ef-2438-4ba9-8cd1-5eb2b159ec17">
+  <producedTypes>
+    <managerType typeId="a086e889-7284-47aa-a47e-530fcc2fcdd9" valueTypeId="0c69cc46-8c13-41f0-93fa-ce02d84b1d09"/>
+    <valueManagerType typeId="98e2dcc8-b123-4967-a3df-a564785da985" valueTypeId="c222f6fa-a6bd-4404-a224-f960604aba8b"/>
+    <valueKeyType typeId="6e5e6a90-caec-5f07-8690-178e145adf64" valueTypeId="b09ce3d5-c1a2-5f73-aaa8-1589f13adf9d"/>
+  </producedTypes>
+  <name>ES_РаспределениеЗаявокВОтдельномОкне</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вести распределение заявок в отдельном окне</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

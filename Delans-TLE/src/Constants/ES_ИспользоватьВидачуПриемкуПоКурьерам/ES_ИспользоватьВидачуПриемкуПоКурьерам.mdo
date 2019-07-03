@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e92dcf7b-9f5e-4310-95ec-c2577b3c4967">
+  <producedTypes>
+    <managerType typeId="8bdd6b50-167d-4e17-a0ee-2001b2be1816" valueTypeId="016032a0-4e20-4459-8fc9-308b33870ef7"/>
+    <valueManagerType typeId="4076bff8-465c-43f7-9f27-7edefb507150" valueTypeId="ac7af9cd-412e-4a39-977b-2b47079b6354"/>
+    <valueKeyType typeId="339fa431-d2f4-5f8c-a7fa-9c8a1386a569" valueTypeId="eabf0289-6f9d-5d8c-b677-3f15f72d08bf"/>
+  </producedTypes>
+  <name>ES_ИспользоватьВидачуПриемкуПоКурьерам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использовать видачу и приемку по курьерам</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

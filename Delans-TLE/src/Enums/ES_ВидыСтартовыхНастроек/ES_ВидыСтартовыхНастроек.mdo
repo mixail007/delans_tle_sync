@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3f62f8c8-c250-4dff-8a27-ab30ac41f272">
+  <producedTypes>
+    <refType typeId="6678e2e7-0c32-4e91-8ccd-1c76a45381f4" valueTypeId="c40d6495-f0bb-49ca-b2e6-418fd3fd9c65"/>
+    <listType typeId="a8e3f140-e7e4-4d5b-8de0-68bc2c465e35" valueTypeId="2ea6bce7-96fd-4629-89de-bc7f1182bf9b"/>
+    <managerType typeId="a5aa7577-f90c-4ba8-a4c1-1488365f7ae7" valueTypeId="4f4ddddb-c33a-473f-a07e-ff944ea2ccc7"/>
+  </producedTypes>
+  <name>ES_ВидыСтартовыхНастроек</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды стартовых настроек</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="385ee1eb-2589-47c7-bb93-b513f206cd90">
+    <name>ВидЗабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид забора</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9b9466fb-2712-471a-af56-8828aaf96146">
+    <name>ВидОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид оплаты</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="afca0a52-d420-41af-95ee-6646a07ed9f0">
+    <name>ДеньДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>День доставки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="50bab3b4-5a60-47d4-b724-72aeea492b46">
+    <name>ДопКассаНП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп. касса НП</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="27b2ab5f-4863-4221-8362-12a248c18b87">
+    <name>КассаНаложенныхПлатежей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса наложенных платежей</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1fb72b90-378a-4656-af8f-cd15e1a7d513">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="24c6866c-fe70-4b21-ba3d-c43df9f200d9">
+    <name>ОсновнойГород</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основной город</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9f654921-7a19-4195-a9e8-467ff309589f">
+    <name>Плательщик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Плательщик</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5cb66b35-c313-4425-aa16-0825e7b637f7">
+    <name>РозничныйПокупатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Розничный покупатель</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="7aba50ac-3618-4525-8b68-82a7e119e070">
+    <name>СмсСервисЛогин</name>
+    <synonym>
+      <key>ru</key>
+      <value>SMS-Сервис логин</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="918fe11c-8359-4f7f-a0a5-a3e80cc5d820">
+    <name>СмсСервисПароль</name>
+    <synonym>
+      <key>ru</key>
+      <value>SMS-Сервис пароль</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1fd17518-9955-41f6-bd59-0c835d6788a5">
+    <name>СмсСервисСервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>SMS-Сервис сервер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="98c29c63-9c3e-42ff-93e3-5ab8e32e3262">
+    <name>УслугаДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга доставки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4e057a23-d76e-4347-94ef-b2c57a5a3868">
+    <name>УслугаРКО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга РКО</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="733f8520-f0e6-4bfd-9aaf-b6537dffb7c4">
+    <name>УслугаСамовывоза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга самовывоза</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="7410d6bc-98e1-4a9d-8ea6-64405dd29f98">
+    <name>УслугаСтраховки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга страховки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="da3b5b8d-57bb-4fa1-9fef-3df0d9f56dd3">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="18fdd931-27a0-492f-abb0-d4472f762917">
+    <name>Удалить_ИспользоватьГрузы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить использовать грузы</value>
+    </synonym>
+    <comment>НЕ ИСПОЛЬЗУЕТСЯ</comment>
+  </enumValues>
+  <enumValues uuid="790fe8eb-c8da-4ab1-8930-fc962aae93e7">
+    <name>Удалить_ИспользоватьЗабор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить использовать забор</value>
+    </synonym>
+    <comment>НЕ ИСПОЛЬЗУЕТСЯ</comment>
+  </enumValues>
+  <enumValues uuid="042573ed-a6fd-4830-8285-79d60785655d">
+    <name>Метка1ВремяС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка1 время С</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="20af7f68-12b6-4e49-9991-daff50d98b45">
+    <name>Метка2ВремяС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маркер 2 время с</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1c686978-22c3-42dd-8b01-f92f508a404b">
+    <name>Метка3ВремяС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маркер 3 время с</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f412d9fa-701f-4284-9548-1d7326aae440">
+    <name>Метка1ВремяПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка1 время по</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9fb7d5d8-116b-4f65-83dc-3a3dfebcce0a">
+    <name>Метка2ВремяПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка2 время по</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="11685886-36be-409e-bba6-d6f664a38b2e">
+    <name>Метка3ВремяПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка3 время по</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ce16bfc6-52a6-4d73-8113-dfe900142c90">
+    <name>Метка1Цвет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка1 цвет</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="85a6fc83-3741-415b-8f52-61ae31979c09">
+    <name>Метка2Цвет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка2 цвет</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e9dc14a3-788b-4b64-a7d4-44d8ddc51162">
+    <name>Метка3Цвет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка3 цвет</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0c931762-705f-4a7a-bc99-022ebdb0639f">
+    <name>ОтражатьВремяНаКарте</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражать время на карте</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c5098576-bc42-40fd-8384-a578e7c2071b">
+    <name>СистемаОпределенияКоординат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Система определения координат</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="865dfca7-2eb3-47cb-b96c-b72394cf1d21">
+    <name>ПроцентСтраховки</name>
+    <synonym>
+      <key>ru</key>
+      <value>% страховки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="aee1ef35-7a33-4718-a473-fc29d5e87b04">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+    <comment>Коэффициент расчета объемного веса</comment>
+  </enumValues>
+  <enumValues uuid="460de055-b3fa-40a2-bcc2-37cfce16c053">
+    <name>ES_Переключатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>ES: Переключатель</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6a1c51ad-3cb7-4552-b5ac-11f58a1c41a9">
+    <name>ES_FTPСервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>ES: FTPСервер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="be3987a0-a78f-415a-a57d-3e0e5fbcf620">
+    <name>ES_FTPПорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>ES: FTPПорт</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="188a5465-66b3-42b2-beb4-acc12bf38bef">
+    <name>ES_Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>ES: Пользователь</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="91b31394-5abc-417c-8682-3e424bdbd112">
+    <name>ES_Пароль</name>
+    <synonym>
+      <key>ru</key>
+      <value>ES: Пароль</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="33b1a5d8-d075-41bd-8fb7-267da6b2bd89">
+    <name>ES_Каталог</name>
+    <synonym>
+      <key>ru</key>
+      <value>ES: Каталог</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c012562a-2e42-4c7c-abba-9271f08b3e0b">
+    <name>ПоискЗаказовПоВхНакладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск заказов по вх накладной</value>
+    </synonym>
+    <comment>Истина - При поиске по штрихкоду заказы подбираются по Вх накладной,  Ложь - По НомеруНакладной</comment>
+  </enumValues>
+  <enumValues uuid="d54fbace-5aaf-4ab2-97fe-c66d105aaa58">
+    <name>АвтоПринятКурьером</name>
+    <synonym>
+      <key>ru</key>
+      <value>Авто принят курьером</value>
+    </synonym>
+    <comment>При создании плана заказам автоматически присваивается статус &quot;Принят курьером&quot;</comment>
+  </enumValues>
+  <enumValues uuid="3001be09-7ab4-4fef-abde-281e29e1fa29">
+    <name>АвтоПриемЗаборов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Авто прием заборов</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2b0696d9-185a-4f58-a8a4-2206a216e28e">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9784c49a-e3e7-4bee-93e1-858dbd7a70bf">
+    <name>ГруппаДляГрузов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа для грузов</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="7ff3c394-5eee-478e-81d4-c55275112713">
+    <name>Метка1Код</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка1 код</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a56ea16b-5808-4e69-b376-f15e29d78eb3">
+    <name>Метка2Код</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка2 код</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3ea896c5-3ec7-4685-9c2c-87bf51cd2ebb">
+    <name>Метка3Код</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метка3 код</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5498c153-f8d9-4e14-9105-b6f4d3a5258b">
+    <name>КодСкладДвери</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код склад двери</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1218c23d-b484-49cd-af44-7adeb4d63ddf">
+    <name>КодДвериДвери</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код двери двери</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a00761f5-9127-4d23-9c42-36d4d369bcd8">
+    <name>КодДвериДвериУпрощенный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код двери двери упрощенный</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="379f1c2d-5040-4f87-9df6-8e264f392a42">
+    <name>КодСамовывоз</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код самовывоз</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4fd44fb1-214f-4c01-a7af-5c9220673305">
+    <name>КодДвериТерминал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код двери терминал</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="56cf756b-4b7d-4c9d-9acb-99e63b629976">
+    <name>КодТерминалТерминал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код терминал терминал</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="10bacf8c-6786-4a64-8a0c-46da1901f73d">
+    <name>НоменклатураДляЧека</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура для чека</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5277b8f6-d340-46aa-91b5-56284c487e40">
+    <name>ИспользоватьНоменклатуруДляЧеков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать номенклатуру для чеков</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="075ad2c2-6ee8-4274-9130-9bed55ceaf55">
+    <name>ВидДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид доставки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b0eb890b-4fce-4078-b55c-6997388e54ac">
+    <name>ОтражатьДДуНаКарте</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражать д ду на карте</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6df7f606-03d9-4562-8f9f-f2873ee9e7be">
+    <name>УслугаСбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга сбора</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cb42cd26-90eb-4d49-9dad-3f845b1de217">
+    <name>ЯчейкаОсновная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная ячейка</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b0de34b5-b79e-412c-b123-533b3c9867a6">
+    <name>ЯчейкаКВыдаче</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка к выдаче</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="93dc57d1-ca86-4fbb-b05d-9375a012b80b">
+    <name>ЯчейкаПроблема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка проблема</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d5ca443a-719c-47ba-85fa-bfa5d5ca6cba">
+    <name>КодТерминалПВЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код терминал ПВЗ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c24b9b10-0ab7-421e-8d49-cb8d876785cc">
+    <name>ШаблонСообщенияДляСбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон сообщения для сбора</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5388b428-5148-4ce3-a96d-51b67c372853">
+    <name>ШаблонСообщенияДляЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон сообщения для заказа</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8ebc1d3e-0260-4742-921d-23e86c50549d">
+    <name>ТокенБотаДляТелеграм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токен бота для телеграм</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1b6612c6-892b-4b91-b365-67978e1c1e42">
+    <name>ИДЧатаДляТелеграм</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИДЧата для телеграм</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="dc2a3ca9-2fb8-4811-abd3-d51dad85e24e">
+    <name>ШаблонСообщенияДляВидаЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон сообщения для вида заказа</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b0f99f22-0b76-4958-a343-affc888cc290">
+    <name>ЛогинПользователяИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Логин пользователя ИБ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="db2a76ec-ed72-401c-94aa-3c4833f8a5d9">
+    <name>ПарольПользователяИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль пользователя ИБ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d48f3db9-c45e-4de1-a333-c9b83f695ea0">
+    <name>АдресСклада</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес склада</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3ba6f0ae-6ae2-4395-97e7-02bf16cea63a">
+    <name>АдресСкладаДолгота</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес склада долгота</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6a785519-7f10-4ddb-b2db-7a6719656358">
+    <name>АдресСкладаШирота</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес склада широта</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

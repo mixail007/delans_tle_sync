@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4c22b3eb-20c2-4d36-a382-448e87738899">
+  <producedTypes>
+    <selectionType typeId="21d6abc0-c09b-48a1-b97b-1e1fe33595b9" valueTypeId="59ce6234-318c-4905-a030-e012571186db"/>
+    <listType typeId="97387502-03cb-4749-8d61-ece09f76c7a6" valueTypeId="2fa1a49f-7d18-470c-9dce-cdf1cace18a8"/>
+    <managerType typeId="1b6aafcf-9b98-40f8-b8d1-70b8745aa779" valueTypeId="f3045b2e-4fd5-42dd-b718-a6f967c721e9"/>
+    <recordSetType typeId="3f16cbee-8646-4497-ac45-4c91919a54f3" valueTypeId="3093df1d-c0da-495f-8334-2dc5c7565ace"/>
+    <recordKeyType typeId="abb3ed99-a3b9-4808-b174-b5674d89cfb3" valueTypeId="acd8dd7f-056e-47c3-98e3-05b3fcb6c1a6"/>
+    <recordType typeId="ae25a25b-03bd-4cda-895a-8a29a9151844" valueTypeId="6a886b3c-b73d-4abb-a5ed-83bcce5bdc3a"/>
+    <recordManagerType typeId="22d891c9-4918-40e1-af9b-8c53a89185ed" valueTypeId="99d0b6a5-3c75-4065-9f52-f58ba4267bb6"/>
+  </producedTypes>
+  <name>ES_КоординатыКурьеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Координаты курьеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="94563f55-71b1-451b-84d5-8f5bc4512f89">
+    <name>Долгота</name>
+    <synonym>
+      <key>ru</key>
+      <value>Долгота</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="cae1d7b6-4f75-47bd-9bf4-01727a1addd6">
+    <name>Широта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Широта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="4d3fdd4b-5df4-4e1c-976d-01a48d971f1f">
+    <name>ИмяПровайдера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя провайдера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="b7e658a9-8fc7-45e2-9953-c6c4176d1017">
+    <name>Адрес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="66871e42-fcef-4dbc-824d-a0cbd8e6f182">
+    <name>Узел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узел</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.EFSOL_МобильноеПриложение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a42e2238-658d-48d4-9c40-0f81acdd1732">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

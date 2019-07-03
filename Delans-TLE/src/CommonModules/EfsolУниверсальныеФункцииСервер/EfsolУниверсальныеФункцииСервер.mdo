@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d286e93b-76e5-4c07-8273-f986d02e9b6a">
+  <name>EfsolУниверсальныеФункцииСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Универсальные функции сервер(Efsol)</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

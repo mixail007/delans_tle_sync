@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5bee5815-8dbb-4757-9041-808599dd1792">
+  <producedTypes>
+    <selectionType typeId="c4ae2c27-da2c-4a9a-b5bc-0cd4104efe61" valueTypeId="cb63d36e-9c02-43ef-b88d-05512e208868"/>
+    <listType typeId="8fbb826a-e8e0-43be-b5ac-7b89103ea57b" valueTypeId="33eade8f-51cf-4119-a63f-d2c85aaef430"/>
+    <managerType typeId="345aaeb0-cde2-4757-89a2-ea9899ae8c17" valueTypeId="60bfe948-fae6-4598-9f81-978b306390e2"/>
+    <recordSetType typeId="b6586c7e-04bd-4de5-8b28-f23b5040e6f7" valueTypeId="9b78b7e6-1e5e-4103-bca6-ef6d11511da7"/>
+    <recordKeyType typeId="fb6bf028-5d37-46f2-9b1f-272f79297a62" valueTypeId="1196e048-6a31-479e-8261-bc80d4847f36"/>
+    <recordType typeId="9e29a77b-02f1-40d7-8779-0ec8bf2b1011" valueTypeId="b9a422e5-912f-4bd4-9cd3-096dbc32bb37"/>
+    <recordManagerType typeId="a404bdc6-97ed-441a-b938-db7dc115393b" valueTypeId="f8fd67ec-4b04-4f1e-9aee-312642e090f0"/>
+  </producedTypes>
+  <name>ES_СборГрузов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регулярные сборы грузов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ES_СборГрузов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ES_СборГрузов.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="86fb67ee-b00e-4e48-8a1a-631cc6fff257">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="184a1a42-a92f-4a8f-bc97-be192496a3fa">
+    <name>Адрес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4114e8b7-efdc-46ab-9804-d9b00ee30e2d">
+    <name>ДеньНедели</name>
+    <synonym>
+      <key>ru</key>
+      <value>День недели</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ДниНедели</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bb9b85dc-5327-41a4-b0ab-bba332060abf">
+    <name>ВремяПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Time</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="54e81811-f910-424f-a666-e5b63debd108">
+    <name>НачальнаяДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальная дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ДФ=dd.MM.yyyy</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ДФ=dd.MM.yyyy</value>
+    </editFormat>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8f9a2489-d9c3-4cd1-ae3c-f47868c4ca19">
+    <name>КонечнаяДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конечная дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ДФ=dd.MM.yyyy</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ДФ=dd.MM.yyyy</value>
+    </editFormat>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="911a2093-266e-4e98-831b-8af65b5c48c9">
+    <name>ВремяС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время С</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Time</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f2e53072-4a82-4500-b368-405cbf29da91">
+    <name>Отправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="326219e0-6573-43c2-a0d5-8c0b3f7c19b6">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="048a09fa-237c-403a-83da-3e769a43b4f4">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fea01de3-4dc2-4740-a79a-79b8d2cd4f93">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

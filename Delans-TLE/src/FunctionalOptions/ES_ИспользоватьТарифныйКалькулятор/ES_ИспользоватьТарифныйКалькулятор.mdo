@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5effd3b2-8f38-43af-9f7c-974d930eb1db">
+  <name>ES_ИспользоватьТарифныйКалькулятор</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использова тарифный калькулятор</value>
+  </synonym>
+  <location>Constant.ES_ИспользоватьТарифныйКалькулятор</location>
+  <privilegedGetMode>true</privilegedGetMode>
+  <content>Document.ES_УстановкаЦенДоставки</content>
+  <content>InformationRegister.ES_ЦеныДоставки</content>
+  <content>Catalog.ES_Адреса</content>
+  <content>Catalog.ES_ЗоныДоставки</content>
+  <content>Catalog.ES_Вес</content>
+  <content>Subsystem.ES_СлужбаДоставки.Subsystem.Ценообразование</content>
+  <content>Report.ES_ПрайсЛист</content>
+</mdclass:FunctionalOption>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="aee2d1ea-baa2-4b1a-a82b-07844343aaaa">
+  <producedTypes>
+    <objectType typeId="fdeadaa8-7010-4b7d-a136-bf33a19bd218" valueTypeId="40cdd92d-76be-49f9-bf2b-25be181bcb6b"/>
+    <refType typeId="5b251b9d-99ab-402f-a105-dcbb96d64a9e" valueTypeId="bd88c1d2-20b1-47f3-ba26-2b7b05d5c45d"/>
+    <selectionType typeId="46485ec6-7896-442b-9bf4-bff5bfac422e" valueTypeId="7f66acc3-5a48-49e0-8bfb-fe5ee225fc0f"/>
+    <listType typeId="8e8644ba-58cb-430b-84bb-0d0728251a18" valueTypeId="285f39fc-7af1-46a7-8ddf-576f5ef702ec"/>
+    <managerType typeId="24818d00-5bc2-4a9a-b820-9682887ae9f4" valueTypeId="7ccf3cd4-0180-452d-bbd5-72653b013f31"/>
+  </producedTypes>
+  <name>ES_КомментарииКСтатусам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Комментарии</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ES_КомментарииКСтатусам.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ES_КомментарииКСтатусам.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ES_КомментарииКСтатусам.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="fe9f872f-1b40-4dfd-8889-b755fee28f89">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_СтатусыЗаказов</types>
+      <types>EnumRef.ES_СтатусыЗаборов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="5ab4447e-e832-4ffe-81eb-5cb9ddcbed66">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

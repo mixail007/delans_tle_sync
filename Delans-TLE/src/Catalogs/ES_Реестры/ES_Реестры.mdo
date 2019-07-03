@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4f17b6f3-846e-422f-99c7-a37608537dbf">
+  <producedTypes>
+    <objectType typeId="054c5d5a-15b2-4b18-9905-406ea75cb3bf" valueTypeId="d48c836f-7724-44d6-a3aa-e2a59ad58fa5"/>
+    <refType typeId="a7c1431c-e823-4e00-ab8e-37a967d9f19b" valueTypeId="82a2c099-01a8-4893-9422-8c5a49e659e3"/>
+    <selectionType typeId="1d6cbf28-317f-4991-8a46-1599fa5bc71f" valueTypeId="08a0fed1-c611-4a26-be78-8475fe515875"/>
+    <listType typeId="b844c916-db7d-4ba5-8156-9a0a9300ad2b" valueTypeId="e5d27643-ce7a-4241-8d95-c9a2b765ad4b"/>
+    <managerType typeId="f1cd1775-375d-4dcc-b559-355aea2f3e55" valueTypeId="81ae17ce-0147-40c0-b095-acb109adce1f"/>
+  </producedTypes>
+  <name>ES_Реестры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реестры (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ES_Реестры.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ES_Реестры.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Реестр</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

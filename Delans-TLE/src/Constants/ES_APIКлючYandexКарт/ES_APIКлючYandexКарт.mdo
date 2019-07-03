@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="715b206c-6353-498a-9781-b99a9e5f51da">
+  <producedTypes>
+    <managerType typeId="e1eb99a8-b7cd-4210-be06-9b4336bea881" valueTypeId="436fe05b-18b5-4edc-9f58-cfa9113cf897"/>
+    <valueManagerType typeId="a0ca0090-dabf-4de4-bd31-c877c429698f" valueTypeId="6e34898d-8d22-40e6-a9d2-e06536596a92"/>
+    <valueKeyType typeId="045419a2-064c-5b56-a1c8-b3ca5db13d20" valueTypeId="58a4b5fb-bd30-5f43-a8b0-5af9c910a1c1"/>
+  </producedTypes>
+  <name>ES_APIКлючYandexКарт</name>
+  <synonym>
+    <key>ru</key>
+    <value>APIКлюч yandex карт</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>50</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

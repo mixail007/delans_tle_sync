@@ -1,0 +1,155 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="EFSOL_DeliveryServiceUT">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="TypeQuantity" base="xs:decimal" variety="Atomic" totalDigits="10" fractionDigits="0"/>
+	<valueType name="TypePrice" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+	<valueType name="OrderStatuses" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">NeedsTake</enumeration>
+		<enumeration xsi:type="xs:string">Completed</enumeration>
+		<enumeration xsi:type="xs:string">Prepared</enumeration>
+		<enumeration xsi:type="xs:string">AwaitGoods</enumeration>
+		<enumeration xsi:type="xs:string">Assigned</enumeration>
+		<enumeration xsi:type="xs:string">OnWay</enumeration>
+		<enumeration xsi:type="xs:string">Undelivered</enumeration>
+		<enumeration xsi:type="xs:string">ReadyToIssue</enumeration>
+		<enumeration xsi:type="xs:string">PartiallyDeliveredCalculate</enumeration>
+		<enumeration xsi:type="xs:string">PartiallyDelivered</enumeration>
+		<enumeration xsi:type="xs:string">DeliveredReturned</enumeration>
+		<enumeration xsi:type="xs:string">DeliveredCalculate</enumeration>
+		<enumeration xsi:type="xs:string">Delivered</enumeration>
+		<enumeration xsi:type="xs:string">Canceled</enumeration>
+		<enumeration xsi:type="xs:string">AwaitIssue</enumeration>
+		<enumeration xsi:type="xs:string">Returned</enumeration>
+		<enumeration xsi:type="xs:string">Accepted</enumeration>
+	</valueType>
+	<valueType name="PickUpGoodsStatuses" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Completed</enumeration>
+		<enumeration xsi:type="xs:string">InWork</enumeration>
+		<enumeration xsi:type="xs:string">Assigned</enumeration>
+		<enumeration xsi:type="xs:string">OnWay</enumeration>
+		<enumeration xsi:type="xs:string">Done</enumeration>
+		<enumeration xsi:type="xs:string">NotDone</enumeration>
+		<enumeration xsi:type="xs:string">Canceled</enumeration>
+		<enumeration xsi:type="xs:string">Handed</enumeration>
+		<enumeration xsi:type="xs:string">Accepted</enumeration>
+	</valueType>
+	<valueType name="PaymentTypes" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Cash</enumeration>
+		<enumeration xsi:type="xs:string">CashLess</enumeration>
+	</valueType>
+	<valueType name="String20" base="xs:string" variety="Atomic" maxLength="20"/>
+	<valueType name="TypeWeight" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="3"/>
+	<objectType name="Objects">
+		<property xmlns:d3p1="EFSOL_DeliveryServiceUT" name="objects" type="d3p1:Object" lowerBound="0" upperBound="-1" nillable="false"/>
+	</objectType>
+	<objectType name="Object">
+		<property name="name" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="id" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="EFSOL_DeliveryServiceUT" name="ES_Contractors" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ThisIsGroup" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Group" type="d2p1:ES_Contractors" lowerBound="0" nillable="true"/>
+		<property name="Adress" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Tel" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Email" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="AdditionalInfo" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="EFSOL_DeliveryServiceUT" name="ES_Users" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ThisIsGroup" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Group" type="d2p1:ES_Users" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="EFSOL_DeliveryServiceUT" name="ES_DocDeliveryReport" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Orders" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Order" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="IsOrder" type="xs:boolean" lowerBound="0" nillable="true"/>
+						<property name="OrdersNumber" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Adress" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="StatusOrder" type="d2p1:OrderStatuses" lowerBound="0" nillable="true"/>
+						<property name="StatusPickUpGoods" type="d2p1:PickUpGoodsStatuses" lowerBound="0" nillable="true"/>
+						<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TrackNumber" type="d2p1:String20" lowerBound="0" nillable="true"/>
+						<property name="Expences" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="DateFact" type="xs:date" lowerBound="0" nillable="true"/>
+						<property name="TimeFact" type="xs:time" lowerBound="0" nillable="true"/>
+						<property name="Customer" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="CostPlan" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="NPPlan" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="CostFact" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="CostFactBN" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="NPFact" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="NPFactBN" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="PaymentType" type="d2p1:PaymentTypes" lowerBound="0" nillable="true"/>
+						<property name="Recipient" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="ContactPersonRecipient" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TelContactPersonRecipient" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Sender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="ContactPersonSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TelContactPersonSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="DeliveryType" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="DocumentReference" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="NewDate" type="xs:date" lowerBound="0" nillable="true"/>
+						<property name="Waybill" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TimeFromTo" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Note" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="QuantityPlaces" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+						<property name="Weight" type="d2p1:TypeWeight" lowerBound="0" nillable="true"/>
+						<property name="TypeGoods" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="GoodsSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="FIOGoodsSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="AdressGoodsSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="MetroGoodsSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TelephoneGoodsSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TimeGoodsSender" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Metro" type="xs:string" lowerBound="0" nillable="true"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Products" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Product" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="OrdersNumber" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Nomenclature" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Party" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="QuantityPlan" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+						<property name="QuantityFact" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+						<property name="Price" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="NPPlan" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="NPFact" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="Description" type="xs:string" lowerBound="0" nillable="true"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Places" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Place" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="OrdersNumber" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="TypeGood" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="NPPlan" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="NPFact" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+						<property name="Description" type="xs:string" lowerBound="0" nillable="true"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Courier" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="PaymentCash" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+		<property name="PaymentCashless" type="d2p1:TypePrice" lowerBound="0" nillable="true"/>
+		<property name="Closed" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="DateClosed" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Returns" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="EFSOL_DeliveryServiceUT" name="ObjectDeletion" base="d2p1:Object">
+		<property name="Type" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+</package>

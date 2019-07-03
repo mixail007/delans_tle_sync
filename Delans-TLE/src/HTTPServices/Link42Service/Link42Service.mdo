@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="24f61e84-fc00-40bc-8a1f-980eed334509">
+  <name>Link42Service</name>
+  <synonym>
+    <key>ru</key>
+    <value>Link42 service</value>
+  </synonym>
+  <rootURL>Link42Service</rootURL>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="ae098ea0-f4aa-431d-b4c6-fcbb9e224b55">
+    <name>ШаблонURL</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон URL</value>
+    </synonym>
+    <template>/{MethodName}</template>
+    <methods uuid="e6230b54-d9a7-4ca6-961c-a382b652a878">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>Link42ServicePOST</handler>
+    </methods>
+    <methods uuid="0be4f40e-633d-4d51-9402-f708ecfb5426">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>Link42ServiceGET</handler>
+    </methods>
+    <methods uuid="8fb69ca0-ee57-4f51-9b4e-0dbe687ad19f">
+      <name>Любой</name>
+      <synonym>
+        <key>ru</key>
+        <value>Любой</value>
+      </synonym>
+      <httpMethod>Any</httpMethod>
+      <handler>MethodNotFoundЛюбой</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

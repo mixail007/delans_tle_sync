@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db230c33-ac89-4d07-b343-22206a5a9ba2">
+  <name>Взаиморасчеты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.ПоступлениеВКассу</content>
+  <content>Document.РасходИзКассы</content>
+  <content>Document.РасходнаяНакладная</content>
+  <content>Document.СчетНаОплату</content>
+  <content>Document.ПриходнаяНакладная</content>
+  <content>Document.РасходСоСчета</content>
+  <content>Document.ПоступлениеНаСчет</content>
+  <content>Document.АвансовыйОтчет</content>
+  <content>Document.ПеремещениеДС</content>
+  <content>Document.ЗаказПокупателя</content>
+  <content>Document.ЧекККМ</content>
+  <content>DocumentJournal.ЧекиККМ</content>
+  <content>Document.ОтчетОРозничныхПродажах</content>
+  <parentSubsystem>Subsystem.ES_СлужбаДоставки</parentSubsystem>
+</mdclass:Subsystem>

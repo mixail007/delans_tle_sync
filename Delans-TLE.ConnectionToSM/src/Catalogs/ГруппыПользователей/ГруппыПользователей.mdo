@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="f7f30586-21e6-4587-8890-0fcb679eb6b1">
+  <producedTypes>
+    <objectType typeId="0e3ee155-3cd7-4323-bd12-0b94871e8f1c" valueTypeId="efcf2755-d14f-421e-af5a-6ab98f529b7b"/>
+    <refType typeId="3af30d7b-c7e0-4b1a-91ca-522efb653c40" valueTypeId="7e667a06-3ca1-47e5-9b2b-64fc5b91de0e"/>
+    <selectionType typeId="46aeae1c-e05c-4f47-9ede-8930b6399f5c" valueTypeId="f89800b2-4d6f-4aaa-b779-4ee79f813af3"/>
+    <listType typeId="f109ce5f-7f6b-4496-ba79-cbaa46562924" valueTypeId="92df10e7-6529-45d3-a9e0-93a11b064105"/>
+    <managerType typeId="52ab5800-34f2-439a-a9be-9bb925e0e73e" valueTypeId="1ed77a98-20bf-4442-b874-d6646e6ea586"/>
+  </producedTypes>
+  <name>ГруппыПользователей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <hierarchical>Checked</hierarchical>
+    <descriptionLength>Checked</descriptionLength>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="2a1d7a07-d449-4df2-959f-1811b65b9b93">
+    <name>Комментарий</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <type>Checked</type>
+    </extension>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="36c47995-924d-44d1-a801-123156c7bbf3">
+    <producedTypes>
+      <objectType typeId="f5bcc7d3-2195-4be7-b153-f735fa95cf24" valueTypeId="0cdda967-8876-4633-938e-0cfd1f20431f"/>
+      <rowType typeId="f534f87d-96d7-40fd-8323-c041d1c7b98d" valueTypeId="8d59142a-7442-4f9b-bd52-954d2007d116"/>
+    </producedTypes>
+    <name>Состав</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="53fd7ebd-1786-4ec2-bcfa-0194950d34cb">
+      <name>Пользователь</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <type>Checked</type>
+      </extension>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>ВходящийДокументПолноеНаименование</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ПользовательскиеВидыДокументов.ВходящийДокументЕстьВыбор</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ИсходящийДокументПолноеНаименование</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ПользовательскиеВидыДокументов.ИсходящийДокументЕстьВыбор</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Пометка</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">1</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#DCF0E1</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.ГотовКЗагрузке</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#969696</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.ПлохоеКачествоИсходныхФайлов</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.СсылкаДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#120089</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Статус</left>
+				<comparisonType>Contains</comparisonType>
+				<right xsi:type="xs:string">Перераспознайте документ (изменен шаблона, состав или порядок страниц)</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#004A00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Статус</left>
+				<comparisonType>Contains</comparisonType>
+				<right xsi:type="xs:string">Выполняется повторное распознавание</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#800027</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Статус</left>
+				<comparisonType>Contains</comparisonType>
+				<right xsi:type="xs:string">Ошибка при распознавании:</right>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Атрибутирован</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FA3214</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Жирный</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value bold="true" italic="false" kind="WindowsFont" ref="sys:DefaultGUIFont" strikeout="false" underline="false" xsi:type="v8ui:Font"/>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.Статус</left>
+				<comparisonType>Contains</comparisonType>
+				<right xsi:type="xs:string">В обработке</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Доступность</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоДокументов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоДокументов.ЭтоСделка</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">2</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По-умолчанию</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоНаименование</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДокументыТаблица.Статус</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">0</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value bold="true" italic="false" kind="WindowsFont" ref="sys:DefaultGUIFont" strikeout="false" underline="true" xsi:type="v8ui:Font"/>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="xs:string">По-умолчанию</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>РеквизитыТЧ</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">РеквизитыТЧ.ИС</left>
+				<comparisonType>Less</comparisonType>
+				<right xsi:type="xs:decimal">1</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FFF9DE</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="xs:string">По-умолчанию</presentation>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ИтоговоеПолеИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ИтоговоеПолеРасчетноеЗначение</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ИтоговоеПоле.Наименование</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:string">""</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value kind="WindowsFont" ref="sys:DefaultGUIFont" xsi:type="v8ui:Font"/>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="xs:string">По-умолчанию</presentation>
+	</item>
+</ConditionalAppearance>

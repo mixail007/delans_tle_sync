@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f47700bf-854b-404d-84b9-b2ce79e614da">
+  <producedTypes>
+    <managerType typeId="7819de58-9875-4b4d-bf35-e89d94853e36" valueTypeId="1fb76519-46f2-4a0b-9de6-fa7b66bb1010"/>
+    <valueManagerType typeId="1ef0cefc-09ec-4605-9aba-8faa3f570d04" valueTypeId="b827884a-b6a0-47f2-bd36-1d30c5c35fce"/>
+    <valueKeyType typeId="e25a6c1b-833f-5751-b0b7-2f9b24ebfe26" valueTypeId="1f483cc3-e49e-5722-98e5-62252f1f11bb"/>
+  </producedTypes>
+  <name>EFSOL_ИспользоватьИнструментыБухгалтера</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL использовать инструменты бухгалтера</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

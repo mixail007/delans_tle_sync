@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="143092ac-2f2c-4e62-a10b-b6894cbf4eb6">
+  <name>ES_ФормированиеДвиженийПоРегистрамДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Формирование движений по регистрам доставки</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

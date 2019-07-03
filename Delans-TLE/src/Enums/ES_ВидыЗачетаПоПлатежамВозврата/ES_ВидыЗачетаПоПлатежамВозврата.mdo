@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a6d6723d-bc13-4aa5-8ee5-812dbc4ba042">
+  <producedTypes>
+    <refType typeId="d8f2dbfa-237b-44ba-afbe-b620b649cbcd" valueTypeId="7d5359a9-6fa2-4922-8947-c3fffe8c13ba"/>
+    <listType typeId="3f45d387-9bad-4d2a-88eb-f144314cff30" valueTypeId="fc90398f-9a3b-4b04-b664-334109d0ed56"/>
+    <managerType typeId="f9b27401-0ee5-4b4a-ba8c-59b9869403df" valueTypeId="9f404927-f279-4ecb-bee4-b13116f1e013"/>
+  </producedTypes>
+  <name>ES_ВидыЗачетаПоПлатежамВозврата</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды зачета по платежам возврата(efsol)</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="ad40d739-76ac-46bd-b489-fe9f87b306f6">
+    <name>УчетРКО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учет РКО</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cf330761-37fa-4e99-b1ad-e8380f67a3cc">
+    <name>Взаимозачет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Взаимозачет</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

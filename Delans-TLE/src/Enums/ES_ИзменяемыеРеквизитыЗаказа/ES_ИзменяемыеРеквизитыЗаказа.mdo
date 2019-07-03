@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fea8d941-7572-41b5-9f35-87ab632ec807">
+  <producedTypes>
+    <refType typeId="1db7a95c-f4fe-4bcc-a161-6f1e78c1c6b8" valueTypeId="1cc94d04-073e-46ac-8c75-ea0e13f91e66"/>
+    <listType typeId="e33c10f9-1867-4618-9ac7-ceea16e2d6e2" valueTypeId="864da1b7-b08a-4e02-b57f-71a3127fff75"/>
+    <managerType typeId="d950ff93-ccce-4841-ac85-83347d9f39a2" valueTypeId="442b1dc4-51cd-410e-91d4-c1191183dac4"/>
+  </producedTypes>
+  <name>ES_ИзменяемыеРеквизитыЗаказа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Изменяемые реквизиты заказа</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="308c5edf-8a11-4724-8d3e-b1c287208458">
+    <name>ДатаВыполненияЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>ДатаВыполненияЗаказа</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="eb1bb6f1-0855-4b22-a209-7c9bb5485b9f">
+    <name>КассаНП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса НП</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="21fa00ee-6ce5-4aa1-9062-5712c613aa1a">
+    <name>КассаСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса стоимость</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="94a3cf4b-edcd-487e-a5da-e4187727f209">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ce775432-2fbc-4437-b7d3-529c22bd41e2">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6c6dac21-e946-431c-b671-3bc5487614ae">
+    <name>Расходы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расходы</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ab8421bc-2466-4ae6-9607-fcead2bffb24">
+    <name>ТрекНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТрекНомер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2d308a49-91ea-42f6-a364-eee55702fc90">
+    <name>Подрядчик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подрядчик</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="63f4d327-4508-4559-9228-7d39708a6e44">
+    <name>ВидОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид оплаты</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="491a875c-08fa-4f98-b0bc-362a85ed6afb">
+    <name>Касса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="205be8fa-c68b-4eec-b6ba-ed196baee4fd">
+    <name>Счет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="de022e59-23b8-4124-87f8-16fc546d8926">
+    <name>ФИОПолучателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>ФИОПолучателя</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4e5ccb1e-b87d-48d4-a451-9f79d90dff3e">
+    <name>ДатаОтменыЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отмены заказа</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="87549a57-1b6d-4c82-bf44-23419618ed81">
+    <name>Ячейка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5f55eae9-3fff-43b4-9787-786395ec4e06">
+    <name>КомментарийСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий статуса</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="35564558-cfa6-4753-a761-c1c4e0b0cab2">
+    <name>Поврежден</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поврежден</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e964bc4f-1258-441f-8589-2fba1e1dfddb">
+    <name>ДоставкаПартнером</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доставка партнером</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="654a7e39-aa1a-401b-95f4-9da6814021f1">
+    <name>Партнер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партнер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="10517a8c-8513-4852-a9a8-bb64d7526c78">
+    <name>УслугиПартнера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуги партнера</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f0323d30-2d27-45a7-9aef-a5c476afd858">
+    <name>НомерЧека</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер чека</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9824b000-86bf-4286-9f21-e9c5338bf092">
+    <name>ИДТранзакции</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИДТранзакции</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b90951b1-7de9-411e-977c-729d6ba2d5ea">
+    <name>ОплаченIBox</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оплачен i box</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6a51ac3a-235f-4c22-a117-e9fe821b9cfc">
+    <name>Плательщик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Плательщик</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cbbb2d0e-d365-4f0b-a8f4-c661ecbf68a6">
+    <name>СпособОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ оплаты</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

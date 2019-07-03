@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="13878336-5198-4396-8c98-c26de06bde53">
+  <producedTypes>
+    <objectType typeId="46c3e608-98cd-4d15-ba75-1427267d5c7f" valueTypeId="3e65cf0e-d534-453e-82e7-0184e6c9cf8f"/>
+    <managerType typeId="419aceeb-b4f4-4bf5-90f2-5ba34e3ea061" valueTypeId="3fd3cdb8-1f5e-4a40-a3d5-a0478b0ca8ad"/>
+  </producedTypes>
+  <name>NS_ОтправкаСМС</name>
+  <synonym>
+    <key>ru</key>
+    <value>N s отправка СМС</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.NS_ОтправкаСМС.Form.Форма</defaultForm>
+  <forms uuid="e5d4c114-7090-472e-99c0-f7ccb2b21859">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

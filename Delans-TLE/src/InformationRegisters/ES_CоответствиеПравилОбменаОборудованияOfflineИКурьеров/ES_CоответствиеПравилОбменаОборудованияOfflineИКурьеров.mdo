@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b2fcce56-4dde-4a08-9d01-6dd33d6b152b">
+  <producedTypes>
+    <selectionType typeId="87d10866-8631-44ee-9826-e42663e01693" valueTypeId="0d408252-0d6c-4b13-99ba-eb80eadae1d8"/>
+    <listType typeId="cbb98c35-7f44-46a7-b4d6-b6b8af7399d3" valueTypeId="5d994847-e863-4abf-85b6-276d7f352c9c"/>
+    <managerType typeId="17ffac57-96b4-4b35-aab9-27053bac9806" valueTypeId="44a67bf3-6346-4db4-aa3e-504e66ff2ee9"/>
+    <recordSetType typeId="d5125129-5032-4d0e-9d76-2dd4f9abe58c" valueTypeId="9a80d4fa-42ab-49f6-9af9-5a6ee29b11d2"/>
+    <recordKeyType typeId="6fc00d8d-a077-46d5-a857-0457b3a34bd8" valueTypeId="0f490886-5f7b-4402-96c5-aa82874309bb"/>
+    <recordType typeId="ebb16041-2565-4592-87b0-9a3120b40970" valueTypeId="5d5a5437-e2cc-4a4c-8d10-5b3a4754e734"/>
+    <recordManagerType typeId="a6c04ed6-ed36-4084-a131-a1c27d409dff" valueTypeId="7e39401f-7a27-43cd-ae03-f2816c92940e"/>
+  </producedTypes>
+  <name>ES_CоответствиеПравилОбменаОборудованияOfflineИКурьеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Соответствия оборудования offline и курьеров (efsol)</value>
+  </synonym>
+  <comment>Хранит комбинацию ПравилоОбмена - Сотрудник(курьер)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ES_CоответствиеПравилОбменаОборудованияOfflineИКурьеров.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ES_CоответствиеПравилОбменаОборудованияOfflineИКурьеров.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="38da5c40-cb20-434c-8ac6-b864f97f7bdf">
+    <name>Курьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курьер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8a1fc34b-ac2e-499e-b810-8adbe915513c">
+    <name>ID</name>
+    <synonym>
+      <key>ru</key>
+      <value>ID</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f5578d68-1123-4a53-ae3d-d0f182d2b967">
+    <name>АдресСервера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес сервера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="5a99aaa1-48bc-41fa-aab0-557cfefc5565">
+    <name>ИмяБазы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя базы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a963dda5-3607-476f-ac9e-155dc12adb8d">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f7ebf312-bad9-41dc-86b0-1c384aa30624">
+    <name>Пароль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <passwordMode>true</passwordMode>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="9da85401-9a45-48ee-bc22-a07254a2a06d">
+    <name>SSL</name>
+    <synonym>
+      <key>ru</key>
+      <value>SSL</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4d7e30a2-34d8-406b-8c5f-31eaeaf19ebc">
+    <name>ТипАдреса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип адреса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f2ea25f4-60ea-4974-9a4e-ffb9ed307d0d">
+    <name>Оборудование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оборудование</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодключаемоеОборудование</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ТипПодключаемогоОборудования</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыПодключаемогоОборудования.EnumValue.УдалитьWebСервисОборудование</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="be6edde8-5e23-4730-ab26-a3c24de3aae0">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="706ba074-1059-4122-b937-8c8d5bb8db2a">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8a575ebb-7f91-417f-89d5-c1aebf732971">
+    <name>ФормаЗаполненияПользователяИПароля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма заполнения пользователя и пароля</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="dca7c15c-df06-4da8-acac-ff24d7eaadd2">
+    <name>МакетНастроек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет настроек</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

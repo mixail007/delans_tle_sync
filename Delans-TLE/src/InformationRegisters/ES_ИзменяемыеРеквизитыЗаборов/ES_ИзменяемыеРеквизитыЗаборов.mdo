@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1808353e-e052-4a93-82f4-5c55572e1680">
+  <producedTypes>
+    <selectionType typeId="da15b543-2ead-466e-aa3a-7af19721554b" valueTypeId="57e316ac-e760-4122-be14-7a4c63c10d28"/>
+    <listType typeId="078f81f8-a9bf-4b37-86c6-92d7458fcdd6" valueTypeId="6efe450f-c0ab-4543-a006-30c86b8e71d9"/>
+    <managerType typeId="f399d432-8d82-4ba6-9fa7-43e4f55f54fe" valueTypeId="09504765-3f66-487c-82b1-b0de0b7f84a5"/>
+    <recordSetType typeId="eecfe5b0-bf98-4050-a655-4610eb21dbcc" valueTypeId="6a1c66e7-e61a-463a-b29e-7f7dad3aff87"/>
+    <recordKeyType typeId="8db00a68-b1b5-4b1b-b28a-78b1ad19f658" valueTypeId="41be18b1-151e-44b2-8fb7-6828e536560d"/>
+    <recordType typeId="d62c0220-788e-4652-8a16-3d2caa5cec1d" valueTypeId="fabee95c-0cf9-460e-89b3-24910f9587fa"/>
+    <recordManagerType typeId="0adeddcb-34c0-48ff-acba-0d19ac18a26d" valueTypeId="f3ad33fb-9c06-420f-bbfa-7a4c084be9d8"/>
+  </producedTypes>
+  <name>ES_ИзменяемыеРеквизитыЗаборов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Изменяемые реквизиты заборов (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="131ed7bf-d4df-4d48-9cb8-b99b4c1cf120">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>Date</types>
+      <types>Number</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Сотрудники</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="801c033e-59cf-4f36-ba1c-4fd38259ee14">
+    <name>Забор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Забор груза</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ES_ЗаборГруза</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="71e1d94c-86e3-4bba-9f5e-39a677a1c4b4">
+    <name>РеквизитЗабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реквизит забора</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ES_ИзменяемыеРеквизитыЗабора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

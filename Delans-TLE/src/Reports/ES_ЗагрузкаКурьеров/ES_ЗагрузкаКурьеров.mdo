@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d255968-54be-41c8-a971-517292dd3f47">
+  <producedTypes>
+    <objectType typeId="940ad651-ec40-47fc-a4ba-e65d74b5cc41" valueTypeId="0e261400-3098-4f31-9cc7-7ec442bef636"/>
+    <managerType typeId="606b5cf5-3a8c-4191-8fa7-47c9e0fd01bb" valueTypeId="eab2383e-8923-4578-849d-fa175be21111"/>
+  </producedTypes>
+  <name>ES_ЗагрузкаКурьеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка курьеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ES_ЗагрузкаКурьеров.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <templates uuid="66dbd82c-e75e-4fa4-9210-b4a89a1a32f9">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2601427d-6e62-489a-865f-851932b5bb1d">
+  <name>ES_СлужбаДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доставка</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ES_РазделСлужбаДоставки</picture>
+  </picture>
+  <content>DataProcessor.ES_СтартовыеНастройки</content>
+  <content>DataProcessor.ES_ЗагрузкаМанифестов</content>
+  <content>DataProcessor.ES_РаспределениеЗаказов</content>
+  <content>Role.ES_СлужбаДоставки</content>
+  <content>Report.ДоходыИРасходы</content>
+  <content>Report.Закупки</content>
+  <content>Catalog.КалендариСотрудников</content>
+  <content>Catalog.ЗаписиКалендаряСотрудника</content>
+  <content>Document.ES_УстановкаЦенДоставки</content>
+  <content>Constant.ES_ИспользоватьВидачуПриемкуПоКурьерам</content>
+  <content>FunctionalOption.ES_ИспользоватьВидачуПриемкуПоКурьерам</content>
+  <content>DataProcessor.УдалениеПомеченныхОбъектов</content>
+  <content>Document.ЧекККМ</content>
+  <content>CommonCommand.ES_РегулярныеСборы</content>
+  <content>AccumulationRegister.ES_ЗаказыВПути</content>
+  <content>DataProcessor.ES_НастройкаGoogleDrive</content>
+  <subsystems>Справочники</subsystems>
+  <subsystems>Доставка</subsystems>
+  <subsystems>Взаиморасчеты</subsystems>
+  <subsystems>Отчеты</subsystems>
+  <subsystems>НастройкиМобильногоПриложения</subsystems>
+  <subsystems>Ценообразование</subsystems>
+  <subsystems>API</subsystems>
+</mdclass:Subsystem>

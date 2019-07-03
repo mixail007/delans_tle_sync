@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="564fa9bc-44a6-48d9-908b-c0af1149f68a">
+  <producedTypes>
+    <refType typeId="a0fb9ca1-195b-4e07-9b01-669ab732321d" valueTypeId="4b3debcd-2ea7-43c0-8744-3d0c8a35d7bf"/>
+    <listType typeId="f84f36e0-306d-453d-9a6e-f90999aa6056" valueTypeId="7b4489a2-eca9-41a3-9d94-5ff27836bd65"/>
+    <managerType typeId="57eb2d1a-d94d-4133-a510-2440965d424c" valueTypeId="ef31f02a-f42d-4dce-a610-49730770021e"/>
+  </producedTypes>
+  <name>ES_ТипыДенежныхСредствОплатаПолучателем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы денежных средств оплата получателем</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="35f247a8-4b56-4db5-80a1-f86aaa5d81ea">
+    <name>Наличные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наличные</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5ccd5f3c-475b-47ea-9e43-485b73083eea">
+    <name>Эквайринг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пл. карта</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="132d75b0-3953-403d-82ac-2c37e044a42c">
+    <name>Безналичные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Безналичные</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ef0379f3-93b3-475b-96a9-943591b3379c">
+    <name>Разовый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разовый</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

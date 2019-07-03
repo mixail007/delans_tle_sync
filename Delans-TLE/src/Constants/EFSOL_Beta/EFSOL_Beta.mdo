@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3c9bfe9f-afaf-4439-9526-a994b0c68071">
+  <producedTypes>
+    <managerType typeId="0269274a-570f-4127-ae2e-a492e73ef582" valueTypeId="a001cea0-ff40-4c55-9c4a-d19568b550cb"/>
+    <valueManagerType typeId="1ba6a4e6-09c2-4acf-aac8-7c6c2386e4b4" valueTypeId="f2f607c3-a6c4-4e4c-981d-f85a5a30ab64"/>
+    <valueKeyType typeId="638fedda-7a9e-5ee3-9fed-0030fc5987b3" valueTypeId="1777a9be-e1a3-54cc-9a3a-424e2b151212"/>
+  </producedTypes>
+  <name>EFSOL_Beta</name>
+  <synonym>
+    <key>ru</key>
+    <value>EFSOL beta</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

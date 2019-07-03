@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bb701705-9eb7-4163-ab29-8e26d8771e8a">
+  <producedTypes>
+    <selectionType typeId="4487eea7-bab3-444b-be77-366d30ba7e2b" valueTypeId="2590c125-490a-446b-882d-d94cda874a1a"/>
+    <listType typeId="981415fe-c2be-4891-9878-0d886f5e0167" valueTypeId="1201ea38-4c6a-470d-a9be-64102382b02a"/>
+    <managerType typeId="3cc7b4aa-cb85-45d3-b7b0-d00768065233" valueTypeId="e2581467-70e4-4362-b13e-ebfc9ac6ab42"/>
+    <recordSetType typeId="de6fee68-0bd3-45f2-950d-786f1deb5761" valueTypeId="24dfb65e-3d37-40e5-a655-c702499d8951"/>
+    <recordKeyType typeId="a9533ec1-1e6f-496d-9467-918cbbaa9f6a" valueTypeId="149d6e00-8e0a-4a8e-a740-d551e01dd7a5"/>
+    <recordType typeId="655000d3-ceb1-4903-a235-f59a7e771736" valueTypeId="8b5f406c-3a02-4767-910e-ba3c1bf25357"/>
+    <recordManagerType typeId="5fa0e90c-96e4-4e95-b791-417a6e41a3a9" valueTypeId="906cb7dd-8887-42ee-9578-a5f741fdf5ff"/>
+  </producedTypes>
+  <name>ES_ТаблицаТокенов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Таблица токенов бота (efsol)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="2975b4d6-236c-4823-86ba-15c14d3d579c">
+    <name>Токен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токен</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="691650b8-beb0-40ef-a442-6ba2139e20b9">
+    <name>ИДЧата</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИДЧата</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

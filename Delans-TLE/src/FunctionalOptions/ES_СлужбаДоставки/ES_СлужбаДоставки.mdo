@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3a6d2e7c-504c-402b-8736-584b686a122b">
+  <name>ES_СлужбаДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Служба доставки (ES)</value>
+  </synonym>
+  <comment>Отвечает за отображение службы доставки в интерфейсе</comment>
+  <location>Constant.ES_СлужбаДоставки</location>
+  <privilegedGetMode>true</privilegedGetMode>
+  <content>Subsystem.ES_СлужбаДоставки</content>
+</mdclass:FunctionalOption>

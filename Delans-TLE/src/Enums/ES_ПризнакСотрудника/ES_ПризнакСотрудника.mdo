@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d7490a54-4fc4-4fd4-916e-2051408d40bf">
+  <producedTypes>
+    <refType typeId="58970a59-458c-4806-b6b0-74bd24834d67" valueTypeId="5c0d2e20-e135-4617-b30e-e9129294b2bd"/>
+    <listType typeId="9d07f141-8072-4476-8386-e0998aead14a" valueTypeId="349aab53-19a1-4ff5-a546-5ecbb7a2954c"/>
+    <managerType typeId="984c07f8-37ad-46a7-8aa5-e02d334c6308" valueTypeId="4992f3b6-90a3-4189-9c66-72232076dfe0"/>
+  </producedTypes>
+  <name>ES_ПризнакСотрудника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Признак сотрудника</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="39dd0c1e-4497-43aa-8e67-51c813663829">
+    <name>Водитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Водитель</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1b03eba8-02ee-423c-9230-6a5b94c0e62d">
+    <name>ПешийКурьер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пеший курьер</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d319ca65-11ae-4397-a1cd-dbefc283d195">
+    <name>СотрудникОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник организации</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

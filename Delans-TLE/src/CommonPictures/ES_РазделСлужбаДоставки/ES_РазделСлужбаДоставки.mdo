@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonPicture xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="07843a14-3df3-4481-b8c1-be91926f85be">
+  <name>ES_РазделСлужбаДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Раздел служба доставки (efsol)</value>
+  </synonym>
+</mdclass:CommonPicture>

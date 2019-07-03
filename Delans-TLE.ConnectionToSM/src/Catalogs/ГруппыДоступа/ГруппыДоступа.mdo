@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="b0366e78-11ad-4d3c-a9e4-c0fba897ff50">
+  <producedTypes>
+    <objectType typeId="3e0f2f6d-b59e-437d-8220-e64e1e33a344" valueTypeId="97f64bca-841e-47dd-9feb-0d64aa93a08b"/>
+    <refType typeId="9a282d05-9419-4cba-8fe2-3286ba54b2e5" valueTypeId="df5abef8-40fc-4bc3-b0b9-92b34f63c673"/>
+    <selectionType typeId="2dabbc9f-13df-444b-b318-6959324ca5b6" valueTypeId="2caf95c6-b0a9-43ad-b812-1865fa665e83"/>
+    <listType typeId="2dfcf6be-6bff-41c9-8b4f-d8503447976a" valueTypeId="408e91d6-ebe1-4e7d-97b2-cd36150ff775"/>
+    <managerType typeId="75595e6a-a7a5-4b73-9250-02262c6a296a" valueTypeId="ae6c234e-4a99-4923-b79a-664bcf3a43f4"/>
+  </producedTypes>
+  <name>ГруппыДоступа</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension"/>
+  <useStandardCommands>true</useStandardCommands>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <tabularSections uuid="bfe44062-b3c2-4c87-953b-07d2c283841d">
+    <producedTypes>
+      <objectType typeId="b358ce9d-f8b4-47f1-97da-7e074aff65e6" valueTypeId="b71286b8-1f8d-4836-a397-8a5afb9b309c"/>
+      <rowType typeId="f3d899c1-e1ce-4d1a-806a-07bb9ca68eba" valueTypeId="6834b8bb-3ce4-4da9-b575-02213418fe0c"/>
+    </producedTypes>
+    <name>Пользователи</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="e513d13c-3d97-4342-8984-2f99d8c12aa3">
+      <name>Пользователь</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <type>Checked</type>
+      </extension>
+      <type>
+        <types>AnyRef</types>
+      </type>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>
